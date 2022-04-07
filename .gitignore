@@ -126,4 +126,6 @@ iOSInjectionProject/
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+# firestore plist #
+Giftatte22/GoogleService-Info.plist
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode,macos
