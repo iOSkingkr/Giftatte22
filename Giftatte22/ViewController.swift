@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ViewController: UIViewController {
+class ViewController: UINavigationController {
 
     @IBOutlet var onBoardCollectionImageView: UICollectionView!
     // 온보딩 collectionView
