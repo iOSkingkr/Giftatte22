@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="swt-zl-0g8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="AzA-i8-xr2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="swt-zl-0g8" customClass="ViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vGS-n7-KXg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="24L-VU-EE8" kind="relationship" relationship="rootViewController" id="FR7-cO-EBp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6V-cz-Rtv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="126"/>
+        </scene>
+        <!--SurveyVC-->
+        <scene sceneID="KRZ-i8-Vj3">
+            <objects>
+                <viewController storyboardIdentifier="SurveyVC" title="SurveyVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="24L-VU-EE8" customClass="SurveyVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOR-fI-yIr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-WM-tCX">
+                                <rect key="frame" x="36" y="168" width="191" height="67"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물을 받을 사람," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="any-91-Kry">
+                                        <rect key="frame" x="0.0" y="0.0" width="191" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 사람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-gP-EN4">
+                                        <rect key="frame" x="0.0" y="33.5" width="191" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="findGiftBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Sw-5qZ">
+                                <rect key="frame" x="24" y="780" width="366" height="52"/>
+                                <color key="backgroundColor" name="white"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="NnW-qb-iDb"/>
+                                </constraints>
+                                <color key="tintColor" name="grey"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="선물 찾으러 가기">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pushFindGiftBT:" destination="24L-VU-EE8" eventType="touchUpInside" id="lIR-iv-Gv1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ax8-1I-WFU"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <color key="tintColor" name="white"/>
+                        <constraints>
+                            <constraint firstItem="lco-Sw-5qZ" firstAttribute="leading" secondItem="Ax8-1I-WFU" secondAttribute="leading" constant="24" id="BlF-Gx-lf3"/>
+                            <constraint firstItem="ayg-WM-tCX" firstAttribute="leading" secondItem="Ax8-1I-WFU" secondAttribute="leading" constant="36" id="INr-sc-MPK"/>
+                            <constraint firstItem="lco-Sw-5qZ" firstAttribute="centerX" secondItem="FOR-fI-yIr" secondAttribute="centerX" id="SvT-Ie-dOv"/>
+                            <constraint firstItem="Ax8-1I-WFU" firstAttribute="bottom" secondItem="lco-Sw-5qZ" secondAttribute="bottom" constant="30" id="T9O-Oj-HWk"/>
+                            <constraint firstItem="ayg-WM-tCX" firstAttribute="top" secondItem="Ax8-1I-WFU" secondAttribute="top" constant="80" id="vhP-Q0-fbr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W9V-un-e68"/>
+                    <connections>
+                        <outlet property="findGiftBT" destination="lco-Sw-5qZ" id="pXH-Yj-ZUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBI-Yc-5vi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1546.4000000000001" y="125.61576354679804"/>
+        </scene>
+        <!--SurveyOneVC-->
+        <scene sceneID="K7h-nA-sr1">
+            <objects>
+                <viewController storyboardIdentifier="SurveyOneVC" title="SurveyOneVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TED-Re-RTk" customClass="SurveyOneVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lC9-WU-anD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Gjj-Ev-toz">
+                                <rect key="frame" x="56" y="72" width="59" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEk-6K-sx1">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqk-sv-qX0">
+                                        <rect key="frame" x="35" y="16.5" width="24" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의  성별은 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-oO-Jkj" userLabel="선물 받을 사람의  성별은 무엇인가요?">
+                                <rect key="frame" x="56" y="122" width="153" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mDA-1P-dOt">
+                                <rect key="frame" x="57" y="201" width="300" height="452"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="manBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uQ-Ut-heA">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="YWi-i7-CCe"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="남성">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pushManBT:" destination="TED-Re-RTk" eventType="touchUpInside" id="eYy-HW-yFj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="womanBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbC-em-Lir">
+                                        <rect key="frame" x="0.0" y="151" width="300" height="150"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="GSC-Pj-AuO"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="여성">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pushWomanBT:" destination="TED-Re-RTk" eventType="touchUpInside" id="VSG-ZN-UO5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="anyBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnX-xo-Kei">
+                                        <rect key="frame" x="0.0" y="302" width="300" height="150"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4x8-cj-If5"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="상관없음">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pushAnyBT:" destination="TED-Re-RTk" eventType="touchUpInside" id="iBf-c1-G1B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0cv-IN-9Cq"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstItem="QCJ-oO-Jkj" firstAttribute="top" secondItem="Gjj-Ev-toz" secondAttribute="bottom" constant="14" id="4nz-Ba-9Nh"/>
+                            <constraint firstItem="mDA-1P-dOt" firstAttribute="top" secondItem="QCJ-oO-Jkj" secondAttribute="bottom" constant="31" id="7zT-M5-pqn"/>
+                            <constraint firstItem="Gjj-Ev-toz" firstAttribute="top" secondItem="0cv-IN-9Cq" secondAttribute="top" constant="28" id="AFC-tA-caG"/>
+                            <constraint firstItem="Gjj-Ev-toz" firstAttribute="leading" secondItem="0cv-IN-9Cq" secondAttribute="leading" constant="56" id="BDL-7V-rH9"/>
+                            <constraint firstItem="mDA-1P-dOt" firstAttribute="centerX" secondItem="lC9-WU-anD" secondAttribute="centerX" id="HCT-af-InG"/>
+                            <constraint firstItem="mDA-1P-dOt" firstAttribute="leading" secondItem="0cv-IN-9Cq" secondAttribute="leading" constant="57" id="aX7-xs-brc"/>
+                            <constraint firstItem="QCJ-oO-Jkj" firstAttribute="leading" secondItem="0cv-IN-9Cq" secondAttribute="leading" constant="56" id="yYe-yr-nyy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어때이" id="NiH-xE-v0c"/>
+                    <connections>
+                        <outlet property="anyBT" destination="xnX-xo-Kei" id="yel-XF-lQZ"/>
+                        <outlet property="manBT" destination="7uQ-Ut-heA" id="9rJ-vN-GoJ"/>
+                        <outlet property="womanBT" destination="AbC-em-Lir" id="tPO-K5-4J8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CBE-AV-dZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2338.4000000000001" y="20.689655172413794"/>
+        </scene>
+        <!--SurveyTwoVC-->
+        <scene sceneID="n2t-4s-5sf">
+            <objects>
+                <viewController storyboardIdentifier="SurveyTwoVC" title="SurveyTwoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M1Q-aF-kkp" customClass="SurveyTwoVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c6M-yI-Nx9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Vc9-d3-e4J">
+                                <rect key="frame" x="56" y="72" width="62.5" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1m-bw-cYI">
+                                        <rect key="frame" x="0.0" y="0.0" width="38.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goi-AW-rWm">
+                                        <rect key="frame" x="38.5" y="16.5" width="24" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의 나이대는 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1F-Cs-evi">
+                                <rect key="frame" x="56" y="122" width="170.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rm0-pl-2QQ">
+                                <rect key="frame" x="57" y="202" width="300" height="455"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctG-0W-MSB">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="LDb-dt-Oew"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="10대">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAge10:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="6iG-AH-vrX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSc-uU-StC">
+                                        <rect key="frame" x="0.0" y="76" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="Y5h-ED-1xO"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="20대">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAge20:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="uCr-tH-L4c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-iB-qhw">
+                                        <rect key="frame" x="0.0" y="152" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="pmN-UH-vhN"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="30대">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAge30:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="JI7-sM-xFH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HL-RS-Mjf">
+                                        <rect key="frame" x="0.0" y="228" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="HBk-Uw-WXq"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="40대">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAge40:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="4BY-u0-baK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87M-1A-dc1">
+                                        <rect key="frame" x="0.0" y="304" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="UcQ-DG-8xC"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="50대">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAge50:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="eTW-Xr-ZDn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7j-Kw-ARw">
+                                        <rect key="frame" x="0.0" y="380" width="300" height="75"/>
+                                        <color key="backgroundColor" name="white"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="x29-5u-fHa"/>
+                                        </constraints>
+                                        <color key="tintColor" name="grey"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="상관없음">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickAgeAnything:" destination="M1Q-aF-kkp" eventType="touchUpInside" id="AoQ-wc-x5A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qEr-m9-iCh"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstItem="Vc9-d3-e4J" firstAttribute="top" secondItem="qEr-m9-iCh" secondAttribute="top" constant="28" id="1VQ-Bx-4XK"/>
+                            <constraint firstItem="Rm0-pl-2QQ" firstAttribute="top" secondItem="u1F-Cs-evi" secondAttribute="bottom" constant="32" id="3s2-Id-njx"/>
+                            <constraint firstItem="Rm0-pl-2QQ" firstAttribute="centerX" secondItem="c6M-yI-Nx9" secondAttribute="centerX" id="SQ3-Os-Gj2"/>
+                            <constraint firstItem="Rm0-pl-2QQ" firstAttribute="leading" secondItem="qEr-m9-iCh" secondAttribute="leading" constant="57" id="bBK-eO-kP5"/>
+                            <constraint firstItem="Vc9-d3-e4J" firstAttribute="leading" secondItem="qEr-m9-iCh" secondAttribute="leading" constant="56" id="lK5-hz-XpB"/>
+                            <constraint firstItem="u1F-Cs-evi" firstAttribute="top" secondItem="Vc9-d3-e4J" secondAttribute="bottom" constant="14" id="ndv-1m-CJX"/>
+                            <constraint firstItem="u1F-Cs-evi" firstAttribute="leading" secondItem="qEr-m9-iCh" secondAttribute="leading" constant="56" id="zA7-lU-PEl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어때이" id="8Kq-IR-k7u"/>
+                    <connections>
+                        <outlet property="age10" destination="ctG-0W-MSB" id="mzS-SQ-TE4"/>
+                        <outlet property="age20" destination="nSc-uU-StC" id="fOs-uc-BJE"/>
+                        <outlet property="age30" destination="vcQ-iB-qhw" id="y67-C2-kl7"/>
+                        <outlet property="age40" destination="1HL-RS-Mjf" id="1VV-Vk-c0X"/>
+                        <outlet property="age50" destination="87M-1A-dc1" id="aWS-IO-Wgm"/>
+                        <outlet property="ageAnything" destination="a7j-Kw-ARw" id="cI4-Ti-9bC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN6-1q-fNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3103.1999999999998" y="20.689655172413794"/>
+        </scene>
+        <!--SurveyThreeVC-->
+        <scene sceneID="nS6-rA-YOj">
+            <objects>
+                <viewController storyboardIdentifier="SurveyThreeVC" title="SurveyThreeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="frI-5t-AgT" customClass="SurveyThreeVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="frn-tR-PzQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVp-Xy-adu">
+                                <rect key="frame" x="56" y="72" width="63.5" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQ4-gF-bq7">
+                                        <rect key="frame" x="0.0" y="0.0" width="39.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rik-20-Mjo">
+                                        <rect key="frame" x="39.5" y="0.0" width="24" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그 사람에게 꼭 하고싶은 말은  무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ay-tE-PE2" userLabel="선물 받을 사람의  성별은 무엇인가요?">
+                                <rect key="frame" x="56" y="122" width="232" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-gB-evC">
+                                <rect key="frame" x="76" y="204" width="262" height="450"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="MEl-FH-5oH"/>
+                                    <constraint firstAttribute="width" constant="262" id="cWC-3k-WvG"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="g6H-af-me7">
+                                    <size key="itemSize" width="131" height="75"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sv3CollectionViewCell" id="L70-hy-xaz" customClass="sv3CollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
+                                        <rect key="frame" x="65.5" y="0.0" width="131" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="131" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSB-lM-70E">
+                                                    <rect key="frame" x="32" y="20" width="67" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="131" height="75"/>
+                                        <connections>
+                                            <outlet property="categoryCellBt" destination="zSB-lM-70E" id="kob-xJ-Nnm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="frI-5t-AgT" id="UqT-T8-iGw"/>
+                                    <outlet property="delegate" destination="frI-5t-AgT" id="ln9-Jf-afn"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="npD-1K-l40"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstItem="CVp-Xy-adu" firstAttribute="leading" secondItem="npD-1K-l40" secondAttribute="leading" constant="56" id="870-sa-jpx"/>
+                            <constraint firstItem="1Ay-tE-PE2" firstAttribute="top" secondItem="CVp-Xy-adu" secondAttribute="bottom" constant="14" id="Mum-AQ-Uv4"/>
+                            <constraint firstItem="0Cd-gB-evC" firstAttribute="top" secondItem="1Ay-tE-PE2" secondAttribute="bottom" constant="34" id="Q3k-Ra-jCY"/>
+                            <constraint firstItem="CVp-Xy-adu" firstAttribute="top" secondItem="npD-1K-l40" secondAttribute="top" constant="28" id="Rng-2G-LcZ"/>
+                            <constraint firstItem="1Ay-tE-PE2" firstAttribute="leading" secondItem="npD-1K-l40" secondAttribute="leading" constant="56" id="mdD-FT-BmA"/>
+                            <constraint firstItem="0Cd-gB-evC" firstAttribute="centerX" secondItem="frn-tR-PzQ" secondAttribute="centerX" id="u3C-6v-YJP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어때이" id="kgF-rh-csO"/>
+                    <connections>
+                        <outlet property="CategoryCollectionView" destination="0Cd-gB-evC" id="uAP-bA-rgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZmJ-6F-ctd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3840.579710144928" y="20.758928571428569"/>
+        </scene>
+        <!--SurveyFourVC-->
+        <scene sceneID="7Lk-12-oLm">
+            <objects>
+                <viewController storyboardIdentifier="SurveyFourVC" title="SurveyFourVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dE-Ox-QSb" customClass="SurveyFourVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Avg-aV-BeO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jD2-ma-uAE">
+                                <rect key="frame" x="56" y="72" width="64" height="36"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS5-kg-kw6">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="re4-cG-Dh7">
+                                        <rect key="frame" x="40" y="0.0" width="24" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물의 가격대는 얼마로  생각하고 있나요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qq-Jw-faj" userLabel="선물 받을 사람의  성별은 무엇인가요?">
+                                <rect key="frame" x="56" y="122" width="187.5" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKr-EQ-0qe">
+                                <rect key="frame" x="57" y="204" width="300" height="450"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="BGK-HV-2pQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E37-tx-VUt"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstItem="PKr-EQ-0qe" firstAttribute="leading" secondItem="E37-tx-VUt" secondAttribute="leading" constant="57" id="3lq-vj-0UP"/>
+                            <constraint firstItem="PKr-EQ-0qe" firstAttribute="centerX" secondItem="Avg-aV-BeO" secondAttribute="centerX" id="9PU-5U-WgQ"/>
+                            <constraint firstItem="jD2-ma-uAE" firstAttribute="top" secondItem="E37-tx-VUt" secondAttribute="top" constant="28" id="Aod-mK-zBm"/>
+                            <constraint firstItem="PKr-EQ-0qe" firstAttribute="top" secondItem="7Qq-Jw-faj" secondAttribute="bottom" constant="34" id="dTA-5Q-KKm"/>
+                            <constraint firstItem="7Qq-Jw-faj" firstAttribute="top" secondItem="jD2-ma-uAE" secondAttribute="bottom" constant="14" id="iqD-Rd-aQe"/>
+                            <constraint firstItem="jD2-ma-uAE" firstAttribute="leading" secondItem="E37-tx-VUt" secondAttribute="leading" constant="56" id="s0I-H7-TXY"/>
+                            <constraint firstItem="7Qq-Jw-faj" firstAttribute="leading" secondItem="E37-tx-VUt" secondAttribute="leading" constant="56" id="vRS-ZZ-jcQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어때이" id="keh-we-Tx5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dzm-Ng-saw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4545" y="21"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="grey">
+            <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yellow">
+            <color red="1" green="0.88235294117647056" blue="0.3843137254901961" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -24,8 +24,8 @@ class ViewController: UINavigationController {
         navigationController?.navigationBar.isHidden = true
         //navigationBar 숨기기
         
-        onBoardCollectionImageView.delegate = self
-        onBoardCollectionImageView.dataSource = self
+//        onBoardCollectionImageView.delegate = self
+//        onBoardCollectionImageView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
@@ -33,17 +33,17 @@ class ViewController: UINavigationController {
 
 }
 
-extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectImageArray.count //collectImageArray 배열안에 수
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = onBoardCollectionImageView.dequeueReusableCell(withReuseIdentifier: "BannerImageCell", for: indexPath) as! BannerImageCell
-        //BannerImageCell에 imageView에 data에 cell 을 넣을 것임
-        cell.imgView.image = dataArray[indexPath.row]   //근데 그게 dataArray 이미지 배열임
-    }
-    
-    
-}
+//extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return collectImageArray.count //collectImageArray 배열안에 수
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = onBoardCollectionImageView.dequeueReusableCell(withReuseIdentifier: "BannerImageCell", for: indexPath) as! BannerImageCell
+//        //BannerImageCell에 imageView에 data에 cell 을 넣을 것임
+//        cell.imgView.image = dataArray[indexPath.row]   //근데 그게 dataArray 이미지 배열임
+//    }
+//
+//
+//}
 
