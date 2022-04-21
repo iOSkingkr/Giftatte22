@@ -46,11 +46,11 @@ extension SurveyThreeVC: UICollectionViewDataSource, UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // 클래스명을 string으로 가져올 수 있음
-        let cellId = String(describing: sv3CollectionViewCell.self)
+        //let cellId = String(describing: sv3CollectionViewCell.self)
         //cellId가 sv3CollectionViewCell 라고 나오는 걸 볼 수 있음
 //        print("cellId : \(cellId)")
         // 쎌의 인스턴스
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! sv3CollectionViewCell
+        let cell = CategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "sv3CollectionViewCell", for: indexPath) as! sv3CollectionViewCell
         
         // 데이터에 따른 쎌 UI 변경
         // 버튼에 대한 설정 ( 버튼에 있는 라벨이 바뀌었으면 좋겠음...)
