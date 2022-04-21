@@ -32,6 +32,8 @@
 		A83BFFE927F42B5D0035E12C /* SurveyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFE827F42B5D0035E12C /* SurveyVC.swift */; };
 		A83BFFEB27F42E4F0035E12C /* SurveyOneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEA27F42E4F0035E12C /* SurveyOneVC.swift */; };
 		A83BFFED27F4566D0035E12C /* SurveyTwoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEC27F4566D0035E12C /* SurveyTwoVC.swift */; };
+		A878B9CA28114BBB0091EE28 /* SurveyResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */; };
+		A878B9CC28114F4B0091EE28 /* SurveyResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */; };
 		A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A87B0D9627FF29AB005BE8BB /* Survey.storyboard */; };
 		A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */; };
 		A8923ACF280EF9B3005EAD7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */; };
@@ -67,6 +69,8 @@
 		A83BFFE827F42B5D0035E12C /* SurveyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyVC.swift; sourceTree = "<group>"; };
 		A83BFFEA27F42E4F0035E12C /* SurveyOneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyOneVC.swift; sourceTree = "<group>"; };
 		A83BFFEC27F4566D0035E12C /* SurveyTwoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTwoVC.swift; sourceTree = "<group>"; };
+		A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultViewController.swift; sourceTree = "<group>"; };
+		A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultTableViewCell.swift; sourceTree = "<group>"; };
 		A87B0D9627FF29AB005BE8BB /* Survey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv3CollectionViewCell.swift; sourceTree = "<group>"; };
 		A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -251,6 +255,8 @@
 				A8249D1927F6D8FC00957E10 /* SurveyThreeVC.swift */,
 				A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */,
 				A8C67D5927F96BFB003B78F9 /* SurveyFourVC.swift */,
+				A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */,
+				A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -385,9 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A878B9CC28114F4B0091EE28 /* SurveyResultTableViewCell.swift in Sources */,
 				A8923AD1280F226E005EAD7C /* NavigationVC.swift in Sources */,
 				A8C67D5A27F96BFB003B78F9 /* SurveyFourVC.swift in Sources */,
 				A83BFFEB27F42E4F0035E12C /* SurveyOneVC.swift in Sources */,
+				A878B9CA28114BBB0091EE28 /* SurveyResultViewController.swift in Sources */,
 				8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */,
 				A8094BF128113EB200716A45 /* MainRecommendCollectionViewCell.swift in Sources */,
 				A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */,

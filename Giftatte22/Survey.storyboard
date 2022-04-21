@@ -18,6 +18,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vGS-n7-KXg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="grey"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="grey"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -81,7 +85,9 @@
                             <constraint firstItem="ayg-WM-tCX" firstAttribute="top" secondItem="Ax8-1I-WFU" secondAttribute="top" constant="80" id="vhP-Q0-fbr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W9V-un-e68"/>
+                    <navigationItem key="navigationItem" id="W9V-un-e68">
+                        <barButtonItem key="backBarButtonItem" title=" " id="V3u-IS-Cbu"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="findGiftBT" destination="lco-Sw-5qZ" id="pXH-Yj-ZUZ"/>
                     </connections>
@@ -183,7 +189,9 @@
                             <constraint firstItem="QCJ-oO-Jkj" firstAttribute="leading" secondItem="0cv-IN-9Cq" secondAttribute="leading" constant="56" id="yYe-yr-nyy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="어때이" id="NiH-xE-v0c"/>
+                    <navigationItem key="navigationItem" title="어때이" id="NiH-xE-v0c">
+                        <barButtonItem key="backBarButtonItem" title=" " id="hIZ-0E-PnE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="anyBT" destination="xnX-xo-Kei" id="yel-XF-lQZ"/>
                         <outlet property="manBT" destination="7uQ-Ut-heA" id="9rJ-vN-GoJ"/>
@@ -333,7 +341,9 @@
                             <constraint firstItem="u1F-Cs-evi" firstAttribute="leading" secondItem="qEr-m9-iCh" secondAttribute="leading" constant="56" id="zA7-lU-PEl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="어때이" id="8Kq-IR-k7u"/>
+                    <navigationItem key="navigationItem" title="어때이" id="8Kq-IR-k7u">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mWn-DY-RYE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="age10" destination="ctG-0W-MSB" id="mzS-SQ-TE4"/>
                         <outlet property="age20" destination="nSc-uU-StC" id="fOs-uc-BJE"/>
@@ -434,7 +444,9 @@
                             <constraint firstItem="0Cd-gB-evC" firstAttribute="centerX" secondItem="frn-tR-PzQ" secondAttribute="centerX" id="u3C-6v-YJP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="어때이" id="kgF-rh-csO"/>
+                    <navigationItem key="navigationItem" title="어때이" id="kgF-rh-csO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="pIS-EJ-Sun"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="CategoryCollectionView" destination="0Cd-gB-evC" id="uAP-bA-rgg"/>
                     </connections>
@@ -499,6 +511,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzm-Ng-saw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4529" y="-270"/>
+        </scene>
+        <!--SurveyResultViewController-->
+        <scene sceneID="Hpm-Yr-zOb">
+            <objects>
+                <viewController storyboardIdentifier="SurveyResultViewController" title="SurveyResultViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="I4T-DL-sau" customClass="SurveyResultViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ILu-gL-YRH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hzx-pi-Lrw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SurveyResultTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SurveyResultTableViewCell" id="oRJ-E9-TFE" customClass="SurveyResultTableViewCell" customModule="Giftatte22" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oRJ-E9-TFE" id="dVe-Fm-YOc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yy2-NW-1eW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="9eg-5b-9dq"/>
+                                                        <constraint firstAttribute="width" constant="100" id="TQH-vh-Fas"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKj-ok-fcC">
+                                                    <rect key="frame" x="120" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Yy2-NW-1eW" firstAttribute="leading" secondItem="dVe-Fm-YOc" secondAttribute="leading" id="4gX-vz-TWE"/>
+                                                <constraint firstItem="QKj-ok-fcC" firstAttribute="top" secondItem="dVe-Fm-YOc" secondAttribute="top" constant="10" id="6kr-Oh-YpG"/>
+                                                <constraint firstItem="Yy2-NW-1eW" firstAttribute="top" secondItem="dVe-Fm-YOc" secondAttribute="top" id="EAu-fJ-AKg"/>
+                                                <constraint firstItem="Yy2-NW-1eW" firstAttribute="leading" secondItem="dVe-Fm-YOc" secondAttribute="leading" id="LQk-Xf-xae"/>
+                                                <constraint firstItem="QKj-ok-fcC" firstAttribute="leading" secondItem="Yy2-NW-1eW" secondAttribute="trailing" constant="20" id="SLk-Vl-7nP"/>
+                                                <constraint firstItem="Yy2-NW-1eW" firstAttribute="top" secondItem="dVe-Fm-YOc" secondAttribute="top" id="tPw-Ia-G55"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="surveyResultImage" destination="Yy2-NW-1eW" id="Xhk-Cj-cLY"/>
+                                            <outlet property="surveyResultLabel" destination="QKj-ok-fcC" id="52h-EH-UMK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PgB-qK-l2h"/>
+                        <color key="backgroundColor" name="yellow"/>
+                        <constraints>
+                            <constraint firstItem="Hzx-pi-Lrw" firstAttribute="top" secondItem="PgB-qK-l2h" secondAttribute="top" constant="44" id="QTV-KP-j72"/>
+                            <constraint firstAttribute="bottom" secondItem="Hzx-pi-Lrw" secondAttribute="bottom" id="bqR-jr-bTS"/>
+                            <constraint firstItem="Hzx-pi-Lrw" firstAttribute="leading" secondItem="ILu-gL-YRH" secondAttribute="leading" id="iyB-Al-H7e"/>
+                            <constraint firstAttribute="trailing" secondItem="Hzx-pi-Lrw" secondAttribute="trailing" id="rgd-8G-BSY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="어때이" id="m65-dF-5uh"/>
+                    <connections>
+                        <outlet property="SurveyResultTableView" destination="Hzx-pi-Lrw" id="Nhc-QH-CQW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVc-4q-sUP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5326" y="21"/>
         </scene>
     </scenes>
     <resources>

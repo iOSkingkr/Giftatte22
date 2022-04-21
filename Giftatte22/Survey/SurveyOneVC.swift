@@ -39,6 +39,7 @@ class SurveyOneVC: UIViewController {
 //        manBT.layer.shadowOpacity = 0.5                         //그림자 투명도 설정
 
         // Do any additional setup after loading the view.
+    
     }
     
     //MARK: - IBAction  버튼 눌렀을 경우, 다음 페이지로 이동함
