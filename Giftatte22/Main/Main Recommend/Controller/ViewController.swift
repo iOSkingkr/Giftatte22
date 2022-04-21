@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
     
+    @IBAction func didTapRecommendationButton(_ sender: Any) {
+        guard let goSurveyViewController = storyboard?.instantiateViewController(withIdentifier: "NavigationVC") as? NavigationVC else{return}
+        goSurveyViewController.modalPresentationStyle = .fullScreen
+        present(goSurveyViewController,animated: true)
+    }
     let mainRecommendCollectImageArray: Array<UIImage> = [UIImage(named: "03.png")!,UIImage(named: "04.png")!,UIImage(named: "05.png")!,UIImage(named: "01.png")!,UIImage(named: "02.png")!]
     
     override func viewDidLoad() {
