@@ -7,12 +7,14 @@
 
 import UIKit
 
-class OnBoardResultVC: UIViewController {
+class MainRecommendResultViewController: UIViewController {
 
     @IBOutlet var defaultImg: UIImageView!
     //상단 고정이미지
     
     @IBOutlet var bottomView: UIView!
+    
+    var nowPage = 0
     func roundBottomView() {
         bottomView.clipsToBounds = true
         bottomView.layer.cornerRadius = 30 //둥글기 정도
