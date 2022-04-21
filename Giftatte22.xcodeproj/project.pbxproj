@@ -36,6 +36,7 @@
 		A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A87B0D9627FF29AB005BE8BB /* Survey.storyboard */; };
 		A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */; };
 		A8923ACF280EF9B3005EAD7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */; };
+		A8923AD1280F226E005EAD7C /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8923AD0280F226E005EAD7C /* NavigationVC.swift */; };
 		A8C67D5A27F96BFB003B78F9 /* SurveyFourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67D5927F96BFB003B78F9 /* SurveyFourVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		A87B0D9627FF29AB005BE8BB /* Survey.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv3CollectionViewCell.swift; sourceTree = "<group>"; };
 		A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A8923AD0280F226E005EAD7C /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		A8C67D5927F96BFB003B78F9 /* SurveyFourVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyFourVC.swift; sourceTree = "<group>"; };
 		BD92B7B1408C128B33261E18 /* Pods-Giftatte22.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftatte22.debug.xcconfig"; path = "Target Support Files/Pods-Giftatte22/Pods-Giftatte22.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +125,12 @@
 				A87B0D9827FF29C9005BE8BB /* Survey */,
 				3A65488327D650740043D3B5 /* AppDelegate.swift */,
 				3A65488527D650740043D3B5 /* SceneDelegate.swift */,
+				3A65488727D650740043D3B5 /* ViewController.swift */,
+				A8923AD0280F226E005EAD7C /* NavigationVC.swift */,
+				3A65488927D650740043D3B5 /* Main.storyboard */,
+				8CDEAE5427FEE2C500304715 /* OnBoardCollectionViewCell.swift */,
+				8CDEAE4727FECB5C00304715 /* OnBoardResultVC.swift */,
+				8C533A2227FDFB240034DA9A /* StartLottieVC.swift */,
 				A87B0D9627FF29AB005BE8BB /* Survey.storyboard */,
 				3A65488C27D650750043D3B5 /* Assets.xcassets */,
 				3A65488E27D650750043D3B5 /* LaunchScreen.storyboard */,
@@ -385,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8923AD1280F226E005EAD7C /* NavigationVC.swift in Sources */,
 				A8C67D5A27F96BFB003B78F9 /* SurveyFourVC.swift in Sources */,
 				A83BFFEB27F42E4F0035E12C /* SurveyOneVC.swift in Sources */,
 				8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */,
