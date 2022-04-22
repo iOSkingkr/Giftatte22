@@ -6,6 +6,8 @@
 //
 import Foundation
 import UIKit
+import FirebaseFirestore
+import Firebase
 
 class SurveyThreeVC: UIViewController{
     
@@ -17,7 +19,8 @@ class SurveyThreeVC: UIViewController{
     // 카테고리 버튼 이름들
     let nameList = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
     //["ㅇ", "ㄱㄱ", "ㅈ"]
-
+    
+   
     
     //cell의 UIButton을 눌렀을때 하려는 동작
     //write somthig to do when clicked UIButton in cell
