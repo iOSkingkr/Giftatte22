@@ -141,10 +141,8 @@
 				A87B0D9827FF29C9005BE8BB /* Survey */,
 				3A65488327D650740043D3B5 /* AppDelegate.swift */,
 				3A65488527D650740043D3B5 /* SceneDelegate.swift */,
-				A8923AD0280F226E005EAD7C /* NavigationVC.swift */,
-				A87B0D9627FF29AB005BE8BB /* Survey.storyboard */,
-				3A65488C27D650750043D3B5 /* Assets.xcassets */,
 				3A65488E27D650750043D3B5 /* LaunchScreen.storyboard */,
+				3A65488C27D650750043D3B5 /* Assets.xcassets */,
 				A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */,
 				3A65489127D650750043D3B5 /* Info.plist */,
 			);
@@ -267,17 +265,91 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		A87B0D9827FF29C9005BE8BB /* Survey */ = {
+		A85DE7B3281299BE00043439 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A87B0D9627FF29AB005BE8BB /* Survey.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		A85DE7B428129B6300043439 /* SurveyHome */ = {
+			isa = PBXGroup;
+			children = (
+				A85DE7B528129B7500043439 /* Controller */,
+			);
+			path = SurveyHome;
+			sourceTree = "<group>";
+		};
+		A85DE7B528129B7500043439 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8923AD0280F226E005EAD7C /* NavigationVC.swift */,
 				A83BFFE827F42B5D0035E12C /* SurveyVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A85DE7B628129B9900043439 /* SurveyList */ = {
+			isa = PBXGroup;
+			children = (
+				A85DE7B728129BA300043439 /* Controller */,
+				A85DE7B828129BF700043439 /* Cell */,
+			);
+			path = SurveyList;
+			sourceTree = "<group>";
+		};
+		A85DE7B728129BA300043439 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				A83BFFEA27F42E4F0035E12C /* SurveyOneVC.swift */,
 				A83BFFEC27F4566D0035E12C /* SurveyTwoVC.swift */,
 				A8249D1927F6D8FC00957E10 /* SurveyThreeVC.swift */,
-				A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */,
 				A8C67D5927F96BFB003B78F9 /* SurveyFourVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A85DE7B828129BF700043439 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A85DE7B928129C3900043439 /* SurveyResult */ = {
+			isa = PBXGroup;
+			children = (
+				A85DE7BA28129C4900043439 /* Controller */,
+				A85DE7BB28129C4F00043439 /* Cell */,
+			);
+			path = SurveyResult;
+			sourceTree = "<group>";
+		};
+		A85DE7BA28129C4900043439 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A85DE7BB28129C4F00043439 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A87B0D9827FF29C9005BE8BB /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				A85DE7B3281299BE00043439 /* Storyboard */,
+				A85DE7B428129B6300043439 /* SurveyHome */,
+				A85DE7B628129B9900043439 /* SurveyList */,
+				A85DE7B928129C3900043439 /* SurveyResult */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -585,6 +657,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8XK6FZ8WC;
 				INFOPLIST_FILE = Giftatte22/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -604,6 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y8XK6FZ8WC;
 				INFOPLIST_FILE = Giftatte22/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

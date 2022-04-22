@@ -12,24 +12,21 @@ import Firebase
 class SurveyResultViewController: UIViewController {
     
     @IBOutlet var SurveyResultTableView: UITableView!
+    
+    var gender: String = ""
+    var age: String = ""
+    var category: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("gender: \(self.gender), age: \(age), category: \(category)")
+
         SurveyResultTableView.delegate = self
         SurveyResultTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     let labeltextArray = ["A","B","C","D","E"]
     let SurveyResultImageArray: Array<UIImage> = [UIImage(named: "03.png")!,UIImage(named: "04.png")!,UIImage(named: "05.png")!,UIImage(named: "01.png")!,UIImage(named: "02.png")!]
 }

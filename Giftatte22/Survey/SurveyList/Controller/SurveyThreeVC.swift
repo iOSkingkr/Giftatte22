@@ -17,15 +17,14 @@ class SurveyThreeVC: UIViewController{
     var age: String = ""
     
     // 카테고리 버튼 이름들
-    let nameList = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
-    //["ㅇ", "ㄱㄱ", "ㅈ"]
-    
-   
-    
-    //cell의 UIButton을 눌렀을때 하려는 동작
-    //write somthig to do when clicked UIButton in cell
-    @objc func clickCellButton(sender: UIButton){
-        
+    let categoryNameList = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
+
+    private func pushNextPage(category: String){
+        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultViewController") as? SurveyResultViewController else { return }
+        goNextPage.age = age
+        goNextPage.gender = gender
+        goNextPage.category = category
+        self.navigationController?.pushViewController(goNextPage, animated: true)
     }
 
     override func viewDidLoad() {
@@ -33,16 +32,19 @@ class SurveyThreeVC: UIViewController{
         print("gender: \(self.gender), age: \(age)")
         
         //콜렉션 뷰에 대한 설정
-//        CategoryCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         CategoryCollectionView.dataSource = self
         CategoryCollectionView.delegate = self
+    }
+    
+    @IBAction func CategoryButton(_ sender: Any) {
+        pushNextPage(category: "입학")
     }
 }
 extension SurveyThreeVC: UICollectionViewDataSource, UICollectionViewDelegate{
     
     // 각 섹션에 들어가는 아이템 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.nameList.count
+        return self.categoryNameList.count
     }
     
     // 각 콜랙션뷰 셀에 대한 설정
@@ -58,16 +60,11 @@ extension SurveyThreeVC: UICollectionViewDataSource, UICollectionViewDelegate{
         // 데이터에 따른 쎌 UI 변경
         // 버튼에 대한 설정 ( 버튼에 있는 라벨이 바뀌었으면 좋겠음...)
         //sv3CollectionViewCell에 생성한 categoryCellBt 바로 연결 가능
-//여기가 문제..
-        cell.categoryCellBt.titleLabel?.text = self.nameList[indexPath.row]
+        
+        cell.categoryCellBt.titleLabel?.text = self.categoryNameList[indexPath.row]
         
         return cell
     }
     
     
 }
-// 콜랙션뷰 델리게이트 - 액션과 관련된 것들
-//extension SurveyThreeVC: UICollectionViewDelegate{
-//
-//}
-
