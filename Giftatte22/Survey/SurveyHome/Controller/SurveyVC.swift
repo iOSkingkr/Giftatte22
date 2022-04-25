@@ -9,22 +9,25 @@ import UIKit
 
 class SurveyVC: UIViewController {
 
-    @IBOutlet var findGiftBT: UIButton!
+    @IBOutlet var didTapFindGiftButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        didTapFindGiftButton.layer.cornerRadius = 25
+        // Do any additional setup after loading the view.
+    }
     
     // 버튼 눌렀을때, 다음 뷰로 이동하게 해주는 액션함수
-    @IBAction func pushFindGiftBT(_ sender: Any) {
-//        let goSurveyOneView = self.storyboard?.instantiateViewController(withIdentifier: "SurveyOneVC")
+    @IBAction func didTapFindGiftButton(_ sender: Any) {
         guard let goSurveyOneView = self.storyboard?.instantiateViewController(identifier: "SurveyOneVC") as? SurveyOneVC else { return }
         self.navigationController?.pushViewController(goSurveyOneView, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        findGiftBT.layer.cornerRadius = 25      //버튼 둥근모서리 설정
-
-        // Do any additional setup after loading the view.
+    @IBAction func didTapBackButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: true)
+        // push-pop으로 변경할 것
     }
-    
 
     /*
     // MARK: - Navigation

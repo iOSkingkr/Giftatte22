@@ -43,7 +43,7 @@ extension SurveyResultViewController : UITableViewDelegate, UITableViewDataSourc
         
         let db : Firestore = Firestore.firestore()
         
-        let docRef = db.collection("f").document("20").collection("50000002").document("2022-04-07").collection("1").document("appInfo")
+        let docRef = db.collection(gender).document("20").collection("50000002").document("2022-04-07").collection("1").document("appInfo")
         
         //get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
         docRef.getDocument { (document, error) in

@@ -15,7 +15,7 @@
             <objects>
                 <navigationController storyboardIdentifier="NavigationVC" title="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="swt-zl-0g8" customClass="NavigationVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vGS-n7-KXg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" backIndicatorTransitionMaskImage="arrow.backward" id="vGS-n7-KXg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="grey"/>
@@ -57,7 +57,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="findGiftBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Sw-5qZ">
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="didTapFindGiftButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Sw-5qZ">
                                 <rect key="frame" x="24" y="780" width="366" height="52"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
@@ -70,7 +70,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="pushFindGiftBT:" destination="24L-VU-EE8" eventType="touchUpInside" id="lIR-iv-Gv1"/>
+                                    <action selector="didTapFindGiftButton:" destination="24L-VU-EE8" eventType="touchUpInside" id="rTw-BV-sOL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,9 +87,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="W9V-un-e68">
                         <barButtonItem key="backBarButtonItem" title=" " id="V3u-IS-Cbu"/>
+                        <barButtonItem key="leftBarButtonItem" title=" " image="arrow.backward" catalog="system" id="xxS-Cy-0EF">
+                            <color key="tintColor" name="grey"/>
+                            <connections>
+                                <action selector="didTapBackButton:" destination="24L-VU-EE8" id="9DL-bj-qjZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="findGiftBT" destination="lco-Sw-5qZ" id="pXH-Yj-ZUZ"/>
+                        <outlet property="didTapFindGiftButton" destination="lco-Sw-5qZ" id="hyp-ch-ZW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBI-Yc-5vi" sceneMemberID="firstResponder"/>
@@ -585,6 +591,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <namedColor name="grey">
             <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
