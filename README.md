@@ -1,6 +1,44 @@
-# Giftatte22
-선물 어플을 개발할꺼에요
-## TODO 
-- 설문지부터 결과창까지 백본 만들기
-- 2022.03.30 박경덕 
-- 전설의 시작.... 
+
+![header](https://capsule-render.vercel.app/api?type=wave&color=FFE162&height=300&section=header&text=Giftatte22&fontSize=90)
+  
+  <br></br>
+ <img src="https://img.shields.io/badge/-Giftattee22-yellow"> <img src="https://img.shields.io/badge/Xcode-13.2.1-blue"> <img src="https://img.shields.io/badge/swift-5.5.2-blue"> <img src="https://img.shields.io/badge/iOS-15.4.1-blue"> <img src="https://img.shields.io/badge/Cocoapods-1.11.3-blue">
+
+
+# [<img alt="Naver" src ="https://img.shields.io/badge/Naver-03C75A.svg?&style=for-the-badge&logo=Naver&logoColor=white"/>](https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md#%EC%87%BC%ED%95%91)
+
+- 네이버 쇼핑 검색 결과를 출력해주는 REST API를 사용하였다.
+
+- 지정된 날짜동안 성별,연령별 등 카테고리별로 정보를 수집하여 Firebase에 저장하였다. 
+
+
+
+
+ # ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+ 
+ 별도의 서버 구축 없이 서비스를 제공하기 위해서 파이어베이스의 제품들을 사용하였다.
+ 
+ - [Cloud Firestore](https://firebase.google.com/products/firestore?hl=ko)
+   - Firestore에 세팅이 된 최신 데이터를 DB에 저장한다.
+  
+  - [Google 애널리틱스](https://firebase.google.com/products/analytics?hl=ko)
+    - 활성 사용자가 어느정도인지 파악한다. 
+
+# <img alt="GitHub" src ="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white"/>
+
+- 추천, 설문 부분으로 나누어 개인 Branch에서 작업한다.
+
+  - 추천 Branch - side
+
+  - 설문 Branch - joy
+
+# <img alt="Airbnb" src ="https://img.shields.io/badge/Airbnb-FF5A5F.svg?&style=for-the-badge&logo=Airbnb&logoColor=white"/>
+
+- 에어비앤비에서 제공하는 Lottie 애니메이션 (JSON 파일) 추가
+
+# 🛍️ TODO
+- 파이어베이스에서 받아오는 데이터 관리 부분
+- 가격이나 카테고리별 유연하게 선택할 수 있도록 기능 구현 필요
+
+
+
