@@ -11,6 +11,7 @@ class SurveyResultTableViewCell: UITableViewCell {
 
     @IBOutlet var surveyResultImage: UIImageView!
     @IBOutlet var surveyResultLabel: UILabel!
+    var webUrl: URL?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,7 +9,7 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 
-class SurveyThreeVC: UIViewController{
+class SurveyCategoryViewController: UIViewController{
     
     @IBOutlet var CategoryCollectionView: UICollectionView!
     
@@ -40,7 +40,7 @@ class SurveyThreeVC: UIViewController{
         pushNextPage(category: "입학")
     }
 }
-extension SurveyThreeVC: UICollectionViewDataSource, UICollectionViewDelegate{
+extension SurveyCategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     
     // 각 섹션에 들어가는 아이템 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

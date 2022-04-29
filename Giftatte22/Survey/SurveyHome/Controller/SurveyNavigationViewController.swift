@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NavigationVC: UINavigationController {
+class SurveyNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

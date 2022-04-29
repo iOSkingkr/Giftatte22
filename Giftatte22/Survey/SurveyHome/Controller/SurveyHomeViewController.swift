@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SurveyVC: UIViewController {
+class SurveyHomeViewController: UIViewController {
 
     @IBOutlet var didTapFindGiftButton: UIButton!
     
@@ -20,7 +20,7 @@ class SurveyVC: UIViewController {
     
     // 버튼 눌렀을때, 다음 뷰로 이동하게 해주는 액션함수
     @IBAction func didTapFindGiftButton(_ sender: Any) {
-        guard let goSurveyOneView = self.storyboard?.instantiateViewController(identifier: "SurveyOneVC") as? SurveyOneVC else { return }
+        guard let goSurveyOneView = self.storyboard?.instantiateViewController(identifier: "SurveyGenderViewController") as? SurveyGenderViewController else { return }
         self.navigationController?.pushViewController(goSurveyOneView, animated: true)
     }
     

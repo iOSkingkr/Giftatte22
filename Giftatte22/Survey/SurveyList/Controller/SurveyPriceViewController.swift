@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SurveyFourVC: UIViewController {
+class SurveyPriceViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

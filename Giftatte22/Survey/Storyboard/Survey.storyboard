@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I4T-DL-sau">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="swt-zl-0g8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NavigationVC-->
+        <!--SurveyNavigationViewController-->
         <scene sceneID="AzA-i8-xr2">
             <objects>
-                <navigationController storyboardIdentifier="NavigationVC" title="NavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="swt-zl-0g8" customClass="NavigationVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SurveyNavigationViewController" title="SurveyNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="swt-zl-0g8" customClass="SurveyNavigationViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" backIndicatorTransitionMaskImage="arrow.backward" id="vGS-n7-KXg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="682" y="126"/>
         </scene>
-        <!--SurveyVC-->
+        <!--SurveyHomeViewController-->
         <scene sceneID="KRZ-i8-Vj3">
             <objects>
-                <viewController storyboardIdentifier="SurveyVC" title="SurveyVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="24L-VU-EE8" customClass="SurveyVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyHomeViewController" title="SurveyHomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="24L-VU-EE8" customClass="SurveyHomeViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FOR-fI-yIr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1546.4000000000001" y="125.61576354679804"/>
         </scene>
-        <!--SurveyOneVC-->
+        <!--SurveyGenderViewController-->
         <scene sceneID="K7h-nA-sr1">
             <objects>
-                <viewController storyboardIdentifier="SurveyOneVC" title="SurveyOneVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TED-Re-RTk" customClass="SurveyOneVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyGenderViewController" title="SurveyGenderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TED-Re-RTk" customClass="SurveyGenderViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lC9-WU-anD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="2338.4000000000001" y="20.689655172413794"/>
         </scene>
-        <!--SurveyTwoVC-->
+        <!--SurveyAgeViewController-->
         <scene sceneID="n2t-4s-5sf">
             <objects>
-                <viewController storyboardIdentifier="SurveyTwoVC" title="SurveyTwoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M1Q-aF-kkp" customClass="SurveyTwoVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyAgeViewController" title="SurveyAgeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="M1Q-aF-kkp" customClass="SurveyAgeViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c6M-yI-Nx9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -363,10 +363,10 @@
             </objects>
             <point key="canvasLocation" x="3103.1999999999998" y="20.689655172413794"/>
         </scene>
-        <!--SurveyThreeVC-->
+        <!--SurveyCategoryViewController-->
         <scene sceneID="nS6-rA-YOj">
             <objects>
-                <viewController storyboardIdentifier="SurveyThreeVC" title="SurveyThreeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="frI-5t-AgT" customClass="SurveyThreeVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyCategoryViewController" title="SurveyCategoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="frI-5t-AgT" customClass="SurveyCategoryViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="frn-tR-PzQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,10 +464,10 @@
             </objects>
             <point key="canvasLocation" x="3840.579710144928" y="20.758928571428569"/>
         </scene>
-        <!--SurveyFourVC-->
+        <!--SurveyPriceViewController-->
         <scene sceneID="7Lk-12-oLm">
             <objects>
-                <viewController storyboardIdentifier="SurveyFourVC" title="SurveyFourVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dE-Ox-QSb" customClass="SurveyFourVC" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyPriceViewController" title="SurveyPriceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2dE-Ox-QSb" customClass="SurveyPriceViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Avg-aV-BeO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

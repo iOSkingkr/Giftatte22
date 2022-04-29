@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class SurveyTwoVC: UIViewController {
+class SurveyAgeViewController: UIViewController {
 
     var gender: String = ""
     
@@ -18,7 +18,7 @@ class SurveyTwoVC: UIViewController {
     @IBOutlet var ageAnything: UIButton!
     
     private func pushNextPage(age: String){
-        guard let goSurveyThreeView = self.storyboard?.instantiateViewController(identifier: "SurveyThreeVC") as? SurveyThreeVC else { return }
+        guard let goSurveyThreeView = self.storyboard?.instantiateViewController(identifier: "SurveyCategoryViewController") as? SurveyCategoryViewController else { return }
         goSurveyThreeView.age = age
         goSurveyThreeView.gender = gender
         self.navigationController?.pushViewController(goSurveyThreeView, animated: true)

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
     
     @IBAction func didTapRecommendationButton(_ sender: Any) {
-        guard let goSurveyViewController = storyboard?.instantiateViewController(withIdentifier: "NavigationVC") as? NavigationVC else{return}
+        guard let goSurveyViewController = storyboard?.instantiateViewController(withIdentifier: "SurveyNavigationViewController") as? SurveyNavigationViewController else{return}
         goSurveyViewController.modalPresentationStyle = .fullScreen
         present(goSurveyViewController,animated: true)
     }

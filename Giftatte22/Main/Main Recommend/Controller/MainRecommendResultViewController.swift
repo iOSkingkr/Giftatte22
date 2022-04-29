@@ -89,7 +89,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
                     //데이터 값을 제이슨 형태로 바꾸는
                     let jsonData = try JSONSerialization.data(withJSONObject: data)
                     
-                    let userInfo = try JSONDecoder().decode(Human.self, from: jsonData)
+                    let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                     
                     if let url = URL(string: userInfo.imageUrl){
                         

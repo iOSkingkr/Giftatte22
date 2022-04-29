@@ -257,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="1741.5999999999999" y="59.11330049261084"/>
         </scene>
-        <!--NavigationVC-->
+        <!--SurveyNavigationViewController-->
         <scene sceneID="tnV-RV-HGO">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NavigationVC" storyboardName="Survey" referencedIdentifier="NavigationVC" id="gM9-Kz-fV3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SurveyNavigationViewController" storyboardName="Survey" referencedIdentifier="SurveyNavigationViewController" id="gM9-Kz-fV3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxC-7M-rQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2340" y="57"/>

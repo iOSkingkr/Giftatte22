@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Human: Codable{
+struct Gift: Codable{
     let highPrice: Int
     let imageUrl: String
     let keyword: String
@@ -16,4 +16,5 @@ struct Human: Codable{
     let rank: Int
     let score: Int
     let webUrl: String
+//    let webUrl: URL
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SurveyOneVC: UIViewController {
+class SurveyGenderViewController: UIViewController {
     
     @IBOutlet var manBT: UIButton!
     @IBOutlet var womanBT: UIButton!
@@ -15,7 +15,7 @@ class SurveyOneVC: UIViewController {
     
     //
     private func pushNextPage(gender: String){
-        guard let goSurveyTwoView = self.storyboard?.instantiateViewController(identifier: "SurveyTwoVC") as? SurveyTwoVC else { return }
+        guard let goSurveyTwoView = self.storyboard?.instantiateViewController(identifier: "SurveyAgeViewController") as? SurveyAgeViewController else { return }
         //남성버튼 클릭했을때, gender에 m이 저장?선택된 것 + m이 다음 페이지뷰에도 전달되어야함
         //var gender = "m"
         goSurveyTwoView.gender = gender
