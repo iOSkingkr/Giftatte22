@@ -18,7 +18,7 @@ class SurveyAgeViewController: UIViewController {
     @IBOutlet var ageAnything: UIButton!
     
     private func pushNextPage(age: String){
-        guard let goSurveyThreeView = self.storyboard?.instantiateViewController(identifier: "SurveyCategoryViewController") as? SurveyCategoryViewController else { return }
+        guard let goSurveyThreeView = self.storyboard?.instantiateViewController(identifier: "PickerViewController") as? PickerViewController else { return }
         goSurveyThreeView.age = age
         goSurveyThreeView.gender = gender
         self.navigationController?.pushViewController(goSurveyThreeView, animated: true)

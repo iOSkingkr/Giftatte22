@@ -108,7 +108,7 @@ extension SurveyResultViewController : UITableViewDelegate, UITableViewDataSourc
     
     // 테이블뷰에서 클릭했을때 동작하는 걸 넣는다
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // weburl 넘어가는거 해보기~ 5/5까지~
     }
     
     @objc func listViewPage(_ sender:AnyObject){
