@@ -19,13 +19,13 @@ class SurveyCategoryViewController: UIViewController{
     // 카테고리 버튼 이름들
     let categoryNameList = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
 
-    private func pushNextPage(category: String){
-        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultViewController") as? SurveyResultViewController else { return }
-        goNextPage.age = age
-        goNextPage.gender = gender
-        goNextPage.category = category
-        self.navigationController?.pushViewController(goNextPage, animated: true)
-    }
+//    private func pushNextPage(category: String){
+//        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultViewController") as? SurveyResultViewController else { return }
+//        goNextPage.age = age
+//        goNextPage.gender = gender
+//        goNextPage.category = category
+//        self.navigationController?.pushViewController(goNextPage, animated: true)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class SurveyCategoryViewController: UIViewController{
     }
     
     @IBAction func CategoryButton(_ sender: Any) {
-        pushNextPage(category: "입학")
+ //       pushNextPage(category: "입학")
     }
 }
 extension SurveyCategoryViewController: UICollectionViewDataSource, UICollectionViewDelegate{
