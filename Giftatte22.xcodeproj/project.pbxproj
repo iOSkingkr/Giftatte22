@@ -17,6 +17,7 @@
 		8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */; };
 		8C533A2127FDFA6D0034DA9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8C533A2027FDFA6D0034DA9A /* Lottie */; };
 		8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */; };
+		8C823D47281FCED700B09F0B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C823D46281FCED700B09F0B /* PickerViewController.swift */; };
 		8CB79C4428115F04000D914A /* FirebaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB79C4328115F04000D914A /* FirebaseCodable.swift */; };
 		8CB79C4628129799000D914A /* MainRecommendResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */; };
 		8CB79C4A28129E7A000D914A /* 20men.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4728129E79000D914A /* 20men.png */; };
@@ -40,7 +41,6 @@
 		A83BFFEB27F42E4F0035E12C /* SurveyGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */; };
 		A83BFFED27F4566D0035E12C /* SurveyAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */; };
 		A85A8FEE281F9791004260EE /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A85A8FED281F9791004260EE /* SF-Pro.ttf */; };
-		A85A8FF0281F9F5B004260EE /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FEF281F9F5B004260EE /* PickerViewController.swift */; };
 		A85A8FF2281FA603004260EE /* TestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF1281FA603004260EE /* TestLayout.swift */; };
 		A85A8FF4281FA776004260EE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF3281FA776004260EE /* TestViewController.swift */; };
 		A85A8FF6281FA924004260EE /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85A8FF5281FA924004260EE /* TestCell.swift */; };
@@ -66,6 +66,7 @@
 		8C1711B9280FE92400D330DD /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
 		8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimationViewController.swift; sourceTree = "<group>"; };
 		8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1120-get-started-slider.json"; sourceTree = "<group>"; };
+		8C823D46281FCED700B09F0B /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Giftatte22/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		8CB79C4328115F04000D914A /* FirebaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCodable.swift; sourceTree = "<group>"; };
 		8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainRecommendResultCollectionViewCell.swift; path = "Giftatte22/Main/Main Recommend/Cell/MainRecommendResultCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		8CB79C4728129E79000D914A /* 20men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20men.png; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGenderViewController.swift; sourceTree = "<group>"; };
 		A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAgeViewController.swift; sourceTree = "<group>"; };
 		A85A8FED281F9791004260EE /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro.ttf"; path = "../../../../../../Library/Fonts/SF-Pro.ttf"; sourceTree = "<group>"; };
-		A85A8FEF281F9F5B004260EE /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = /Users/joy/lee/testatte/Giftatte22/PickerViewController.swift; sourceTree = "<absolute>"; };
 		A85A8FF1281FA603004260EE /* TestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestLayout.swift; path = Giftatte22/Survey/SurveyList/Controller/TestLayout.swift; sourceTree = SOURCE_ROOT; };
 		A85A8FF3281FA776004260EE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestViewController.swift; path = Giftatte22/Survey/SurveyList/Controller/TestViewController.swift; sourceTree = SOURCE_ROOT; };
 		A85A8FF5281FA924004260EE /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 			children = (
 				A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */,
 				A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */,
-				A85A8FEF281F9F5B004260EE /* PickerViewController.swift */,
+				8C823D46281FCED700B09F0B /* PickerViewController.swift */,
 				A8249D1927F6D8FC00957E10 /* SurveyCategoryViewController.swift */,
 				A8C67D5927F96BFB003B78F9 /* SurveyPriceViewController.swift */,
 				A85A8FF1281FA603004260EE /* TestLayout.swift */,
@@ -520,7 +520,7 @@
 				A83BFFE927F42B5D0035E12C /* SurveyHomeViewController.swift in Sources */,
 				3A65488427D650740043D3B5 /* AppDelegate.swift in Sources */,
 				8C1711B8280FE8CA00D330DD /* Strings.swift in Sources */,
-				A85A8FF0281F9F5B004260EE /* PickerViewController.swift in Sources */,
+				8C823D47281FCED700B09F0B /* PickerViewController.swift in Sources */,
 				A8094BF528113EE800716A45 /* ViewController.swift in Sources */,
 				A8094BF328113EE000716A45 /* MainRecommendResultViewController.swift in Sources */,
 				3A65488627D650740043D3B5 /* SceneDelegate.swift in Sources */,
