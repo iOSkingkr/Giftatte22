@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/joy/lee/testatte/Giftatte22/PickerViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:Giftatte22.xcodeproj">
    </FileRef>
    <FileRef

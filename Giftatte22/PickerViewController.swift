@@ -11,6 +11,7 @@ class PickerViewController: UIViewController {
     var categoryNameList: [String] = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
     var gender: String = ""
     var age: String = ""
+    var category = 0
     
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var selectedPickerUIView: UIView!
@@ -25,7 +26,21 @@ class PickerViewController: UIViewController {
     }
         
     @IBAction func didTapNextButton(_ sender: Any) {
-        pushNextPage(category: "1")
+        switch category {
+        case 0:
+            pushNextPage(category: "50000000")
+        case 1:
+            pushNextPage(category: "50000001")
+        case 2:
+            pushNextPage(category: "50000002")
+        case 3:
+            pushNextPage(category: "50000003")
+        case 4:
+            pushNextPage(category: "50000004")
+        default:
+            print("no find category")
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -84,6 +99,8 @@ extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("select=\(row)")
+        category = row
+        
     }
 }
 

@@ -21,14 +21,22 @@ class MainRecommendResultViewController: UIViewController {
         
         self.defaultContentsLabel.text = Strings.defaultContentsLabelArray[nowPage]
         
-        self.defaultTop5Label.text = Strings.defaultTop5LabelArray[nowPage]
+        self.defaultTop5Label.text = Strings.defaultTop5LabelArray
         
         self.defaultImg.image = recommendResultImageArray[nowPage]
         
         recommendTop5CollectionView.dataSource = self
         recommendTop5CollectionView.delegate = self
         
-        // Do any additional setup after loading the view.
+        
+        //defaultImg 원형 mask
+        let bounds = defaultImg.bounds
+        let pathCircle = UIBezierPath(ovalIn: bounds)
+        
+        let layer = CAShapeLayer()
+        layer.path = pathCircle.cgPath
+        defaultImg.layer.mask = layer
+        
     }
     
     var nowPage = 0
@@ -41,7 +49,9 @@ class MainRecommendResultViewController: UIViewController {
         )
     }
     
-    let recommendResultImageArray: Array<UIImage> = [UIImage(named:  "50gift.png")!,UIImage(named:"20men.png")!,UIImage(named:"20girl.png")!,UIImage(named:"gradegift.png")!,UIImage(named:"shitgift.png")!]
+    let recommendResultImageArray: Array<UIImage> = [UIImage(named:  "50gift.png")!,UIImage(named:"20girl.png")!,UIImage(named:"20men.png")!,UIImage(named:"gradegift.png")!,UIImage(named:"shitgift.png")!]
+    
+    
     
     @IBOutlet var defaultImg: UIImageView!
     
