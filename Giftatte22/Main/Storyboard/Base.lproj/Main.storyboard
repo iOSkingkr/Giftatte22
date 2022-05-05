@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XJ6-ds-mUV">
-                                <rect key="frame" x="20" y="88" width="335" height="69.333333333333314"/>
+                                <rect key="frame" x="20" y="63.999999999999993" width="335" height="69.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요즘 핫한" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-jC-u7v">
                                         <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="33.666666666666664"/>
@@ -59,7 +59,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="htm-hd-jvz">
-                                <rect key="frame" x="0.0" y="199.33333333333334" width="375" height="468.66666666666663"/>
+                                <rect key="frame" x="0.0" y="153.33333333333334" width="375" height="502.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bha-Oe-quI">
                                     <size key="itemSize" width="373" height="465"/>
@@ -81,9 +81,10 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3L-xs-fFf">
-                                <rect key="frame" x="25" y="706" width="325" height="52"/>
+                                <rect key="frame" x="25" y="696" width="325" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7A3-tx-Zz0"/>
+                                    <constraint firstAttribute="width" secondItem="C3L-xs-fFf" secondAttribute="height" multiplier="25:4" id="ZOZ-PV-XqG"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="선물 추천 받기" cornerStyle="capsule" titleAlignment="center">
@@ -103,12 +104,12 @@
                             <constraint firstItem="XJ6-ds-mUV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3gk-wQ-PcP"/>
                             <constraint firstItem="C3L-xs-fFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5pB-Mu-BeP"/>
                             <constraint firstItem="htm-hd-jvz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9vd-Jr-BhH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3L-xs-fFf" secondAttribute="bottom" constant="20" id="QY9-ZL-8HD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3L-xs-fFf" secondAttribute="bottom" constant="30" id="QY9-ZL-8HD"/>
                             <constraint firstItem="C3L-xs-fFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="WE3-7q-zee"/>
-                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="42" id="kdZ-NT-UkS"/>
+                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="20" id="kdZ-NT-UkS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C3L-xs-fFf" secondAttribute="trailing" constant="25" id="lDm-AZ-uNT"/>
-                            <constraint firstItem="XJ6-ds-mUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="tMZ-sV-Zat"/>
-                            <constraint firstItem="C3L-xs-fFf" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="38" id="wJZ-3q-DOY"/>
+                            <constraint firstItem="XJ6-ds-mUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="tMZ-sV-Zat"/>
+                            <constraint firstItem="C3L-xs-fFf" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="40" id="wJZ-3q-DOY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ6-ds-mUV" secondAttribute="trailing" constant="20" id="wcG-jA-faJ"/>
                         </constraints>
                     </view>

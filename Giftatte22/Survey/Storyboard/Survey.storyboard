@@ -494,21 +494,25 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그 사람에게 꼭 하고싶은 말은  무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoB-vd-JLZ" userLabel="선물 받을 사람의  성별은 무엇인가요?">
-                                <rect key="frame" x="56" y="108" width="232" height="48"/>
+                                <rect key="frame" x="56" y="108" width="232" height="111"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBd-NO-Bbi">
-                                <rect key="frame" x="57" y="190" width="255" height="454"/>
+                                <rect key="frame" x="57" y="253" width="261" height="441"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJI-km-43c">
-                                        <rect key="frame" x="58" y="380" width="139" height="44"/>
+                                        <rect key="frame" x="58" y="367" width="145" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="a82-wG-PLK"/>
+                                        </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="다음">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                            <color key="baseBackgroundColor" name="grey"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="다음" cornerStyle="capsule">
+                                            <fontDescription key="titleFontDescription" name="SFPro-Regular" family="SF Pro" pointSize="16"/>
+                                            <color key="baseForegroundColor" name="grey"/>
+                                            <color key="baseBackgroundColor" red="0.89411764705882346" green="0.89411764705882346" blue="0.89411764705882346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didTapNextButton:" destination="e46-o1-hqO" eventType="touchUpInside" id="HuA-CJ-eIa"/>
@@ -537,23 +541,23 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="pJI-km-43c" firstAttribute="top" secondItem="fBd-NO-Bbi" secondAttribute="top" constant="380" id="2sR-1X-BPH"/>
                                     <constraint firstItem="pJI-km-43c" firstAttribute="leading" secondItem="fBd-NO-Bbi" secondAttribute="leading" constant="58" id="DRl-td-JUF"/>
                                     <constraint firstItem="pJI-km-43c" firstAttribute="centerX" secondItem="fBd-NO-Bbi" secondAttribute="centerX" id="Fje-8s-SeO"/>
                                     <constraint firstItem="aG8-jN-fnS" firstAttribute="top" secondItem="fBd-NO-Bbi" secondAttribute="top" constant="140" id="Mae-Dc-ZId"/>
                                     <constraint firstItem="aG8-jN-fnS" firstAttribute="leading" secondItem="fBd-NO-Bbi" secondAttribute="leading" constant="13" id="Nsk-Kr-i0d"/>
-                                    <constraint firstAttribute="width" constant="255" id="UYj-1u-5es"/>
+                                    <constraint firstAttribute="width" secondItem="fBd-NO-Bbi" secondAttribute="height" multiplier="29:49" id="THK-78-Fy4"/>
                                     <constraint firstItem="WJf-rf-9YA" firstAttribute="leading" secondItem="aG8-jN-fnS" secondAttribute="trailing" constant="9" id="Zsf-c9-Exs"/>
                                     <constraint firstItem="WJf-rf-9YA" firstAttribute="top" secondItem="fBd-NO-Bbi" secondAttribute="top" constant="157" id="fJ5-uN-NDW"/>
                                     <constraint firstAttribute="bottom" secondItem="pJI-km-43c" secondAttribute="bottom" constant="30" id="fj8-7p-1rc"/>
-                                    <constraint firstAttribute="height" constant="454" id="pNJ-pd-PH1"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D1B-ph-UPP"/>
                         <color key="backgroundColor" name="yellow"/>
                         <constraints>
+                            <constraint firstItem="D1B-ph-UPP" firstAttribute="bottom" secondItem="fBd-NO-Bbi" secondAttribute="bottom" constant="84" id="3ZC-lo-rPP"/>
                             <constraint firstItem="OHz-IQ-w0E" firstAttribute="top" secondItem="D1B-ph-UPP" secondAttribute="top" constant="14" id="9zM-3P-z4W"/>
+                            <constraint firstItem="fBd-NO-Bbi" firstAttribute="centerX" secondItem="QKt-a1-FGz" secondAttribute="centerX" id="PLi-yL-TPz"/>
                             <constraint firstItem="eoB-vd-JLZ" firstAttribute="top" secondItem="OHz-IQ-w0E" secondAttribute="bottom" constant="14" id="bVL-XM-QbL"/>
                             <constraint firstItem="OHz-IQ-w0E" firstAttribute="leading" secondItem="D1B-ph-UPP" secondAttribute="leading" constant="56" id="esz-BV-r9g"/>
                             <constraint firstItem="fBd-NO-Bbi" firstAttribute="top" secondItem="eoB-vd-JLZ" secondAttribute="bottom" constant="34" id="jSg-z0-Bjl"/>
