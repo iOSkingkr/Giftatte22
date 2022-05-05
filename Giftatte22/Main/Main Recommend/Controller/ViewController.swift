@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -60,6 +60,28 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource{
         return 5
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let frameWidth = self.view.frame.width
+        let horizontalMargin: CGFloat = frameWidth * (56 / 375)
+        let width = frameWidth - (horizontalMargin * 2)
+        let height = width * (500 / 263)
+//        let collectionHeight: CGFloat = 382
+//        //collectionView.frame.height
+        
+//        if collectionHeight < height {
+//
+//            print(height)
+//            height = collectionHeight
+//            width = height * (263 / 500)
+//        }
+//
+        
+        
+        return CGSize(width: width, height: height)
+    }
+    
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //OnBoardCollectionViewCell에 onBoardImageView에 data에 cell 을 넣을 것임
         let cell = mainRecommendCollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendCollectionViewCell", for: indexPath) as! MainRecommendCollectionViewCell
