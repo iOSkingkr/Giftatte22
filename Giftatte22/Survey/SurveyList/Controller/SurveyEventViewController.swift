@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PickerViewController: UIViewController {
+class SurveyEventViewController: UIViewController {
     var categoryNameList: [String] = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
     var gender: String = ""
     var age: String = ""
@@ -16,9 +16,9 @@ class PickerViewController: UIViewController {
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var selectedPickerUIView: UIView!
 
-    
+
     private func pushNextPage(category: String){
-        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultViewController") as? SurveyResultViewController else { return }
+        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyPriceViewController") as? SurveyPriceViewController else { return }
         goNextPage.age = age
         goNextPage.gender = gender
         goNextPage.category = category
@@ -40,7 +40,6 @@ class PickerViewController: UIViewController {
         default:
             print("no find category")
         }
-        
     }
     
     override func viewDidLoad() {
@@ -67,9 +66,9 @@ class PickerViewController: UIViewController {
 //        pickerView.subviews[1].addSubview(upLine)
 //        pickerView.subviews[1].addSubview(underLine)
    }
-    
 }
-extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+
+extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

@@ -16,6 +16,8 @@ class SurveyResultViewController: UIViewController {
     var gender: String = ""
     var age: String = ""
     var category: String = ""
+    var price: String = ""
+    var item: String = ""
     
     //임시 연습용
     var gifts: [Gift] = [Gift(highPrice: 10_000, imageUrl:  "https://i.picsum.photos/id/986/200/300.jpg?hmac=uk_NL7rXttZ_ISvqJ3g_aV8Z_hQMxNLaABWXMHESj2Q", keyword: "시계", lowPrice: 3000, meanPrice: 6500, rank: 1, score: 80, webUrl: "https://msearch.shopping.naver.com/search/all?query=%ED%97%A4%EB%9D%BC%EB%B8%94%EB%9E%99%EC%BF%A0%EC%85%98&cat_id=&frm=NVSHATC")]
@@ -23,7 +25,8 @@ class SurveyResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("gender: \(self.gender), age: \(age), category: \(category)")
+        print("-결과창-")
+        print("gender: \(self.gender), age: \(age), category: \(category), price: \(price), item: \(item)")
 
         SurveyResultTableView.delegate = self
         SurveyResultTableView.dataSource = self
