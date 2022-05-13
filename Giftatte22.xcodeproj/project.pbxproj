@@ -15,9 +15,9 @@
 		8C1711B8280FE8CA00D330DD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B7280FE8CA00D330DD /* Strings.swift */; };
 		8C1711BA280FE92400D330DD /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B9280FE92400D330DD /* CarouselLayout.swift */; };
 		8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */; };
+		8C50D474282E2782007DB1F3 /* SurveyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */; };
 		8C533A2127FDFA6D0034DA9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8C533A2027FDFA6D0034DA9A /* Lottie */; };
 		8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */; };
-		8C823D47281FCED700B09F0B /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C823D46281FCED700B09F0B /* PickerViewController.swift */; };
 		8CA9ABEC282901E500B569F7 /* TestResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */; };
 		8CA9ABEE2829027B00B569F7 /* TestReusultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */; };
 		8CA9ABF02829195600B569F7 /* TestResultCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */; };
@@ -65,7 +65,6 @@
 		A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */; };
 		A8923ACF280EF9B3005EAD7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */; };
 		A8923AD1280F226E005EAD7C /* SurveyNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8923AD0280F226E005EAD7C /* SurveyNavigationViewController.swift */; };
-		A8B4013B282A561B005BF428 /* SurveyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4013A282A561B005BF428 /* SurveyEventViewController.swift */; };
 		A8B4013D282B9231005BF428 /* SurveyItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B4013C282B9231005BF428 /* SurveyItemViewController.swift */; };
 		A8C67D5A27F96BFB003B78F9 /* SurveyPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C67D5927F96BFB003B78F9 /* SurveyPriceViewController.swift */; };
 /* End PBXBuildFile section */
@@ -82,8 +81,8 @@
 		8C1711B7280FE8CA00D330DD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8C1711B9280FE92400D330DD /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
 		8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimationViewController.swift; sourceTree = "<group>"; };
+		8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyEventViewController.swift; sourceTree = "<group>"; };
 		8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1120-get-started-slider.json"; sourceTree = "<group>"; };
-		8C823D46281FCED700B09F0B /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PickerViewController.swift; path = Giftatte22/PickerViewController.swift; sourceTree = SOURCE_ROOT; };
 		8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewController.swift; sourceTree = "<group>"; };
 		8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReusultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -131,7 +130,6 @@
 		A88CCF3A28044C6B00D37E80 /* sv3CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sv3CollectionViewCell.swift; sourceTree = "<group>"; };
 		A8923ACE280EF9B3005EAD7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A8923AD0280F226E005EAD7C /* SurveyNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyNavigationViewController.swift; sourceTree = "<group>"; };
-		A8B4013A282A561B005BF428 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyEventViewController.swift; path = /Users/joy/lee/testatte/Giftatte22/Survey/SurveyList/Controller/SurveyEventViewController.swift; sourceTree = "<absolute>"; };
 		A8B4013C282B9231005BF428 /* SurveyItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyItemViewController.swift; sourceTree = "<group>"; };
 		A8C67D5927F96BFB003B78F9 /* SurveyPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPriceViewController.swift; sourceTree = "<group>"; };
 		BD92B7B1408C128B33261E18 /* Pods-Giftatte22.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftatte22.debug.xcconfig"; path = "Target Support Files/Pods-Giftatte22/Pods-Giftatte22.debug.xcconfig"; sourceTree = "<group>"; };
@@ -356,7 +354,7 @@
 			children = (
 				A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */,
 				A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */,
-				A8B4013A282A561B005BF428 /* SurveyEventViewController.swift */,
+				8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */,
 				A8C67D5927F96BFB003B78F9 /* SurveyPriceViewController.swift */,
 				A8B4013C282B9231005BF428 /* SurveyItemViewController.swift */,
 				A85A8FF1281FA603004260EE /* TestLayout.swift */,
@@ -592,6 +590,7 @@
 				A83BFFEB27F42E4F0035E12C /* SurveyGenderViewController.swift in Sources */,
 				A878B9CA28114BBB0091EE28 /* SurveyResultViewController.swift in Sources */,
 				8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */,
+				8C50D474282E2782007DB1F3 /* SurveyEventViewController.swift in Sources */,
 				A8094BF128113EB200716A45 /* MainRecommendCollectionViewCell.swift in Sources */,
 				A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */,
 				A85A8FF2281FA603004260EE /* TestLayout.swift in Sources */,
@@ -601,7 +600,6 @@
 				8CA9ABEC282901E500B569F7 /* TestResultCollectionViewController.swift in Sources */,
 				8CA9ABF02829195600B569F7 /* TestResultCollectionViewFlowLayout.swift in Sources */,
 				8C1711B8280FE8CA00D330DD /* Strings.swift in Sources */,
-				A8B4013B282A561B005BF428 /* SurveyEventViewController.swift in Sources */,
 				A8094BF528113EE800716A45 /* ViewController.swift in Sources */,
 				A8094BF328113EE000716A45 /* MainRecommendResultViewController.swift in Sources */,
 				3A65488627D650740043D3B5 /* SceneDelegate.swift in Sources */,
