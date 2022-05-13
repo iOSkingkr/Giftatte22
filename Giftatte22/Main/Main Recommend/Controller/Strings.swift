@@ -23,5 +23,12 @@ struct Strings{
     static let defaultTop5LabelArray = "이런 선물은 어때요?"
     
     static let defaultContentsLabelArray = ["#50대 이상 #돈이 최고", "#아이구 괜찮다니까~ #돈이 최고", "#아이구 괜찮다니까~ #돈이 최고", "#아이구 괜찮다니까~ #돈이 최고", "#여름이니까~ #돈이 최고"]
-
+    
+    //Survey
+    var itemNameList0: [String] = ["옷", "신발/시계", "전자제품", "책"]
+    var itemNameList1: [String] = ["옷", "신발/시계", "화장품", "상품권"]
+    var itemNameList2: [String] = ["전자제품", "인테리어소품", "출산육아템", "생활용품"]
+    var itemNameList3: [String] = ["전자제품", "생활용품", "상품권", "책"]
+    var itemNameList4: [String] = ["시계/신발", "전자제품", "생활용품", "상품권"]
+    
 }

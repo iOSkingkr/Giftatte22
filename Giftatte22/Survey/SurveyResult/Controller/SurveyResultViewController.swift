@@ -25,11 +25,11 @@ class SurveyResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("-결과창-")
-        print("gender: \(self.gender), age: \(age), category: \(category), price: \(price), item: \(item)")
+        print("-결과창- gender: \(self.gender), age: \(age), category: \(category), price: \(price), item: \(item)")
 
-        SurveyResultTableView.delegate = self
-        SurveyResultTableView.dataSource = self
+//        SurveyResultTableView.delegate = self
+//        SurveyResultTableView.dataSource = self
+        
         // Do any additional setup after loading the view.
 //        let db : Firestore = Firestore.firestore()
 //
@@ -79,49 +79,50 @@ class SurveyResultViewController: UIViewController {
     
 }
 
-extension SurveyResultViewController : UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gifts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let tableCell = SurveyResultTableView.dequeueReusableCell(withIdentifier: "SurveyResultTableViewCell", for: indexPath) as! SurveyResultTableViewCell
-
-        let gift = self.gifts[indexPath.row]
-        
-        tableCell.surveyResultLabel.text = gift.keyword
-        if let imgUrl = URL(string: gift.imageUrl){
-            
-            if let imagedata = try? Data(contentsOf: imgUrl){
-                tableCell.surveyResultImage.image = UIImage(data: imagedata)
-            } else{
-                print("image error")
-            }
-        }
-
 //
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SurveyResultViewController.listViewPage(_:)))
-//        tableCell.isUserInteractionEnabled = true
-//        tableCell.tag = indexPath.row
-//        tableCell.addGestureRecognizer(tapGestureRecognizer)
-        
-        return tableCell
-    }
-    
-    // 테이블뷰에서 클릭했을때 동작하는 걸 넣는다
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // weburl 넘어가는거 해보기~ 5/5까지~
-    }
-    
-    @objc func listViewPage(_ sender:AnyObject){
-        if let url = URL(string:"https://msearch.shopping.naver.com/search/all?query=%ED%97%A4%EB%9D%BC%EB%B8%94%EB%9E%99%EC%BF%A0%EC%85%98&cat_id=&frm=NVSHATC"){
-            UIApplication.shared.open(url, options: [:])
-        }
-        
-        
-        
-    }
-    
-    
-}
+//extension SurveyResultViewController : UITableViewDelegate, UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return gifts.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let tableCell = SurveyResultTableView.dequeueReusableCell(withIdentifier: "SurveyResultTableViewCell", for: indexPath) as! SurveyResultTableViewCell
+//
+//        let gift = self.gifts[indexPath.row]
+//
+//        tableCell.surveyResultLabel.text = gift.keyword
+//        if let imgUrl = URL(string: gift.imageUrl){
+//
+//            if let imagedata = try? Data(contentsOf: imgUrl){
+//                tableCell.surveyResultImage.image = UIImage(data: imagedata)
+//            } else{
+//                print("image error")
+//            }
+//        }
+//
+////
+////        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SurveyResultViewController.listViewPage(_:)))
+////        tableCell.isUserInteractionEnabled = true
+////        tableCell.tag = indexPath.row
+////        tableCell.addGestureRecognizer(tapGestureRecognizer)
+//
+//        return tableCell
+//    }
+//
+//    // 테이블뷰에서 클릭했을때 동작하는 걸 넣는다
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        // weburl 넘어가는거 해보기~ 5/5까지~
+//    }
+//
+//    @objc func listViewPage(_ sender:AnyObject){
+//        if let url = URL(string:"https://msearch.shopping.naver.com/search/all?query=%ED%97%A4%EB%9D%BC%EB%B8%94%EB%9E%99%EC%BF%A0%EC%85%98&cat_id=&frm=NVSHATC"){
+//            UIApplication.shared.open(url, options: [:])
+//        }
+//
+//
+//
+//    }
+//
+//
+//}

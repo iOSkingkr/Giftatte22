@@ -22,10 +22,11 @@ class SurveyPriceViewController: UIViewController {
         goNextPage.price = price
         self.navigationController?.pushViewController(goNextPage, animated: true)
     }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("gender: \(self.gender), age: \(age), category: \(category)")
+        print("-P-gender: \(gender), age: \(age), category: \(category)")
 
         // Do any additional setup after loading the view.
     }
