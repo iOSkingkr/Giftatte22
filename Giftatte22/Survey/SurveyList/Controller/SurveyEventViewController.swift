@@ -24,7 +24,18 @@ class SurveyEventViewController: UIViewController {
         goNextPage.category = category
         self.navigationController?.pushViewController(goNextPage, animated: true)
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        selectedPickerUIView.layer.cornerRadius = 15
         
+        print("gender: \(gender), age: \(age)")
+        // Do any additional setup after loading the view.
+    }
+    
+    
     @IBAction func didTapNextButton(_ sender: Any) {
         switch category {
         case 0:
@@ -41,15 +52,7 @@ class SurveyEventViewController: UIViewController {
             print("no find category")
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        selectedPickerUIView.layer.cornerRadius = 15
 
-        // Do any additional setup after loading the view.
-    }
     override func viewWillLayoutSubviews() {
         selectedPickerViewUICustom()
     }
@@ -74,13 +77,16 @@ extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 60
+        return 50
     }
     
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoryNameList.count
+    }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-//        view.backgroundColor = .white
+//        view.backgroundColor = .blue
 
         let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         nameLabel.text = categoryNameList[row]
@@ -91,16 +97,11 @@ extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         return view
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryNameList.count
-    }
- 
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("select=\(row)")
         category = row
-        
     }
+    
 }
 
 
