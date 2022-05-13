@@ -36,8 +36,12 @@ class CarouselLayout: UICollectionViewFlowLayout {
         
         let itemWidth = self.itemSize.width
         
-        let scaledItemOffset =  (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
+        let scaledItemOffset = (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
+        
+        
         self.minimumLineSpacing = spacing - scaledItemOffset
+        
+       
         
         self.scrollDirection = .horizontal
     }
@@ -54,7 +58,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
         return attributes.map({ self.transformLayoutAttributes(attributes: $0) })
     }
     
-    private func transformLayoutAttributes(attributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+    public func transformLayoutAttributes(attributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         
         guard let collectionView = self.collectionView else {return attributes}
         
@@ -65,6 +69,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
         let maxDistance = 2*(self.itemSize.width + self.minimumLineSpacing)
         let distance = min(abs(collectionCenter - center), maxDistance)
         
+       
         let ratio = (maxDistance - distance)/maxDistance
         
         let alpha = ratio * (1 - self.sideItemAlpha) + self.sideItemAlpha

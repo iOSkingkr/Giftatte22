@@ -37,8 +37,11 @@ class MainRecommendResultViewController: UIViewController {
         layer.path = pathCircle.cgPath
         defaultImg.layer.mask = layer
         
+    
+         xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
     }
     
+
     var nowPage = 0
     
     //UIView 모서리 설정
@@ -50,9 +53,9 @@ class MainRecommendResultViewController: UIViewController {
     }
     
     let recommendResultImageArray: Array<UIImage> = [UIImage(named:  "50gift.png")!,UIImage(named:"20girl.png")!,UIImage(named:"20men.png")!,UIImage(named:"gradegift.png")!,UIImage(named:"shitgift.png")!]
+
     
-    
-    
+    @IBOutlet var xMarkBackButton: UIButton!
     @IBOutlet var defaultImg: UIImageView!
     
     @IBOutlet var recommendTop5CollectionView: UICollectionView!
@@ -67,6 +70,7 @@ class MainRecommendResultViewController: UIViewController {
     //roundBottomView의 내용 들어갈 Label
     @IBOutlet var defaultTop5Label: UILabel!
     //콜렉션 뷰에 들어갈 Top5 제목 Label
+    
     
     
     @IBAction func mainRecommendResultBackButton(_ sender: Any) {
