@@ -36,13 +36,10 @@ class CarouselLayout: UICollectionViewFlowLayout {
         
         let itemWidth = self.itemSize.width
         
-        let scaledItemOffset = (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
+//        let scaledItemOffset = (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
+//  뒤에있는 셀을 중복하여 클릭하여 겹치지 않도록 수정 
         
-        
-        self.minimumLineSpacing = spacing - scaledItemOffset
-        
-       
-        
+        self.minimumLineSpacing = 0
         self.scrollDirection = .horizontal
     }
     
