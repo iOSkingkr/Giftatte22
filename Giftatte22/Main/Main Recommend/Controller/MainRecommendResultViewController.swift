@@ -15,6 +15,7 @@ class MainRecommendResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         roundBottomView()
+        
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
         
         self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray
@@ -52,7 +53,7 @@ class MainRecommendResultViewController: UIViewController {
         )
     }
     
-    let recommendResultImageArray: Array<UIImage> = [UIImage(named:  "50gift.png")!,UIImage(named:"20girl.png")!,UIImage(named:"20men.png")!,UIImage(named:"gradegift.png")!,UIImage(named:"shitgift.png")!]
+    let recommendResultImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
 
     
     @IBOutlet var xMarkBackButton: UIButton!

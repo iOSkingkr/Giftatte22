@@ -9,22 +9,28 @@ import UIKit
 
 
 class ViewController: UIViewController {
-
-    @IBOutlet var mainRecommendCollectionView: UICollectionView!
     
+    @IBOutlet var mainRecommendCollectionView: UICollectionView!
+
     @IBAction func didTapRecommendationButton(_ sender: Any) {
         guard let goSurveyViewController = storyboard?.instantiateViewController(withIdentifier: "SurveyNavigationViewController") as? SurveyNavigationViewController else{return}
         goSurveyViewController.modalPresentationStyle = .fullScreen
         present(goSurveyViewController,animated: true)
     }
-    let mainRecommendCollectImageArray: Array<UIImage> = [UIImage(named: "03.png")!,UIImage(named: "04.png")!,UIImage(named: "05.png")!,UIImage(named: "01.png")!,UIImage(named: "02.png")!]
+    
+    
+    let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
+    
+    let topLabelArray = Strings.collectTitleArray
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addCollectionView()
-//        mainRecommendCollectionView.backgroundColor = .clear
         self.view.backgroundColor = .white
-        navigationController?.navigationBar.isHidden = true
+        
+        
+        
     }
     
     func addCollectionView(){
@@ -34,16 +40,16 @@ class ViewController: UIViewController {
         layout.spacing = -197
         layout.isPagingEnabled = true
         layout.sideItemAlpha = 0.5
-
+      
+        
         mainRecommendCollectionView.collectionViewLayout = layout
-            
+        
         self.mainRecommendCollectionView?.delegate = self
         self.mainRecommendCollectionView?.dataSource = self
-
         self.mainRecommendCollectionView?.register(MainRecommendCollectionViewCell.self, forCellWithReuseIdentifier: "MainRecommendCollectionViewCell")
     }
     
-   
+    
     
     
 }
@@ -54,27 +60,28 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return mainRecommendCollectImageArray.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let frameWidth = self.view.frame.width
         let horizontalMargin: CGFloat = frameWidth * (56 / 375)
         let width = frameWidth - (horizontalMargin * 2)
-        let height = width * (500 / 263)
-//        let collectionHeight: CGFloat = 382
-//        //collectionView.frame.height
+        let height = width * (442 / 260)
+        //        let collectionHeight: CGFloat = 382
+        //        //collectionView.frame.height
         
-//        if collectionHeight < height {
-//
-//            print(height)
-//            height = collectionHeight
-//            width = height * (263 / 500)
-//        }
-//
+        //        if collectionHeight < height {
+        //
+        //            print(height)
+        //            height = collectionHeight
+        //            width = height * (263 / 500)
+        //        }
+        //
+        
         
         
         return CGSize(width: width, height: height)
@@ -85,16 +92,21 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //OnBoardCollectionViewCell에 onBoardImageView에 data에 cell 을 넣을 것임
         let cell = mainRecommendCollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendCollectionViewCell", for: indexPath) as! MainRecommendCollectionViewCell
-
-        cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
-//        cell.recommendMainImageTitleLabel.text = Strings.collectTitleArray[indexPath.row]
-//        cell.recommendMainImageContentLabel.text = Strings.collectContentsArray
         
+        cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
+        cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
+        cell.customBottomLabel.text = Strings.collectContentsArray
+        
+       
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
         cell.customView.isUserInteractionEnabled = true
         cell.customView.tag = indexPath.row
         cell.customView.addGestureRecognizer(tapGestureRecognizer)
+        cell.layer.cornerRadius = 30
+        cell.clipsToBounds = true
+      
+        
         return cell
     }
     

@@ -8,7 +8,15 @@
 import UIKit
 
 struct Images {
-    static let temp01: UIImage = UIImage(named:"01.png")!
+    // mainRecommendCollectionView image
+    static let parentsGiftImage: UIImage = UIImage(named:"parentsGiftImage.png")!
+    static let summerGiftImage: UIImage = UIImage(named:"summerGiftImage.png")!
+    static let twentyMenGiftImage: UIImage = UIImage(named:"twentyMenGiftImage.png")!
+    static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImage.png")!
+    static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImage.png")!
+    
+    
+    
     
     // survey 
     static let baby: UIImage = UIImage(named: "baby.png")!

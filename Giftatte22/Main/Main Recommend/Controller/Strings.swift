@@ -12,7 +12,7 @@ struct Strings{
     
     //MainRecommendViewCOntroller
     static let collectTitleArray = ["50대 부모님 선물", "20대 여자 선물" , "20대 남자 선물" ,"최악의 선물 top3", "쓸모 없는 선물 top5"]
-    static let collectContentsArray = "뭐가 필요한지 모르겠다면 Click!!!"
+    static let collectContentsArray = "생일 선물이거나 기념일날 이정도 선물\n하면 최소 센스있단 소리 들으실거에요"
     
     
     //MainRecommendResultViewController
