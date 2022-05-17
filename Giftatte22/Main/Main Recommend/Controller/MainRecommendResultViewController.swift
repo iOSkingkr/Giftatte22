@@ -38,11 +38,11 @@ class MainRecommendResultViewController: UIViewController {
         layer.path = pathCircle.cgPath
         defaultImg.layer.mask = layer
         
-    
-         xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
+        
+        xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
     }
     
-
+    
     var nowPage = 0
     
     //UIView 모서리 설정
@@ -54,7 +54,7 @@ class MainRecommendResultViewController: UIViewController {
     }
     
     let recommendResultImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
-
+    
     
     @IBOutlet var xMarkBackButton: UIButton!
     @IBOutlet var defaultImg: UIImageView!
@@ -90,9 +90,13 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         
         let db : Firestore = Firestore.firestore()
         
-        let docRef = db.collection("ALL").document("10").collection("50000001").document("2022-04-07").collection("1").document("appInfo")
         
-        //get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
+        
+        
+        let docRef = db.collection("testCollectionViewData").document("useless")
+        
+        //
+        //        get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 
@@ -110,6 +114,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
                         
                         if let imagedata = try? Data(contentsOf: url){
                             top5Cell.top5ImageView.image = UIImage(data: imagedata)
+                            
                         } else{
                             print("image error")
                         }
@@ -130,6 +135,8 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         top5Cell.isUserInteractionEnabled = true
         top5Cell.tag = indexPath.row
         top5Cell.addGestureRecognizer(tapGestureRecognizer)
+        top5Cell.layer.cornerRadius = 30
+        top5Cell.clipsToBounds = true
         
         
         
