@@ -29,6 +29,12 @@ class SurveyAgeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         print("gender: \(gender)")
+        age10.setRounded()
+        age20.setRounded()
+        age30.setRounded()
+        age40.setRounded()
+        age50.setRounded()
+        ageAnything.setRounded()
     }
     
     //MARK: - IBAction 버튼 클릭시 다음 페이지로 이동
@@ -67,3 +73,4 @@ class SurveyAgeViewController: UIViewController {
     */
 
 }
+

@@ -23,25 +23,13 @@ class SurveyGenderViewController: UIViewController {
         self.navigationController?.pushViewController(goSurveyTwoView, animated: true)
     }
     
-//    struct Answer {
-//        var age: Int
-//        var gender: String
-//    }
-//
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //남성버튼 둥근 모서리 + 그림자 설정
-        manBT.layer.cornerRadius = 15                           //둥근 모서리 설정
-        manBT.layer.shadowOffset = CGSize(width: 1, height: 5)  //그림자 위치 기본(0,0)
-        manBT.layer.shadowColor = UIColor.gray.cgColor          //그림자 컬러
-        manBT.layer.shadowRadius = 10                           //그림자의 블러 정도 지정 (0일때 가장 진함)
-        manBT.layer.shadowOpacity = 0.4                         //그림자 투명도 설정
-
+        manBT.setRounded()
+        womanBT.setRounded()
+        anyBT.setRounded()
         // Do any additional setup after loading the view.
     }
-    
     
     //MARK: - IBAction  버튼 눌렀을 경우, 다음 페이지로 이동함
         @IBAction func pushManBT(_ sender: Any) {
@@ -56,7 +44,15 @@ class SurveyGenderViewController: UIViewController {
             pushNextPage(gender: "all")
         }
     
+}
 
-
+extension UIButton{
+    func setRounded(){
+        self.layer.cornerRadius = 15
+        self.layer.shadowOffset = CGSize(width: 1, height: 5)
+        self.layer.shadowColor = UIColor.gray.cgColor
+        self.layer.shadowRadius = 10
+        self.layer.shadowOpacity = 0.4
+    }
 }
 
