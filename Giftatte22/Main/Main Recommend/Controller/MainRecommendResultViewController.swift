@@ -31,18 +31,38 @@ class MainRecommendResultViewController: UIViewController {
         
         
         //defaultImg 원형 mask
-        let bounds = defaultImg.bounds
-        let pathCircle = UIBezierPath(ovalIn: bounds)
+ 
+        let width: CGFloat = 545450
+        let height: CGFloat = 2454545
+             
+        let frames = defaultImg.frame
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = CGRect(x: 0, y: 0,
+                                  width: width, height: height)
+        let pathCircle = UIBezierPath(ovalIn: frames)
         
-        let layer = CAShapeLayer()
-        layer.path = pathCircle.cgPath
-        defaultImg.layer.mask = layer
+        shapeLayer.path = pathCircle.cgPath
+        defaultImg.layer.mask = shapeLayer
         
-    
-         xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
+        
+//        let bounds = defaultImg.bounds
+//
+//        let pathCircle = UIBezierPath(ovalIn: bounds)
+//
+//        let layer = CAShapeLayer()
+//        layer.path = pathCircle.cgPath
+//
+//        defaultImg.layer.mask = layer
+      
+
+        
+      
+        
+        
+        xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
     }
     
-
+    
     var nowPage = 0
     
     //UIView 모서리 설정
@@ -54,7 +74,7 @@ class MainRecommendResultViewController: UIViewController {
     }
     
     let recommendResultImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
-
+    
     
     @IBOutlet var xMarkBackButton: UIButton!
     @IBOutlet var defaultImg: UIImageView!
@@ -89,47 +109,65 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
         
         let db : Firestore = Firestore.firestore()
-        
-        let docRef = db.collection("ALL").document("10").collection("50000001").document("2022-04-07").collection("1").document("appInfo")
-        
-        //get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                
-                //오류 잡는거 do catch문
-                do{
-                    //문서에 있는 데이터를 변수에 저장
-                    let data = document.data()
-                    
-                    //데이터 값을 제이슨 형태로 바꾸는
-                    let jsonData = try JSONSerialization.data(withJSONObject: data)
-                    
-                    let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                    
-                    if let url = URL(string: userInfo.imageUrl){
-                        
-                        if let imagedata = try? Data(contentsOf: url){
-                            top5Cell.top5ImageView.image = UIImage(data: imagedata)
-                        } else{
-                            print("image error")
+        let presentsRef = db.collection("2022-05-13").document("ALL").collection("10").document("50000000").collection("appInfo")
+        presentsRef.getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
                         }
                     }
-                    else{
-                        
-                    }
-                    
-                }catch let err{
-                    print("err: \(err)")
                 }
-                
-            } else {
-                print("Document does not exist")
-            }
-        }
+        
+//        let docRef = db.collection("testCollectionViewData").document("useless")
+//
+//        let docRef2 = db.collection("testCollectionViewData").document("useless2")
+//
+//        let docArray = [docRef, docRef2]
+//
+//        //
+//        //        get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//
+//                //오류 잡는거 do catch문
+//                do{
+//                    //문서에 있는 데이터를 변수에 저장
+//                    let data = document.data()
+//
+//                    //데이터 값을 제이슨 형태로 바꾸는
+//                    let jsonData = try JSONSerialization.data(withJSONObject: data)
+//
+//                    let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+//
+//                    if let url = URL(string: userInfo.imageUrl){
+//
+//                        if let imagedata = try? Data(contentsOf: url){
+//                            top5Cell.top5ImageView.image = UIImage(data: imagedata)
+//
+//                        } else{
+//                            print("image error")
+//                        }
+//                    }
+//                    else{
+//
+//                    }
+//
+//                }catch let err{
+//                    print("err: \(err)")
+//                }
+//
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
         top5Cell.isUserInteractionEnabled = true
         top5Cell.tag = indexPath.row
         top5Cell.addGestureRecognizer(tapGestureRecognizer)
+        top5Cell.layer.cornerRadius = 30
+        top5Cell.clipsToBounds = true
         
         
         
@@ -143,6 +181,14 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         }
     }
 }
+
+//extension UIImageView {
+//    func setRounded() {
+//        let radius = CGRectGet(self.frame) / 2
+//        self.layer.cornerRadius = radius
+//        self.layer.masksToBounds =true
+//    }
+//}
 
 
 
