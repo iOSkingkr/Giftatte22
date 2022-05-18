@@ -11,6 +11,8 @@ import Lottie
 class SurveyItemViewController: UIViewController{
 
     @IBOutlet var itemImage: UIImageView!
+    @IBOutlet var whiteBackgroundUIView: UIView!
+    
     
     var itemNameList0: [String] = ["옷", "신발/시계", "전자제품", "책"]
     var itemNameList1: [String] = ["옷", "신발/시계", "화장품", "상품권"]
@@ -34,7 +36,7 @@ class SurveyItemViewController: UIViewController{
     @IBOutlet var selectedPickerUIView: UIView!
     
     private func pushNextPage(item: String){
-        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultViewController") as? SurveyResultViewController else { return }
+        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "TestResultCollectionViewController") as? TestResultCollectionViewController else { return }
         goNextPage.age = age
         goNextPage.gender = gender
         goNextPage.category = category
@@ -52,6 +54,7 @@ class SurveyItemViewController: UIViewController{
         
         print("gender: \(gender), age: \(age), category: \(category), price: \(price)")
         // Do any additional setup after loading the view.
+        whiteBackgroundUIView.layer.cornerRadius = 10
     }
     
     @IBAction func didTapShowResultButton(_ sender: Any) {
