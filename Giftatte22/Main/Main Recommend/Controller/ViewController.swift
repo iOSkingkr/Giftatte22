@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import Firebase
 
 
 class ViewController: UIViewController {
+    var onboardingDataArray: [Gift] = []
     
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
 
@@ -55,7 +58,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
-    
+   
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -98,11 +101,13 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         cell.customBottomLabel.text = Strings.collectContentsArray
         
        
+       
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
         cell.customView.isUserInteractionEnabled = true
         cell.customView.tag = indexPath.row
         cell.customView.addGestureRecognizer(tapGestureRecognizer)
+        
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
       
@@ -113,15 +118,49 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
     
     
     
-    @objc func defaultpage(_ sender:AnyObject){
+    @objc func defaultpage (_ sender:AnyObject) {
         guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
         
+        func getOnboardingData(){
+            print("데이터 이제 불러올거야 지금은 어때? \(self.onboardingDataArray)")
+                let db : Firestore = Firestore.firestore()
+                let onboardingRef = db.collection("onboarding")
+                onboardingRef.getDocuments() { (querySnapshot, err) in
+                    if let err = err {
+                        print("Error getting documents: \(err)")
+                    } else {
+                        for document in querySnapshot!.documents {
+                            print("\(document.documentID) => \(document.data())")
+                            do{
+
+                                let data = document.data()
+
+                                let jsonData = try JSONSerialization.data(withJSONObject: data)
+                                let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                                self.onboardingDataArray.append(userInfo)
+                                print("내가볼곳!!!!! \(userInfo)")
+
+
+                            }catch let err{
+                                print("err: \(err)")
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        
+        getOnboardingData()
         //modal 방식으로 전체화면으로 띄워주기
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .crossDissolve
         
+        
         //onBoardResultVC에 있는 nowPage를 tag로 받기
         nextVC.nowPage = sender.view.tag
+        nextVC.onboardingDataArray = self.onboardingDataArray
+        
         self.present(nextVC, animated: true)
         
         
