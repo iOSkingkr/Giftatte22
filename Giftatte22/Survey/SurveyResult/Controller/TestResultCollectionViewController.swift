@@ -13,6 +13,13 @@ import FirebaseFirestore
 class TestResultCollectionViewController: UIViewController {
     
     @IBOutlet var testResultCollecionVeiw: UICollectionView!
+    
+    var gender: String = ""
+    var age: String = ""
+    var category: String = ""
+    var price: String = ""
+    var item: String = ""
+    
     var heights:[CGFloat] = [218.0,240.0,218.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0]
     var widths: [CGFloat] = [100.0,100.0,100.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0]
     var colors: UIColor = .white

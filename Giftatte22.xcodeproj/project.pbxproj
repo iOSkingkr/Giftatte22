@@ -243,7 +243,6 @@
 		8C25C077280FE3E500D2B2E4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */,
 				8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */,
 				A8094BF228113EE000716A45 /* MainRecommendResultViewController.swift */,
 				8C1711B7280FE8CA00D330DD /* Strings.swift */,
@@ -251,7 +250,6 @@
 				8CB79C4328115F04000D914A /* FirebaseCodable.swift */,
 				8C1711B9280FE92400D330DD /* CarouselLayout.swift */,
 				A8094BF428113EE800716A45 /* ViewController.swift */,
-				8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */,
 				8CA9ABF128291D2800B569F7 /* TestResultCollectionReusableView.swift */,
 				8CA22D7728362D6700FECF38 /* Onboarding.swift */,
 			);
@@ -388,6 +386,7 @@
 		A85DE7BA28129C4900043439 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */,
 				A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */,
 			);
 			path = Controller;
@@ -396,6 +395,7 @@
 		A85DE7BB28129C4F00043439 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */,
 				A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */,
 			);
 			path = Cell;

@@ -15,6 +15,8 @@ class SurveyEventViewController: UIViewController {
     
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var selectedPickerUIView: UIView!
+    @IBOutlet var whiteBackgroundUIView: UIView!
+    
 
 
     private func pushNextPage(category: String){
@@ -33,6 +35,7 @@ class SurveyEventViewController: UIViewController {
         
         print("gender: \(gender), age: \(age)")
         // Do any additional setup after loading the view.
+        whiteBackgroundUIView.layer.cornerRadius = 10
     }
     
     
@@ -91,7 +94,9 @@ extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         nameLabel.text = categoryNameList[row]
         nameLabel.textAlignment = .center
-        nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .light)
+        nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
+        //SF-Pro 폰트는 설정안되어 있음..
+        nameLabel.textColor = UIColor(named: "grey")
 
         view.addSubview(nameLabel)
         return view

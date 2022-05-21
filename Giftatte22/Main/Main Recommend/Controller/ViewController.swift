@@ -11,7 +11,7 @@ import Firebase
 
 
 class ViewController: UIViewController {
-    var onboardingDataArray: [Gift] = []
+//    var onboardingDataArray: [Gift] = []
     
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
 
@@ -93,7 +93,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         //OnBoardCollectionViewCell에 onBoardImageView에 data에 cell 을 넣을 것임
+        
         let cell = mainRecommendCollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendCollectionViewCell", for: indexPath) as! MainRecommendCollectionViewCell
         
         cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
@@ -118,40 +120,42 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
     
     
     
-    @objc func defaultpage (_ sender:AnyObject) {
+    @objc func defaultpage (_ sender:AnyObject)  {
         guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
-        
-        func getOnboardingData(){
-            print("데이터 이제 불러올거야 지금은 어때? \(self.onboardingDataArray)")
+//    var onBoardingDataArrayNextVC:[Gift] = []
+      
+      func getOnboardingData() -> [Gift]{
+          var onboardingDataArray:[Gift] = []
+//            print("데이터 이제 불러올거야 지금은 어때? \(self.onboardingDataArray)")
                 let db : Firestore = Firestore.firestore()
                 let onboardingRef = db.collection("onboarding")
-                onboardingRef.getDocuments() { (querySnapshot, err) in
+                onboardingRef.getDocuments(){(querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else {
                         for document in querySnapshot!.documents {
                             print("\(document.documentID) => \(document.data())")
                             do{
-
                                 let data = document.data()
-
                                 let jsonData = try JSONSerialization.data(withJSONObject: data)
                                 let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                                self.onboardingDataArray.append(userInfo)
-                                print("내가볼곳!!!!! \(userInfo)")
-
-
+                                onboardingDataArray.append(userInfo)
                             }catch let err{
                                 print("err: \(err)")
-
                             }
 
                         }
                     }
                 }
+          return onboardingDataArray
             }
         
-        getOnboardingData()
+//        onBoardingDataArrayNextVC = getOnboardingData()
+      
+        
+       
+      
+        
         //modal 방식으로 전체화면으로 띄워주기
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .crossDissolve
@@ -159,7 +163,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         
         //onBoardResultVC에 있는 nowPage를 tag로 받기
         nextVC.nowPage = sender.view.tag
-        nextVC.onboardingDataArray = self.onboardingDataArray
+        nextVC.onboardingDataArray = getOnboardingData()
+        
         
         self.present(nextVC, animated: true)
         
