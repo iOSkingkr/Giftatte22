@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 
+
 class MainRecommendResultViewController: UIViewController {
     var onboardingDataArray: [Gift] = []
     var nowPage = 0
@@ -95,12 +96,12 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         //onboardingDataArray를 초기화 하지 않아서 나는 오류인것 같음
 //        //렐름 라이브러리 이용해서 개선필요
 //        print(indexPath.row)
-//        if let url = URL(string: self.onboardingDataArray[indexPath.row].imageUrl){
+//        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
 //            if let imagedata = try? Data(contentsOf: url){
 //                top5Cell.top5ImageView.image = UIImage(data: imagedata)
 //            }
 //        }
-//
+
         
         
         

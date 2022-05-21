@@ -152,7 +152,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-QR-3Id">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-QR-3Id">
                                 <rect key="frame" x="77.666666666666686" y="110" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="8MA-rF-wR6"/>
