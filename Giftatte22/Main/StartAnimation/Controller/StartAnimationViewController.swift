@@ -8,6 +8,7 @@
 import UIKit
 import Lottie
 
+
 class StartAnimationViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -36,6 +37,8 @@ class StartAnimationViewController: UIViewController {
         let navigation = UINavigationController(rootViewController: rootVC)
         navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
+        
+
         
     }
 }

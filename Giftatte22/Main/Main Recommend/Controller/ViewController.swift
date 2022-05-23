@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         present(goSurveyViewController,animated: true)
     }
     
-    
     let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
     
     let topLabelArray = Strings.collectTitleArray
@@ -31,6 +30,7 @@ class ViewController: UIViewController {
         
         addCollectionView()
         self.view.backgroundColor = .white
+        navigationController?.navigationBar.isHidden = true
         
         
         
@@ -61,6 +61,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+       
         return 1
     }
     
@@ -84,9 +85,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         //            width = height * (263 / 500)
         //        }
         //
-        
-        
-        
         return CGSize(width: width, height: height)
     }
     
@@ -102,75 +100,86 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
         cell.customBottomLabel.text = Strings.collectContentsArray
         
-       
-       
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
-        cell.customView.isUserInteractionEnabled = true
-        cell.customView.tag = indexPath.row
-        cell.customView.addGestureRecognizer(tapGestureRecognizer)
+//
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
+//        cell.customView.isUserInteractionEnabled = true
+//        cell.customView.tag = indexPath.row
+//        cell.customView.addGestureRecognizer(tapGestureRecognizer)
         
         cell.layer.cornerRadius = 30
         cell.clipsToBounds = true
-      
         
+ 
         return cell
     }
     
-    
-    
-    
-    @objc func defaultpage (_ sender:AnyObject)  {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
-//    var onBoardingDataArrayNextVC:[Gift] = []
-      
-      func getOnboardingData() -> [Gift]{
-          var onboardingDataArray:[Gift] = []
-//            print("데이터 이제 불러올거야 지금은 어때? \(self.onboardingDataArray)")
-                let db : Firestore = Firestore.firestore()
-                let onboardingRef = db.collection("onboarding")
-                onboardingRef.getDocuments(){(querySnapshot, err) in
-                    if let err = err {
-                        print("Error getting documents: \(err)")
-                    } else {
-                        for document in querySnapshot!.documents {
-                            print("\(document.documentID) => \(document.data())")
-                            do{
-                                let data = document.data()
-                                let jsonData = try JSONSerialization.data(withJSONObject: data)
-                                let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                                onboardingDataArray.append(userInfo)
-                            }catch let err{
-                                print("err: \(err)")
-                            }
-
-                        }
-                    }
-                }
-          return onboardingDataArray
-            }
-        
-//        onBoardingDataArrayNextVC = getOnboardingData()
-      
-        
-       
-      
         
         //modal 방식으로 전체화면으로 띄워주기
         nextVC.modalPresentationStyle = .fullScreen
         nextVC.modalTransitionStyle = .crossDissolve
-        
-        
-        //onBoardResultVC에 있는 nowPage를 tag로 받기
-        nextVC.nowPage = sender.view.tag
-        nextVC.onboardingDataArray = getOnboardingData()
-        
-        
+        nextVC.nowPage = indexPath.row
         self.present(nextVC, animated: true)
-        
-        
+//
+//         func getOnboardingData(){
+//            var onboardingDataArray:[Gift] = []
+//    //            print("데이터 이제 불러올거야 지금은 어때? \(self.onboardingDataArray)")
+//                  let db : Firestore = Firestore.firestore()
+//                  let onboardingRef = db.collection("onboarding")
+//                  onboardingRef.getDocuments(){(querySnapshot, err) in
+//                      if let err = err {
+//                          print("Error getting documents: \(err)")
+//                      } else {
+//                          for document in querySnapshot!.documents {
+//                              print("\(document.documentID) => \(document.data())")
+//                              do{
+//                                  let data = document.data()
+//                                  let jsonData = try JSONSerialization.data(withJSONObject: data)
+//                                  let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+//                                  onboardingDataArray.append(userInfo)
+//                                  onboardingDataArray = self.onboardingDataArray
+//                                  collectionView.reloadData()
+//                                  print("지금 보고 있는곳이 여기야\(onboardingDataArray)")
+//                              }catch let err{
+//                                  print("err: \(err)")
+//                              }
+//
+//                          }
+//                      }
+//                  }
+//              }
+//
+//        nextVC.onboardingDataArray = onboardingDataArray
+//        collectionView.reloadData()
+     
         
     }
+    
+
+//    @objc func defaultpage (_ sender:AnyObject)  {
+//        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
+////    var onBoardingDataArrayNextVC:[Gift] = []
+//
+//
+////
+//
+//        //modal 방식으로 전체화면으로 띄워주기
+//        nextVC.modalPresentationStyle = .fullScreen
+//        nextVC.modalTransitionStyle = .crossDissolve
+//
+//
+//        //onBoardResultVC에 있는 nowPage를 tag로 받기
+//        nextVC.nowPage = sender.view.tag
+//       nextVC.onboardingDataArray = getOnboardingData()
+//
+//
+//
+//        self.present(nextVC, animated: true)
+//
+//
+//
+//    }
     
 }
 
