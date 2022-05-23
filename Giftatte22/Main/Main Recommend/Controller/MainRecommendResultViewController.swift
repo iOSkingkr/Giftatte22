@@ -13,13 +13,18 @@ import Firebase
 class MainRecommendResultViewController: UIViewController {
     var onboardingDataArray: [Gift] = []
     var nowPage = 0
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        recommendTop5CollectionView.reloadData()
+        getOnboardingData()
+       
+     
+        roundBottomView()
         print("1 \(self.onboardingDataArray)")
         print("1 \(self.nowPage)")
-        roundBottomView()
-        
+       
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
         
         self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray
@@ -47,7 +52,36 @@ class MainRecommendResultViewController: UIViewController {
         
         xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
     }
-    
+   
+    func getOnboardingData(){
+       var onboardingDataArray:[Gift] = []
+             let db : Firestore = Firestore.firestore()
+             let onboardingRef = db.collection("onboarding")
+             onboardingRef.getDocuments(){(querySnapshot, err) in
+                 if let err = err {
+                     print("Error getting documents: \(err)")
+                 } else {
+                     for document in querySnapshot!.documents {
+                         print("\(document.documentID) => \(document.data())")
+                         do{
+                             let data = document.data()
+                             let jsonData = try JSONSerialization.data(withJSONObject: data)
+                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                             onboardingDataArray.append(userInfo)
+                             print("잘 들어가고 있나 확인해보자 \(onboardingDataArray)")
+                            
+                             onboardingDataArray = self.onboardingDataArray
+                            
+                             print("지금 보고 있는곳이 여기야\(self.onboardingDataArray)")
+                         }catch let err{
+                             print("err: \(err)")
+                         }
+
+                     }
+                 }
+             }
+         }
+   
     //UIView 모서리 설정
     func roundBottomView() {
         bottomView.clipsToBounds = true
@@ -83,24 +117,27 @@ class MainRecommendResultViewController: UIViewController {
     
 }
 
-extension MainRecommendResultViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainRecommendResultViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("2 \(onboardingDataArray)")
-        return 5
+        return onboardingDataArray.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         print("3 \(onboardingDataArray)")
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
         
-        //onboardingDataArray를 초기화 하지 않아서 나는 오류인것 같음
-//        //렐름 라이브러리 이용해서 개선필요
-//        print(indexPath.row)
-//        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
-//            if let imagedata = try? Data(contentsOf: url){
-//                top5Cell.top5ImageView.image = UIImage(data: imagedata)
-//            }
-//        }
+//        onboardingDataArray를 초기화 하지 않아서 나는 오류인것 같음
+        //렐름 라이브러리 이용해서 개선필요
+        print(indexPath.row)
+        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
+            if let imagedata = try? Data(contentsOf: url){
+                top5Cell.top5ImageView.image = UIImage(data: imagedata)
+            }
+        }
 
         
         
@@ -144,24 +181,24 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         //                print("Document does not exist")
         //            }
         //        }
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
-        top5Cell.isUserInteractionEnabled = true
-        top5Cell.tag = indexPath.row
-        top5Cell.addGestureRecognizer(tapGestureRecognizer)
-        top5Cell.layer.cornerRadius = 30
-        top5Cell.clipsToBounds = true
-        
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
+//        top5Cell.isUserInteractionEnabled = true
+//        top5Cell.tag = indexPath.row
+//        top5Cell.addGestureRecognizer(tapGestureRecognizer)
+//        top5Cell.layer.cornerRadius = 30
+//        top5Cell.clipsToBounds = true
+//
         
         
         return top5Cell
         
     }
     
-    @objc func collectionViewPage(_ sender:AnyObject){
-        if let url = URL(string:"https://msearch.shopping.naver.com/search/all?query=%EC%97%90%EC%96%B4%ED%8F%AC%EC%8A%A4%EC%9B%90&frm=NVSHSRC&prevQuery=%ED%97%A4%EB%9D%BC%EB%B8%94%EB%9E%99%EC%BF%A0%EC%85%98"){
-            UIApplication.shared.open(url, options: [:])
-        }
-    }
+//    @objc func collectionViewPage(_ sender:AnyObject){
+//        if let url = URL(string:"https://msearch.shopping.naver.com/search/all?query=%EC%97%90%EC%96%B4%ED%8F%AC%EC%8A%A4%EC%9B%90&frm=NVSHSRC&prevQuery=%ED%97%A4%EB%9D%BC%EB%B8%94%EB%9E%99%EC%BF%A0%EC%85%98"){
+//            UIApplication.shared.open(url, options: [:])
+//        }
+//    }
 }
 
 

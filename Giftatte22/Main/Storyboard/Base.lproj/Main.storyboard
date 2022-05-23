@@ -285,13 +285,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsO-2I-1cs">
-                                                            <rect key="frame" x="41.666666666666657" y="53" width="45" height="22"/>
+                                                            <rect key="frame" x="41.666666666666657" y="53.666666666666657" width="45" height="21"/>
                                                             <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="18"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC8-3g-Dwc">
-                                                            <rect key="frame" x="88.333333333333329" y="57.000000000000007" width="31.666666666666671" height="14.333333333333336"/>
+                                                            <rect key="frame" x="88.333333333333329" y="57" width="31.666666666666671" height="14"/>
                                                             <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
@@ -335,13 +335,13 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 선물 어때이?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-6N-dJy">
-                                            <rect key="frame" x="101" y="83" width="173" height="34"/>
+                                            <rect key="frame" x="101.33333333333333" y="83.666666666666671" width="172.66666666666669" height="32.666666666666671"/>
                                             <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                             <color key="textColor" name="grey"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dr2-3z-Cae">
-                                            <rect key="frame" x="156" y="137" width="63" height="63"/>
+                                            <rect key="frame" x="156" y="136.33333333333334" width="63" height="63"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="63" id="9oF-QF-oAm"/>
                                                 <constraint firstAttribute="width" constant="63" id="mfy-vj-Ru5"/>
