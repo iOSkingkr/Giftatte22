@@ -123,14 +123,12 @@ class MainRecommendResultViewController: UIViewController {
 
 extension MainRecommendResultViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         print("2 \(onboardingDataArray)")
-        
         return onboardingDataArray.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         print("3 \(onboardingDataArray)")
@@ -187,15 +185,13 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         //                print("Document does not exist")
         //            }
         //        }
-        //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
-        //        top5Cell.isUserInteractionEnabled = true
-        //        top5Cell.tag = indexPath.row
-        //        top5Cell.addGestureRecognizer(tapGestureRecognizer)
-        //        guard let url = URL(string: onboardingDataArray[indexPath.row].webUrl) else { return ("\(onboardingDataArray)") }
-        //        UIApplication.shared.open(url)
-        //        print(" \(indexPath.row)선택했잖슴!!!!!!!")
-        //
-        
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
+//        top5Cell.isUserInteractionEnabled = true
+//        top5Cell.tag = indexPath.row
+//        top5Cell.addGestureRecognizer(tapGestureRecognizer)
+//        top5Cell.layer.cornerRadius = 30
+//        top5Cell.clipsToBounds = true
+//
         
         
         return top5Cell
