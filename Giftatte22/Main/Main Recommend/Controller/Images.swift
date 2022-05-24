@@ -15,6 +15,14 @@ struct Images {
     static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImage.png")!
     static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImage.png")!
     
+    // mainRecommendResult image
+    static let noBGParentsGiftImage: UIImage = UIImage(named:"noBGParentsGiftImage.png")!
+    static let noBGSummerGiftImage: UIImage = UIImage(named:"noBGSummerGiftImage.png")!
+    static let noBGTwentyMenGiftImage: UIImage = UIImage(named:"noBGTwentyMenGiftImage.png")!
+    static let noBGTwentyWomenGiftImage: UIImage = UIImage(named:"noBGTwentyWomenGiftImage.png")!
+    static let noBGUselessGiftImage: UIImage = UIImage(named:"noBGUselessGiftImage.png")!
+    
+    
     
     
     
