@@ -13,6 +13,11 @@ import Firebase
 class MainRecommendResultViewController: UIViewController {
     var onboardingDataArray: [Gift] = []
     var nowPage = 0
+    var firstcollect = "presents"
+    var firstdoc = "ALL"
+    var secondcollect = "ALL"
+    var seconddoc = "5000000"
+    var thirdcollect = "appInfo"
     
     
     override func viewDidLoad() {
@@ -51,10 +56,70 @@ class MainRecommendResultViewController: UIViewController {
         xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
     }
     
+   
+    
     func getOnboardingData() {
         var onboardingDataArray:[Gift] = []
         let db : Firestore = Firestore.firestore()
-        let onboardingRef = db.collection("onboarding")
+        
+         switch nowPage{
+         case 0:
+             firstcollect = "presents"
+             firstdoc = "ALL"
+             secondcollect = "50"
+             seconddoc = "50000003"
+             thirdcollect = "appInfo"
+                          
+         case 1:
+
+             firstcollect = "presents"
+             firstdoc = "f"
+             secondcollect = "20"
+             seconddoc = "50000000"
+             thirdcollect = "appInfo"
+         case 2:
+
+             firstcollect = "presents"
+             firstdoc = "m"
+             secondcollect = "20"
+             seconddoc = "50000000"
+             thirdcollect = "appInfo"
+         case 3:
+             let onboardingRef = db.collection("onboarding")
+             onboardingRef.getDocuments(){(querySnapshot, err) in
+                 if let err = err {
+                     print("Error getting documents: \(err)")
+                 } else {
+                     for document in querySnapshot!.documents {
+                        
+                         do{
+                             let data = document.data()
+                             let jsonData = try JSONSerialization.data(withJSONObject: data)
+                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                             onboardingDataArray.append(userInfo)
+                           
+                             self.onboardingDataArray = onboardingDataArray
+                             self.recommendTop5CollectionView.reloadData()
+                             
+                        
+                         }catch let err{
+                             print("err: \(err)")
+                         }
+                         
+                     }
+                 }
+             }
+         case 4:
+             firstcollect = "presents"
+             firstdoc = "ALL"
+             secondcollect = "50"
+             seconddoc = "50000003"
+             thirdcollect = "appInfo"
+         default:
+           print("nowpage 0~5사이가 아닙니다.")
+         }
+        
+        let onboardingRef = db.collection(firstcollect).document(firstdoc).collection(secondcollect).document(seconddoc).collection(thirdcollect)
         onboardingRef.getDocuments(){(querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -95,7 +160,7 @@ class MainRecommendResultViewController: UIViewController {
     let recommendResultImageArray: Array<UIImage> = [Images.noBGParentsGiftImage, Images.noBGTwentyWomenGiftImage, Images.noBGTwentyMenGiftImage, Images.noBGUselessGiftImage, Images.noBGSummerGiftImage]
     
     let recommendResultImageBackgroundColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
-    
+  
     
     @IBOutlet var xMarkBackButton: UIButton!
     @IBOutlet var defaultImg: UIImageView!
@@ -125,18 +190,13 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        print("2 \(onboardingDataArray)")
         return onboardingDataArray.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        print("3 \(onboardingDataArray)")
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
-        
-        //        onboardingDataArray를 초기화 하지 않아서 나는 오류인것 같음
-        //렐름 라이브러리 이용해서 개선필요
-        print(indexPath.row)
+
         if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
                 top5Cell.top5ImageView.image = UIImage(data: imagedata)
@@ -146,79 +206,19 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             }
         }
         
-        //        let docRef = db.collection("testCollectionViewData").document("useless")
-        //
-        //
-        //        //
-        //        //        get 실제 불러오는 함수 document랑 error중에 하나로 받아옴
-        //        docRef.getDocument { (document, error) in
-        //            if let document = document, document.exists {
-        
-        //오류 잡는거 do catch문
-        //                do{
-        //                    //문서에 있는 데이터를 변수에 저장
-        //                    let data = document.data()
-        //
-        //데이터 값을 제이슨 형태로 바꾸는
-        //                            let jsonData = try JSONSerialization.data(withJSONObject: data)
-        //
-        //                            let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-        //
-        //                            if let url = URL(string: userInfo.imageUrl){
-        //
-        //                                if let imagedata = try? Data(contentsOf: url){
-        //                                    top5Cell.top5ImageView.image = UIImage(data: imagedata)
-        //
-        //                                } else{
-        //                                    print("image error")
-        //                                }
-        //                    }
-        //                    else{
-        //
-        //                    }
-        //
-        //                }catch let err{
-        //                    print("err: \(err)")
-        //                }
-        //
-        //            } else {
-        //                print("Document does not exist")
-        //            }
-        //        }
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainRecommendResultViewController.collectionViewPage(_:)))
-//        top5Cell.isUserInteractionEnabled = true
-//        top5Cell.tag = indexPath.row
-//        top5Cell.addGestureRecognizer(tapGestureRecognizer)
-//        top5Cell.layer.cornerRadius = 30
-//        top5Cell.clipsToBounds = true
-//
-        
-        
         return top5Cell
         
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        print(" \(indexPath.row)선택했잖슴!!!!!!!")
         
-//        if let url = URL(string: "https://search.shopping.naver.com/search/all?query=2021%EB%85%84%20%EB%8B%AC%EB%A0%A5&cat_id=&frm=NVSHATC"){
-        
-        guard let urldata = URL(string: onboardingDataArray[indexPath.row].webUrl) else { return }
-                
-           
-            UIApplication.shared.open(urldata, options: [:])
-            
-
-            //        print(" \(indexPath.row)선택했잖슴!!!!!!!")
-            
-           
+        if let encoded = onboardingDataArray[indexPath.row].webUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded){
+            UIApplication.shared.open(myURL, options: [:])
         }
         
     }
-
-
-
+}
 
 extension UIColor {
     
