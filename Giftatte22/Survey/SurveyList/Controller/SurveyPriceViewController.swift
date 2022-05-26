@@ -55,7 +55,7 @@ class SurveyPriceViewController: UIViewController {
         pushNextPage(price: "30000to50000")
     }
     @IBAction func didTapPriceAll(_ sender: Any) {
-        pushNextPage(price: "All")
+        pushNextPage(price: "ALL")
     }
     
     /*

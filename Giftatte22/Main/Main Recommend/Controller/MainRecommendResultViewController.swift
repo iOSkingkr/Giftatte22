@@ -125,19 +125,16 @@ class MainRecommendResultViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                   
                     do{
                         let data = document.data()
                         let jsonData = try JSONSerialization.data(withJSONObject: data)
                         let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                         onboardingDataArray.append(userInfo)
-                        print("잘 들어가고 있나 확인해보자 \(onboardingDataArray)")
-                        //                             print(userInfo)
-                        //
+                
                         self.onboardingDataArray = onboardingDataArray
                         self.recommendTop5CollectionView.reloadData()
                         
-                        print("지금 보고 있는곳이 여기야\(self.onboardingDataArray)")
                     }catch let err{
                         print("err: \(err)")
                     }

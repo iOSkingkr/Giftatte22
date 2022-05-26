@@ -42,15 +42,15 @@ class SurveyEventViewController: UIViewController {
     @IBAction func didTapNextButton(_ sender: Any) {
         switch category {
         case 0:
-            pushNextPage(category: "50000000")
+            pushNextPage(category: "입학/졸업")
         case 1:
-            pushNextPage(category: "50000001")
+            pushNextPage(category: "생일")
         case 2:
-            pushNextPage(category: "50000002")
+            pushNextPage(category: "결혼/출산")
         case 3:
-            pushNextPage(category: "50000003")
+            pushNextPage(category: "취업/퇴사")
         case 4:
-            pushNextPage(category: "50000004")
+            pushNextPage(category: "기념일")
         default:
             print("no find category")
         }

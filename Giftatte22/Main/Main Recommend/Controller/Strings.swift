@@ -11,12 +11,12 @@ import Foundation
 struct Strings{
     
     //MainRecommendViewCOntroller
-    static let collectTitleArray = ["50대 부모님 선물", "20대 여자 선물" , "20대 남자 선물" ,"최악의 선물 top3", "쓸모 없는 선물 top5"]
+    static let collectTitleArray = ["50대 부모님 선물", "20대 여자 선물" , "20대 남자 선물" ,"쓸모없는 선물 Top9", "여름 필수템 선물"]
     static let collectContentsArray = "생일 선물이거나 기념일날 이정도 선물\n하면 최소 센스있단 소리 들으실거에요"
     
     
     //MainRecommendResultViewController
-    static let defaultTopTitleLabelArray = ["부모님 선물", "20대 여자 선물", "20대 남자 선물", "쓸데 없는 선물 Top5" , "쓸모없는 선물 Top5", "시원한 선물 Top5"]
+    static let defaultTopTitleLabelArray = ["부모님 선물", "20대 여자 선물", "20대 남자 선물", "쓸데 없는 선물 Top5" , "쓸모없는 선물 Top9", "시원한 선물 "]
     
     static let defaultBottomTitleLabelArray = "데이터 불러오기"
     
