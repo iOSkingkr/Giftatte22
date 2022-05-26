@@ -36,11 +36,6 @@
 		8CA9ABF4282920AF00B569F7 /* giftIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9ABF3282920AF00B569F7 /* giftIcon.png */; };
 		8CB79C4428115F04000D914A /* FirebaseCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB79C4328115F04000D914A /* FirebaseCodable.swift */; };
 		8CB79C4628129799000D914A /* MainRecommendResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */; };
-		8CB79C4A28129E7A000D914A /* 20men.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4728129E79000D914A /* 20men.png */; };
-		8CB79C4B28129E7A000D914A /* gradegift.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4828129E7A000D914A /* gradegift.png */; };
-		8CB79C4C28129E7A000D914A /* shitgift.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4928129E7A000D914A /* shitgift.png */; };
-		8CB79C4E28129E8F000D914A /* 50gift.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4D28129E8F000D914A /* 50gift.png */; };
-		8CB79C5028129EB8000D914A /* 20girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CB79C4F28129EB8000D914A /* 20girl.png */; };
 		8CDEAE4527FEBDC600304715 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDEAE4327FEBD7900304715 /* NotoSansCJKkr-Regular.otf */; };
 		8CDEAE4627FEBDC800304715 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDEAE4427FEBD8800304715 /* NotoSansCJKkr-Bold.otf */; };
 		8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDA86E2823C2EF0007BE67 /* Images.swift */; };
@@ -107,11 +102,6 @@
 		8CA9ABF3282920AF00B569F7 /* giftIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giftIcon.png; sourceTree = "<group>"; };
 		8CB79C4328115F04000D914A /* FirebaseCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCodable.swift; sourceTree = "<group>"; };
 		8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainRecommendResultCollectionViewCell.swift; path = "Giftatte22/Main/Main Recommend/Cell/MainRecommendResultCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
-		8CB79C4728129E79000D914A /* 20men.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20men.png; sourceTree = "<group>"; };
-		8CB79C4828129E7A000D914A /* gradegift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradegift.png; sourceTree = "<group>"; };
-		8CB79C4928129E7A000D914A /* shitgift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shitgift.png; sourceTree = "<group>"; };
-		8CB79C4D28129E8F000D914A /* 50gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 50gift.png; sourceTree = "<group>"; };
-		8CB79C4F28129EB8000D914A /* 20girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20girl.png; sourceTree = "<group>"; };
 		8CDEAE4327FEBD7900304715 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		8CDEAE4427FEBD8800304715 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
 		8CEDA86E2823C2EF0007BE67 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -321,11 +311,6 @@
 				8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */,
 				8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */,
 				8CA9ABF3282920AF00B569F7 /* giftIcon.png */,
-				8CB79C4728129E79000D914A /* 20men.png */,
-				8CB79C4828129E7A000D914A /* gradegift.png */,
-				8CB79C4928129E7A000D914A /* shitgift.png */,
-				8CB79C4D28129E8F000D914A /* 50gift.png */,
-				8CB79C4F28129EB8000D914A /* 20girl.png */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -518,7 +503,6 @@
 			files = (
 				A8651AD1282E454400C28C83 /* baby.png in Resources */,
 				A8651AD4282E454400C28C83 /* interior.png in Resources */,
-				8CB79C4C28129E7A000D914A /* shitgift.png in Resources */,
 				A8651AD6282E454400C28C83 /* cosmetics.png in Resources */,
 				A8651AD3282E454400C28C83 /* giftcard.png in Resources */,
 				8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */,
@@ -528,9 +512,7 @@
 				3A65488D27D650750043D3B5 /* Assets.xcassets in Resources */,
 				A8094BF828113F6400716A45 /* Main.storyboard in Resources */,
 				8C43B9BB283CA1B900FDC155 /* noBGUselessGiftImage.png in Resources */,
-				8CB79C4E28129E8F000D914A /* 50gift.png in Resources */,
 				8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */,
-				8CB79C4A28129E7A000D914A /* 20men.png in Resources */,
 				A8651AD5282E454400C28C83 /* book.png in Resources */,
 				8CDEAE4627FEBDC800304715 /* NotoSansCJKkr-Bold.otf in Resources */,
 				A8651AD9282E454400C28C83 /* lifeitem.png in Resources */,
@@ -541,10 +523,8 @@
 				8C43B9B9283CA1B900FDC155 /* noBGTwentyMenGiftImage.png in Resources */,
 				A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */,
 				A85A8FEE281F9791004260EE /* SF-Pro.ttf in Resources */,
-				8CB79C5028129EB8000D914A /* 20girl.png in Resources */,
 				8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */,
 				8C43B9BC283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png in Resources */,
-				8CB79C4B28129E7A000D914A /* gradegift.png in Resources */,
 				8C43B9BA283CA1B900FDC155 /* noBGParentsGiftImage.png in Resources */,
 				8CA9ABF4282920AF00B569F7 /* giftIcon.png in Resources */,
 				A8923ACF280EF9B3005EAD7C /* GoogleService-Info.plist in Resources */,

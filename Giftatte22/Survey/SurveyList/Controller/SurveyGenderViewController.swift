@@ -41,9 +41,8 @@ class SurveyGenderViewController: UIViewController {
        }
         
         @IBAction func pushAnyBT(_ sender: Any) {
-            pushNextPage(gender: "all")
+            pushNextPage(gender: "ALL")
         }
-    
 }
 
 extension UIButton{

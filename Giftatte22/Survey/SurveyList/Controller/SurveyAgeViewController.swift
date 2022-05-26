@@ -59,7 +59,7 @@ class SurveyAgeViewController: UIViewController {
     }
     
     @IBAction func clickAgeAnything(_ sender: Any) {
-        pushNextPage(age: "anything")
+        pushNextPage(age: "ALL")
     }
 
     /*
