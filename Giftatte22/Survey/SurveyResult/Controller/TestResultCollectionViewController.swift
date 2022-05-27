@@ -28,6 +28,7 @@ class TestResultCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getResultGiftData()
         testResultCollecionVeiw.delegate = self
         testResultCollecionVeiw.dataSource = self
@@ -78,9 +79,17 @@ extension TestResultCollectionViewController: UICollectionViewDelegateFlowLayout
         if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
                 cell.testResultImageView.image = UIImage(data: imagedata)
+                
+                let bounds = cell.testResultImageView.bounds
+                let pathCircle = UIBezierPath(ovalIn: bounds)
+                
+                let layer = CAShapeLayer()
+                layer.path = pathCircle.cgPath
+                
+                cell.testResultImageView.layer.mask = layer
             }
         }
-        cell.testResultProductPriceLabel.text = String(resultGiftDataArray[indexPath.row].meanPrice)
+        cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
         cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
         cell.layer.cornerRadius = 15
         

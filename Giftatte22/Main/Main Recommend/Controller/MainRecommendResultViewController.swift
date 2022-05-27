@@ -112,8 +112,8 @@ class MainRecommendResultViewController: UIViewController {
          case 4:
              firstcollect = "presents"
              firstdoc = "ALL"
-             secondcollect = "50"
-             seconddoc = "50000003"
+             secondcollect = "20"
+             seconddoc = "50000005"
              thirdcollect = "appInfo"
          default:
            print("nowpage 0~5사이가 아닙니다.")

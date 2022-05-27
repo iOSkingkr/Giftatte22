@@ -16,7 +16,7 @@ struct Strings{
     
     
     //MainRecommendResultViewController
-    static let defaultTopTitleLabelArray = ["부모님 선물", "20대 여자 선물", "20대 남자 선물", "쓸데 없는 선물 Top5" , "쓸모없는 선물 Top9", "시원한 선물 "]
+    static let defaultTopTitleLabelArray = ["부모님 선물", "20대 여자 선물", "20대 남자 선물", "쓸데 없는 선물 Top9" , "시원한 선물"]
     
     static let defaultBottomTitleLabelArray = "데이터 불러오기"
     
