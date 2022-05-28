@@ -152,7 +152,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-QR-3Id">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-QR-3Id">
                                 <rect key="frame" x="77.666666666666686" y="110" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="8MA-rF-wR6"/>
@@ -380,6 +380,7 @@
     </scenes>
     <resources>
         <image name="giftIcon.png" width="68" height="67"/>
+        <image name="xmark" width="128" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="OnBoardColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
