@@ -23,6 +23,7 @@
 		8C50D474282E2782007DB1F3 /* SurveyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */; };
 		8C533A2127FDFA6D0034DA9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8C533A2027FDFA6D0034DA9A /* Lottie */; };
 		8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */; };
+		8C8E9A0228435CD5008A840B /* gift.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E9A0128435CD5008A840B /* gift.json */; };
 		8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */; };
 		8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */; };
 		8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */; };
@@ -89,6 +90,7 @@
 		8C43B9B7283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noBGTwentyWomenGiftImage.png; sourceTree = "<group>"; };
 		8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyEventViewController.swift; sourceTree = "<group>"; };
 		8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1120-get-started-slider.json"; sourceTree = "<group>"; };
+		8C8E9A0128435CD5008A840B /* gift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gift.json; sourceTree = "<group>"; };
 		8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyMenGiftImage.png; sourceTree = "<group>"; };
 		8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uselessGiftImage.png; sourceTree = "<group>"; };
 		8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomenGiftImage.png; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		8C25C07A280FE44700D2B2E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8C8E9A0128435CD5008A840B /* gift.json */,
 				8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */,
 			);
 			path = Model;
@@ -520,6 +523,7 @@
 				8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */,
 				A8651AD8282E454400C28C83 /* clothes.png in Resources */,
 				8CA22D76283230CD00FECF38 /* parentsGiftImage.png in Resources */,
+				8C8E9A0228435CD5008A840B /* gift.json in Resources */,
 				8C43B9B9283CA1B900FDC155 /* noBGTwentyMenGiftImage.png in Resources */,
 				A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */,
 				A85A8FEE281F9791004260EE /* SF-Pro.ttf in Resources */,
@@ -761,7 +765,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Y8XK6FZ8WC;
+				DEVELOPMENT_TEAM = F2PAPBBTST;
 				INFOPLIST_FILE = Giftatte22/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
