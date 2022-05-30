@@ -14,13 +14,13 @@ class StartAnimationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let time = DispatchTime.now() + (5.0)
+        let time = DispatchTime.now() + (2.5)
         
         DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
             self?.fire()
         }
         
-        let animationView: AnimationView = .init(name: "1120-get-started-slider")
+        let animationView: AnimationView = .init(name: "gift")
         self.view.addSubview(animationView)
         
         animationView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
