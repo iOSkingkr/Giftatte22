@@ -10,6 +10,7 @@ import Lottie
 
 
 class StartAnimationViewController: UIViewController {
+    let transitionHandler = TransitionHandler()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,12 +33,17 @@ class StartAnimationViewController: UIViewController {
     }
     @objc func fire()
     {
-        
+
         guard let rootVC = self.storyboard?.instantiateViewController(identifier: "ViewController") else{return}
+//        self.present(rootVC, animated: true, completion: nil)
         let navigation = UINavigationController(rootViewController: rootVC)
+        navigation.transitioningDelegate = self.transitionHandler
+
+
         navigation.modalPresentationStyle = .fullScreen
+//        navigation.modalTransitionStyle = UIModalTransitionStyle.coverVertical
         self.present(navigation, animated: true, completion: nil)
-        
+
 
         
     }

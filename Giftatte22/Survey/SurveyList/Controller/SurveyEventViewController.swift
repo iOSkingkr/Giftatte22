@@ -9,6 +9,8 @@ import UIKit
 
 class SurveyEventViewController: UIViewController {
     var categoryNameList: [String] = ["입학/졸업", "생일", "결혼/출산", "취업/퇴사", "기념일"]
+    var tencategoryNameList: [String] = ["입학/졸업", "생일", "취업", "기념일"]
+    var fortyAndFiftycategoryNameList: [String] = ["생일", "결혼/출산", "취업/퇴사", "기념일"]
     var gender: String = ""
     var age: String = ""
     var category = 0
@@ -40,20 +42,54 @@ class SurveyEventViewController: UIViewController {
     
     
     @IBAction func didTapNextButton(_ sender: Any) {
-        switch category {
-        case 0:
-            pushNextPage(category: "입학/졸업")
-        case 1:
-            pushNextPage(category: "생일")
-        case 2:
-            pushNextPage(category: "결혼/출산")
-        case 3:
-            pushNextPage(category: "취업/퇴사")
-        case 4:
-            pushNextPage(category: "기념일")
+        switch age{
+        case "10":
+            switch category{
+            case 0:
+                pushNextPage(category: "입학/졸업")
+            case 1:
+                pushNextPage(category: "생일")
+            case 2:
+                pushNextPage(category: "취업/퇴사")
+            case 3:
+                pushNextPage(category: "기념일")
+            default:
+                print ("age가 10일때 카테고리 선택이 안됨")
+            }
+        case "20","30":
+            switch category{
+            case 0:
+                pushNextPage(category: "입학/졸업")
+            case 1:
+                pushNextPage(category: "생일")
+            case 2:
+                pushNextPage(category: "결혼/출산")
+            case 3:
+                pushNextPage(category: "취업/퇴사")
+            case 4 :
+                pushNextPage(category: "기념일")
+            default:
+                print ("age가 20,30일때 카테고리 선택이 안됨")
+            }
+        case "40","50":
+            switch category{
+            case 0:
+                pushNextPage(category: "생일")
+            case 1:
+                pushNextPage(category: "결혼/출산")
+            case 2:
+                pushNextPage(category: "취업/퇴사")
+            case 3:
+                pushNextPage(category: "기념일")
+            default:
+                print ("age가 20,30일때 카테고리 선택이 안됨")
+            }
+            
         default:
-            print("no find category")
+            print("category선택중 선택된 age가 없음 error")
+            
         }
+      
     }
 
     override func viewWillLayoutSubviews() {
@@ -84,7 +120,16 @@ extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categoryNameList.count
+        switch age{
+        case "10":
+            return tencategoryNameList.count
+        case "20","30":
+            return categoryNameList.count
+        case "40","50":
+            return fortyAndFiftycategoryNameList.count
+        default:
+            return tencategoryNameList.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -92,7 +137,17 @@ extension SurveyEventViewController: UIPickerViewDelegate, UIPickerViewDataSourc
 //        view.backgroundColor = .blue
 
         let nameLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
-        nameLabel.text = categoryNameList[row]
+        
+        switch age{
+        case "10":
+            nameLabel.text = tencategoryNameList[row]
+        case "20","30":
+            nameLabel.text = categoryNameList[row]
+        case "40","50":
+            nameLabel.text = fortyAndFiftycategoryNameList[row]
+        default:
+            nameLabel.text = tencategoryNameList[row]
+        }
         nameLabel.textAlignment = .center
         nameLabel.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
         //SF-Pro 폰트는 설정안되어 있음..
