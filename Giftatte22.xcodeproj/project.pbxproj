@@ -12,6 +12,7 @@
 		3A65488D27D650750043D3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A65488C27D650750043D3B5 /* Assets.xcassets */; };
 		3A65489027D650750043D3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A65488E27D650750043D3B5 /* LaunchScreen.storyboard */; };
 		717A64BF46A8895543665FB3 /* Pods_Giftatte22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C51C696EF1F982CD5EC90E /* Pods_Giftatte22.framework */; };
+		8C0EEF962844B30900803B10 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EEF952844B30900803B10 /* TransitionHandler.swift */; };
 		8C1711B8280FE8CA00D330DD /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B7280FE8CA00D330DD /* Strings.swift */; };
 		8C1711BA280FE92400D330DD /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B9280FE92400D330DD /* CarouselLayout.swift */; };
 		8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */; };
@@ -80,6 +81,7 @@
 		3A65489127D650750043D3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57C51C696EF1F982CD5EC90E /* Pods_Giftatte22.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Giftatte22.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E23A7A4155DF0392E15A75 /* Pods-Giftatte22.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giftatte22.release.xcconfig"; path = "Target Support Files/Pods-Giftatte22/Pods-Giftatte22.release.xcconfig"; sourceTree = "<group>"; };
+		8C0EEF952844B30900803B10 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
 		8C1711B7280FE8CA00D330DD /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		8C1711B9280FE92400D330DD /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
 		8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAnimationViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				8C25C07C280FE4D300D2B2E4 /* StartAnimationViewController.swift */,
+				8C0EEF952844B30900803B10 /* TransitionHandler.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				8C1711BA280FE92400D330DD /* CarouselLayout.swift in Sources */,
 				A8249D1A27F6D8FC00957E10 /* SurveyCategoryViewController.swift in Sources */,
 				3A65488627D650740043D3B5 /* SceneDelegate.swift in Sources */,
+				8C0EEF962844B30900803B10 /* TransitionHandler.swift in Sources */,
 				8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */,
 				8CB79C4428115F04000D914A /* FirebaseCodable.swift in Sources */,
 				A83BFFED27F4566D0035E12C /* SurveyAgeViewController.swift in Sources */,

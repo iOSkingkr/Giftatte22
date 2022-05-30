@@ -525,11 +525,11 @@
                                         </constraints>
                                         <color key="tintColor" name="grey"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="1만원 이하">
+                                        <buttonConfiguration key="configuration" style="plain" title="3만원 이하">
                                             <fontDescription key="titleFontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapPriceUnder10000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="GpQ-cL-BAO"/>
+                                            <action selector="didTapPriceUnder30000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="BJb-gC-kuu"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtl-JF-teg">
@@ -540,11 +540,11 @@
                                         </constraints>
                                         <color key="tintColor" name="grey"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="1~2만원">
+                                        <buttonConfiguration key="configuration" style="plain" title="3~5만원">
                                             <fontDescription key="titleFontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapPrice10000to20000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="o5T-z5-mif"/>
+                                            <action selector="didTapPrice30000to50000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="ut6-yH-tJX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5C-zG-Vik">
@@ -555,11 +555,11 @@
                                         </constraints>
                                         <color key="tintColor" name="grey"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="2~3만원">
+                                        <buttonConfiguration key="configuration" style="plain" title="5~10만원">
                                             <fontDescription key="titleFontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapPrice20000to30000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="D3m-Uh-lup"/>
+                                            <action selector="didTapPrice50000to100000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="feQ-Yc-twg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ob-LL-nRE">
@@ -570,11 +570,11 @@
                                         </constraints>
                                         <color key="tintColor" name="grey"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="3~5만원">
+                                        <buttonConfiguration key="configuration" style="plain" title="10~20만원">
                                             <fontDescription key="titleFontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapPrice30000to50000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="gsg-0k-bso"/>
+                                            <action selector="didTapPrice1000000to200000:" destination="2dE-Ox-QSb" eventType="touchUpInside" id="jfc-bt-e2y"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DR-7k-cJg">
@@ -611,11 +611,11 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Za9-OO-vcP"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="price10000to20000" destination="jtl-JF-teg" id="jWj-ej-k9g"/>
-                        <outlet property="price20000to30000" destination="N5C-zG-Vik" id="Rmb-bJ-SY2"/>
-                        <outlet property="price30000to50000" destination="9Ob-LL-nRE" id="MCL-Y9-hCW"/>
+                        <outlet property="price100000to200000" destination="9Ob-LL-nRE" id="Wa0-2F-GxC"/>
+                        <outlet property="price30000to50000" destination="jtl-JF-teg" id="zbe-K0-VVQ"/>
+                        <outlet property="price50000to100000" destination="N5C-zG-Vik" id="Rmb-bJ-SY2"/>
                         <outlet property="priceAnything" destination="2DR-7k-cJg" id="ieK-VF-IF5"/>
-                        <outlet property="priceUnder10000" destination="ud0-Nj-Y1k" id="Ggs-I4-9ID"/>
+                        <outlet property="priceUnder30000" destination="ud0-Nj-Y1k" id="Ggs-I4-9ID"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzm-Ng-saw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

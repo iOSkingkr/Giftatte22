@@ -53,25 +53,25 @@ class TestResultCollectionViewController: UIViewController {
                         let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                      
                         switch self.price{
-                            case "under10000" :
-                            if userInfo.meanPrice < 10000{
+                            case "under30000" :
+                            if userInfo.meanPrice < 30000{
                             resultGiftDataArray.append(userInfo)
-                            }
-                        case "10000to20000":
-                            if userInfo.meanPrice > 10000{
-                                if userInfo.meanPrice < 20000{
-                                    resultGiftDataArray.append(userInfo)
-                                }
-                            }
-                        case "20000to30000":
-                            if userInfo.meanPrice > 20000{
-                                if userInfo.meanPrice < 30000{
-                                    resultGiftDataArray.append(userInfo)
-                                }
                             }
                         case "30000to50000":
                             if userInfo.meanPrice > 30000{
-                                if userInfo.meanPrice < 50000 {
+                                if userInfo.meanPrice < 50000{
+                                    resultGiftDataArray.append(userInfo)
+                                }
+                            }
+                        case "50000to100000":
+                            if userInfo.meanPrice > 50000{
+                                if userInfo.meanPrice < 100000{
+                                    resultGiftDataArray.append(userInfo)
+                                }
+                            }
+                        case "100000to200000":
+                            if userInfo.meanPrice > 100000{
+                                if userInfo.meanPrice < 200000 {
                                     resultGiftDataArray.append(userInfo)
                                 }
                             }
