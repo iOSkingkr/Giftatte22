@@ -121,9 +121,33 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         nextVC.modalTransitionStyle = .crossDissolve
         nextVC.nowPage = indexPath.row
         self.present(nextVC, animated: true)
-
         
     }
+    
+
+//    @objc func defaultpage (_ sender:AnyObject)  {
+//        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
+////    var onBoardingDataArrayNextVC:[Gift] = []
+//
+//
+////
+//
+//        //modal 방식으로 전체화면으로 띄워주기
+//        nextVC.modalPresentationStyle = .fullScreen
+//        nextVC.modalTransitionStyle = .crossDissolve
+//
+//
+//        //onBoardResultVC에 있는 nowPage를 tag로 받기
+//        nextVC.nowPage = sender.view.tag
+//       nextVC.onboardingDataArray = getOnboardingData()
+//
+//
+//
+//        self.present(nextVC, animated: true)
+//
+//
+//
+//    }
     
 }
 
