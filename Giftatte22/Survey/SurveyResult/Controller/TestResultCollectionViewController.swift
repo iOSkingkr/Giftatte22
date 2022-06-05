@@ -21,8 +21,8 @@ class TestResultCollectionViewController: UIViewController {
     var item: String = ""
     var resultGiftDataArray: [Gift] = []
     
-    var heights:[CGFloat] = [218.0,240.0,218.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0,70.0]
-    var widths: [CGFloat] = [100.0,100.0,100.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0]
+    var heights:[CGFloat] = [150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0,150.0]
+    var widths: [CGFloat] = [320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0]
     var colors: UIColor = .white
     
     
@@ -274,7 +274,7 @@ extension TestResultCollectionViewController: UICollectionViewDelegateFlowLayout
         let cellSize = CGSize(width: widths[indexPath.row], height: heights[indexPath.row])
             return cellSize
         }else{
-            let cellsize = CGSize(width: 320, height: 70)
+            let cellsize = CGSize(width: 320, height: 150)
             return cellsize
         }
             

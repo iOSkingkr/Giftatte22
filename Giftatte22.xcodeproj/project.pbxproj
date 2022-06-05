@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A65488427D650740043D3B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65488327D650740043D3B5 /* AppDelegate.swift */; };
 		3A65488627D650740043D3B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A65488527D650740043D3B5 /* SceneDelegate.swift */; };
-		3A65488D27D650750043D3B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A65488C27D650750043D3B5 /* Assets.xcassets */; };
 		3A65489027D650750043D3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A65488E27D650750043D3B5 /* LaunchScreen.storyboard */; };
 		717A64BF46A8895543665FB3 /* Pods_Giftatte22.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C51C696EF1F982CD5EC90E /* Pods_Giftatte22.framework */; };
 		8C0EEF962844B30900803B10 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EEF952844B30900803B10 /* TransitionHandler.swift */; };
@@ -25,6 +24,8 @@
 		8C533A2127FDFA6D0034DA9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8C533A2027FDFA6D0034DA9A /* Lottie */; };
 		8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */; };
 		8C8E9A0228435CD5008A840B /* gift.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E9A0128435CD5008A840B /* gift.json */; };
+		8C963FFF284C82CE00709094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A65488C27D650750043D3B5 /* Assets.xcassets */; };
+		8C964001284C84BD00709094 /* Giftatte22Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C964000284C84BC00709094 /* Giftatte22Icon.png */; };
 		8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */; };
 		8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */; };
 		8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */; };
@@ -93,6 +94,7 @@
 		8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyEventViewController.swift; sourceTree = "<group>"; };
 		8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1120-get-started-slider.json"; sourceTree = "<group>"; };
 		8C8E9A0128435CD5008A840B /* gift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gift.json; sourceTree = "<group>"; };
+		8C964000284C84BC00709094 /* Giftatte22Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Giftatte22Icon.png; sourceTree = "<group>"; };
 		8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyMenGiftImage.png; sourceTree = "<group>"; };
 		8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uselessGiftImage.png; sourceTree = "<group>"; };
 		8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomenGiftImage.png; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 		A8651AAF282E413800C28C83 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				8C964000284C84BC00709094 /* Giftatte22Icon.png */,
 				A8651AC8282E454400C28C83 /* baby.png */,
 				A8651ACC282E454400C28C83 /* book.png */,
 				A8651ACF282E454400C28C83 /* clothes.png */,
@@ -507,15 +510,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C964001284C84BD00709094 /* Giftatte22Icon.png in Resources */,
 				A8651AD1282E454400C28C83 /* baby.png in Resources */,
 				A8651AD4282E454400C28C83 /* interior.png in Resources */,
 				A8651AD6282E454400C28C83 /* cosmetics.png in Resources */,
 				A8651AD3282E454400C28C83 /* giftcard.png in Resources */,
+				8C963FFF284C82CE00709094 /* Assets.xcassets in Resources */,
 				8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */,
 				3A65489027D650750043D3B5 /* LaunchScreen.storyboard in Resources */,
 				8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */,
 				8CDEAE4527FEBDC600304715 /* NotoSansCJKkr-Regular.otf in Resources */,
-				3A65488D27D650750043D3B5 /* Assets.xcassets in Resources */,
 				A8094BF828113F6400716A45 /* Main.storyboard in Resources */,
 				8C43B9BB283CA1B900FDC155 /* noBGUselessGiftImage.png in Resources */,
 				8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */,

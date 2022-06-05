@@ -835,53 +835,50 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="TestReusultCollectionViewCell" reuseIdentifier="TestReusultCollectionViewCell" id="Sjx-cg-ass" customClass="TestReusultCollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="150" width="128" height="128"/>
+                                        <rect key="frame" x="27.666666666666668" y="150" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="P7S-zS-CWW">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBF-Bk-mGv">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-yA-8rR">
-                                                            <rect key="frame" x="41.666666666666657" y="53.333333333333336" width="45" height="21.666666666666664"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANs-yA-8rR">
+                                                            <rect key="frame" x="137" y="36" width="175" height="45"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="18"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-IH-sls">
-                                                            <rect key="frame" x="88.333333333333329" y="86" width="31.666666666666671" height="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUn-IH-sls">
+                                                            <rect key="frame" x="137" y="89" width="175" height="14"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="12"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="ANs-yA-8rR" firstAttribute="centerX" secondItem="YBF-Bk-mGv" secondAttribute="centerX" id="DAL-QO-ff7"/>
-                                                        <constraint firstAttribute="bottom" secondItem="HUn-IH-sls" secondAttribute="bottom" constant="28" id="QUf-VI-bwe"/>
-                                                        <constraint firstItem="ANs-yA-8rR" firstAttribute="centerY" secondItem="YBF-Bk-mGv" secondAttribute="centerY" id="d9X-91-AcH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="HUn-IH-sls" secondAttribute="trailing" constant="8" id="hrt-0n-Ody"/>
-                                                    </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zqM-yM-aP1">
-                                                    <rect key="frame" x="28" y="10" width="50" height="50"/>
+                                                    <rect key="frame" x="28" y="35" width="80" height="80"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="iuX-DS-5L1"/>
-                                                        <constraint firstAttribute="width" constant="50" id="ncd-VG-tvk"/>
+                                                        <constraint firstAttribute="height" constant="80" id="iuX-DS-5L1"/>
+                                                        <constraint firstAttribute="width" constant="80" id="ncd-VG-tvk"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="zqM-yM-aP1" firstAttribute="centerY" secondItem="P7S-zS-CWW" secondAttribute="centerY" id="0Mx-3p-S1X"/>
                                                 <constraint firstItem="YBF-Bk-mGv" firstAttribute="top" secondItem="P7S-zS-CWW" secondAttribute="top" id="5LT-Rs-LS5"/>
-                                                <constraint firstItem="zqM-yM-aP1" firstAttribute="top" secondItem="P7S-zS-CWW" secondAttribute="top" constant="10" id="D6J-Ib-zGE"/>
                                                 <constraint firstAttribute="trailing" secondItem="YBF-Bk-mGv" secondAttribute="trailing" id="HYG-nV-Wo3"/>
                                                 <constraint firstItem="YBF-Bk-mGv" firstAttribute="leading" secondItem="P7S-zS-CWW" secondAttribute="leading" id="NM5-Q7-tdV"/>
                                                 <constraint firstAttribute="bottom" secondItem="YBF-Bk-mGv" secondAttribute="bottom" id="Vyi-4j-B5i"/>
                                                 <constraint firstItem="zqM-yM-aP1" firstAttribute="leading" secondItem="P7S-zS-CWW" secondAttribute="leading" constant="28" id="rRw-9s-vvh"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="320" height="150"/>
                                         <connections>
                                             <outlet property="testResultCollecionCell" destination="YBF-Bk-mGv" id="Uev-7N-7yy"/>
                                             <outlet property="testResultImageView" destination="zqM-yM-aP1" id="Xle-p0-aOZ"/>
@@ -900,7 +897,7 @@
                                             <color key="textColor" name="grey"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giftIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-Ru-ItI">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-Ru-ItI">
                                             <rect key="frame" x="156" y="64.666666666666671" width="63" height="63"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="63" id="9Zz-EI-SA2"/>
@@ -934,12 +931,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNT-9f-NK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7175" y="21"/>
+            <point key="canvasLocation" x="7173.6000000000004" y="20.689655172413794"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Giftatte22Icon.png" width="568" height="596"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
-        <image name="giftIcon.png" width="68" height="67"/>
         <namedColor name="grey">
             <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
