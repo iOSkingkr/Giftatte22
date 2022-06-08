@@ -121,14 +121,16 @@ extension TestResultCollectionViewController: UICollectionViewDelegateFlowLayout
                     cell.testResultImageView.contentMode = .scaleAspectFill
                     cell.testResultImageView.layer.cornerRadius = 15
                     
-                    
-//                    let bounds = cell.testResultImageView.bounds
+                    let bounds = cell.testResultImageView.bounds
 //                    let pathCircle = UIBezierPath(ovalIn: bounds)
-//
-//                    let layer = CAShapeLayer()
+                    //둥근사각형
+                    let pathRect = UIBezierPath(roundedRect: CGRect(x: bounds.midX-50, y:bounds.midY-50, width: 100, height: 100),cornerRadius: 20)
+                    
+                    let layer = CAShapeLayer()
 //                    layer.path = pathCircle.cgPath
-//
-//                    cell.testResultImageView.layer.mask = layer
+                    layer.path = pathRect.cgPath
+                    
+                    cell.testResultImageView.layer.mask = layer
                 }
             }
         
