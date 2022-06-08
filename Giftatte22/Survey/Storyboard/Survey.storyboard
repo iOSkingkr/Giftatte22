@@ -51,13 +51,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-WM-tCX">
                                 <rect key="frame" x="36" y="168" width="191" height="67.333333333333314"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물을 받을 사람," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="any-91-Kry">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직도 선물을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="any-91-Kry">
                                         <rect key="frame" x="0.0" y="0.0" width="191" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="28"/>
                                         <color key="textColor" name="grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어떤 사람인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-gP-EN4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="못 고르셨다구요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTA-gP-EN4">
                                         <rect key="frame" x="0.0" y="33.666666666666657" width="191" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                         <color key="textColor" name="grey"/>
@@ -67,7 +67,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="didTapFindGiftButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Sw-5qZ">
                                 <rect key="frame" x="24" y="696" width="327" height="52"/>
-                                <color key="backgroundColor" name="white"/>
+                                <color key="backgroundColor" name="yellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="NnW-qb-iDb"/>
                                 </constraints>
@@ -81,9 +81,13 @@
                                     <action selector="didTapFindGiftButton:" destination="24L-VU-EE8" eventType="touchUpInside" id="rTw-BV-sOL"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gifticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="mQK-Df-uQX">
+                                <rect key="frame" x="67" y="342" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ax8-1I-WFU"/>
-                        <color key="backgroundColor" name="yellow"/>
+                        <color key="backgroundColor" name="white"/>
                         <color key="tintColor" name="white"/>
                         <constraints>
                             <constraint firstItem="lco-Sw-5qZ" firstAttribute="leading" secondItem="Ax8-1I-WFU" secondAttribute="leading" constant="24" id="BlF-Gx-lf3"/>
@@ -897,7 +901,11 @@
                                             <color key="textColor" name="grey"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+<<<<<<< HEAD
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-Ru-ItI">
+=======
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gifticon.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-Ru-ItI">
+>>>>>>> 1c20f9d ( survey색상 변경, 선물아이콘 이미지 변경)
                                             <rect key="frame" x="156" y="64.666666666666671" width="63" height="63"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="63" id="9Zz-EI-SA2"/>
@@ -937,6 +945,7 @@
     <resources>
         <image name="Giftatte22Icon.png" width="568" height="596"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="gifticon.png" width="89" height="91"/>
         <namedColor name="grey">
             <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
