@@ -25,6 +25,8 @@ class TestResultCollectionViewController: UIViewController {
     var widths: [CGFloat] = [320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0,320.0]
     var colors: UIColor = .white
     
+    var rank = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,158 +111,30 @@ extension TestResultCollectionViewController: UICollectionViewDelegateFlowLayout
         let cell = testResultCollecionVeiw.dequeueReusableCell(withReuseIdentifier: "TestReusultCollectionViewCell", for: indexPath)as! TestReusultCollectionViewCell
         
         cell.testResultCollecionCell.backgroundColor = colors
-        //        cell.testResultImageView.image = images[indexPath.row]
-        
-        
-//        switch price{
-//
-//        case "under10000" :
-//            if resultGiftDataArray[indexPath.row].meanPrice < 10000 {
-//                cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
-//                if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
-//                    if let imagedata = try? Data(contentsOf: url){
-//                        cell.testResultImageView.image = UIImage(data: imagedata)
-//
-//                        let bounds = cell.testResultImageView.bounds
-//                        let pathCircle = UIBezierPath(ovalIn: bounds)
-//
-//                        let layer = CAShapeLayer()
-//                        layer.path = pathCircle.cgPath
-//
-//                        cell.testResultImageView.layer.mask = layer
-//                    }
-//                }
-//                cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
-//            }
-//            else{
-//                cell.testResultProductNameLabel.text = "돈이 더 필요해"
-//                cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//                cell.testResultImageView.image = UIImage(systemName: "xmark")
-//            }
-//        case "10000to20000" :
-//            if resultGiftDataArray[indexPath.row].meanPrice < 20000 {
-//                if resultGiftDataArray[indexPath.row].meanPrice > 10000{
-//                    cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
-//                    if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
-//                        if let imagedata = try? Data(contentsOf: url){
-//                            cell.testResultImageView.image = UIImage(data: imagedata)
-//
-//                            let bounds = cell.testResultImageView.bounds
-//                            let pathCircle = UIBezierPath(ovalIn: bounds)
-//
-//                            let layer = CAShapeLayer()
-//                            layer.path = pathCircle.cgPath
-//
-//                            cell.testResultImageView.layer.mask = layer
-//                        }
-//                    }
-//                    cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
-//                }else{
-//                    cell.testResultProductNameLabel.text = "돈이 더 필요해"
-//                    cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//                    cell.testResultImageView.image = UIImage(systemName: "xmark")
-//
-//                }
-//            }else{
-//                cell.testResultProductNameLabel.text = "돈이 더 필요해"
-//                cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//                cell.testResultImageView.image = UIImage(systemName: "xmark")
-//            }
-//
-//        case "20000to30000" :
-//            if resultGiftDataArray[indexPath.row].meanPrice < 30000 {
-//                if resultGiftDataArray[indexPath.row].meanPrice > 20000{
-//                    cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
-//                    if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
-//                        if let imagedata = try? Data(contentsOf: url){
-//                            cell.testResultImageView.image = UIImage(data: imagedata)
-//
-//                            let bounds = cell.testResultImageView.bounds
-//                            let pathCircle = UIBezierPath(ovalIn: bounds)
-//
-//                            let layer = CAShapeLayer()
-//                            layer.path = pathCircle.cgPath
-//
-//                            cell.testResultImageView.layer.mask = layer
-//                        }
-//                    }
-//                    cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
-//                }else{
-//                    cell.testResultProductNameLabel.text = "가격대가 안맞아요"
-//                    cell.testResultImageView.image = UIImage(systemName: "xmark")
-//                    cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//                }
-//            }else{
-//                cell.testResultProductNameLabel.text = "가격대가 안맞아요"
-//                cell.testResultImageView.image = UIImage(systemName: "xmark")
-//                cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//            }
-//
-//
-//        case "30000to50000" :
-//            if resultGiftDataArray[indexPath.row].meanPrice < 50000 {
-//                if resultGiftDataArray[indexPath.row].meanPrice > 30000{
-//                    cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
-//                    if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
-//                        if let imagedata = try? Data(contentsOf: url){
-//                            cell.testResultImageView.image = UIImage(data: imagedata)
-//
-//                            let bounds = cell.testResultImageView.bounds
-//                            let pathCircle = UIBezierPath(ovalIn: bounds)
-//
-//                            let layer = CAShapeLayer()
-//                            layer.path = pathCircle.cgPath
-//
-//                            cell.testResultImageView.layer.mask = layer
-//                        }
-//                    }
-//                    cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
-//                }else{
-//                    cell.testResultProductNameLabel.text = "가격대가 안맞아요"
-//                    cell.testResultImageView.image = UIImage(systemName: "xmark")
-//                    cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//                }
-//            }else{
-//                cell.testResultProductNameLabel.text = "가격대가 안맞아요"
-//                cell.testResultImageView.image = UIImage(systemName: "xmark")
-//                cell.testResultProductPriceLabel.text = "ㅠㅠ"
-//            }
-//
-//        default :
+  
+        cell.resultRankLabel.text = String("\(rank[indexPath.row])등")
        
         cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
             if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
                 if let imagedata = try? Data(contentsOf: url){
                     cell.testResultImageView.image = UIImage(data: imagedata)
+                    cell.testResultImageView.contentMode = .scaleAspectFill
+                    cell.testResultImageView.layer.cornerRadius = 15
                     
-                    let bounds = cell.testResultImageView.bounds
-                    let pathCircle = UIBezierPath(ovalIn: bounds)
                     
-                    let layer = CAShapeLayer()
-                    layer.path = pathCircle.cgPath
-                    
-                    cell.testResultImageView.layer.mask = layer
+//                    let bounds = cell.testResultImageView.bounds
+//                    let pathCircle = UIBezierPath(ovalIn: bounds)
+//
+//                    let layer = CAShapeLayer()
+//                    layer.path = pathCircle.cgPath
+//
+//                    cell.testResultImageView.layer.mask = layer
                 }
             }
+        
             cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
         
         
-        //        if let url = URL(string: resultGiftDataArray[indexPath.row].imageUrl){
-        //            if let imagedata = try? Data(contentsOf: url){
-        //                cell.testResultImageView.image = UIImage(data: imagedata)
-        //
-        //                let bounds = cell.testResultImageView.bounds
-        //                let pathCircle = UIBezierPath(ovalIn: bounds)
-        //
-        //                let layer = CAShapeLayer()
-        //                layer.path = pathCircle.cgPath
-        //
-        //                cell.testResultImageView.layer.mask = layer
-        //            }
-        //        }
-        
-        //        cell.testResultProductPriceLabel.text = String("\(resultGiftDataArray[indexPath.row].meanPrice)원")
-        //        cell.testResultProductNameLabel.text = resultGiftDataArray[indexPath.row].keyword
         cell.layer.cornerRadius = 15
         
         
@@ -270,13 +144,13 @@ extension TestResultCollectionViewController: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         //    let collectionViewWidth = collectionView.bounds.width
         //    let collectionViewHeight = collectionView.bounds.height
-        if resultGiftDataArray.count == 20{
-        let cellSize = CGSize(width: widths[indexPath.row], height: heights[indexPath.row])
-            return cellSize
-        }else{
+//        if resultGiftDataArray.count == 20{
+//        let cellSize = CGSize(width: widths[indexPath.row], height: heights[indexPath.row])
+//            return cellSize
+//        }else{
             let cellsize = CGSize(width: 320, height: 150)
             return cellsize
-        }
+//        }
             
            
     }
