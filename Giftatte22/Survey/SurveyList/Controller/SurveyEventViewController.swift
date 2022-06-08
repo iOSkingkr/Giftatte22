@@ -56,7 +56,7 @@ class SurveyEventViewController: UIViewController {
             default:
                 print ("age가 10일때 카테고리 선택이 안됨")
             }
-        case "20","30":
+        case "20","30","ALL":
             switch category{
             case 0:
                 pushNextPage(category: "입학/졸업")

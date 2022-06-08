@@ -193,6 +193,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
+        top5Cell.layer.cornerRadius = 15
 
         if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
@@ -202,18 +203,28 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
                 
             }
         }
+        top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
+        top5Cell.top5PriceLabel.text =
+        String(
+            "\(onboardingDataArray[indexPath.row].lowPrice)~")
         
         return top5Cell
         
     }
     
-    
+   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         if let encoded = onboardingDataArray[indexPath.row].webUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded){
             UIApplication.shared.open(myURL, options: [:])
         }
         
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, siForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 300, height: 130)
     }
 }
 
