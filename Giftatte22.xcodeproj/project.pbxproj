@@ -31,7 +31,6 @@
 		8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */; };
 		8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D70283230CD00FECF38 /* summerGiftImage.png */; };
 		8CA22D76283230CD00FECF38 /* parentsGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D71283230CD00FECF38 /* parentsGiftImage.png */; };
-		8CA22D7828362D6700FECF38 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA22D7728362D6700FECF38 /* Onboarding.swift */; };
 		8CA9ABEC282901E500B569F7 /* TestResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */; };
 		8CA9ABEE2829027B00B569F7 /* TestReusultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */; };
 		8CA9ABF02829195600B569F7 /* TestResultCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */; };
@@ -100,7 +99,6 @@
 		8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomenGiftImage.png; sourceTree = "<group>"; };
 		8CA22D70283230CD00FECF38 /* summerGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerGiftImage.png; sourceTree = "<group>"; };
 		8CA22D71283230CD00FECF38 /* parentsGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parentsGiftImage.png; sourceTree = "<group>"; };
-		8CA22D7728362D6700FECF38 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewController.swift; sourceTree = "<group>"; };
 		8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReusultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 				8C1711B9280FE92400D330DD /* CarouselLayout.swift */,
 				A8094BF428113EE800716A45 /* ViewController.swift */,
 				8CA9ABF128291D2800B569F7 /* TestResultCollectionReusableView.swift */,
-				8CA22D7728362D6700FECF38 /* Onboarding.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -624,7 +621,6 @@
 				8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */,
 				8CB79C4428115F04000D914A /* FirebaseCodable.swift in Sources */,
 				A83BFFED27F4566D0035E12C /* SurveyAgeViewController.swift in Sources */,
-				8CA22D7828362D6700FECF38 /* Onboarding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

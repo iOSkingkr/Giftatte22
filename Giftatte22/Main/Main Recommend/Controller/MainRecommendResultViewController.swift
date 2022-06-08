@@ -33,11 +33,14 @@ class MainRecommendResultViewController: UIViewController {
         
         self.defaultContentsLabel.text = Strings.defaultContentsLabelArray[nowPage]
         
-        self.defaultTop5Label.text = Strings.defaultTop5LabelArray
+//        self.defaultTop5Label.text = Strings.defaultTop5LabelArray
         
         self.defaultImg.image = recommendResultImageArray[nowPage]
         
         self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
+        
+        self.bottomView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
+        recommendTop5CollectionView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
         recommendTop5CollectionView.dataSource = self
         recommendTop5CollectionView.delegate = self
@@ -152,6 +155,7 @@ class MainRecommendResultViewController: UIViewController {
         bottomView.layer.cornerRadius = 30 //둥글기 정도
         bottomView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner
         )
+      
     }
     
     let recommendResultImageArray: Array<UIImage> = [Images.noBGParentsGiftImage, Images.noBGTwentyWomenGiftImage, Images.noBGTwentyMenGiftImage, Images.noBGUselessGiftImage, Images.noBGSummerGiftImage]
@@ -204,9 +208,13 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             }
         }
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice))!
         top5Cell.top5PriceLabel.text =
-        String(
-            "\(onboardingDataArray[indexPath.row].lowPrice)~")
+        String("\(lowPrice)원~")
         
         return top5Cell
         

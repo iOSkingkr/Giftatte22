@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aLu-2d-G1o">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,9 +13,9 @@
     <customFonts key="customFonts">
         <array key="SF-Pro.ttf">
             <string>SFPro-Bold</string>
-            <string>SFPro-Heavy</string>
             <string>SFPro-Medium</string>
             <string>SFPro-Regular</string>
+            <string>SFPro-Semibold</string>
         </array>
     </customFonts>
     <scenes>
@@ -43,7 +43,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XJ6-ds-mUV">
-                                <rect key="frame" x="20" y="88" width="335" height="69.333333333333314"/>
+                                <rect key="frame" x="20" y="77" width="335" height="69.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요즘 핫한" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-jC-u7v">
                                         <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="33.666666666666664"/>
@@ -60,29 +60,29 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="htm-hd-jvz">
-                                <rect key="frame" x="0.0" y="177.33333333333334" width="375" height="478.66666666666663"/>
+                                <rect key="frame" x="0.0" y="153.33333333333334" width="375" height="467.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bha-Oe-quI">
-                                    <size key="itemSize" width="373" height="465"/>
-                                    <size key="estimatedItemSize" width="260" height="442"/>
+                                    <size key="itemSize" width="326" height="408"/>
+                                    <size key="estimatedItemSize" width="326" height="408"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainRecommendCollectionViewCell" reuseIdentifier="MainRecommendCollectionViewCell" id="q8g-XO-oBq" customClass="MainRecommendCollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="0.0" width="373" height="465"/>
+                                        <rect key="frame" x="24.666666666666668" y="0.0" width="326" height="408"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v3w-A4-aOO">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="465"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="408"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="373" height="465"/>
+                                        <size key="customSize" width="326" height="408"/>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3L-xs-fFf">
-                                <rect key="frame" x="25" y="696" width="325" height="52"/>
+                                <rect key="frame" x="25" y="659.33333333333337" width="325" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="7A3-tx-Zz0"/>
                                 </constraints>
@@ -96,6 +96,23 @@
                                     <action selector="didTapRecommendationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6G-an-1r8"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Bzr-If-Aij">
+                                <rect key="frame" x="23" y="631" width="171.66666666666666" height="19.333333333333371"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요즘 인기 카테고리" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lls-Nk-M6V">
+                                        <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="16"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zR2-Nm-kFM">
+                                        <rect key="frame" x="124.66666666666666" y="0.0" width="47" height="19.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="16"/>
+                                        <color key="textColor" red="0.92539656159999995" green="0.3658511639" blue="0.33722069859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="OnBoardColor"/>
@@ -104,23 +121,57 @@
                             <constraint firstItem="XJ6-ds-mUV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3gk-wQ-PcP"/>
                             <constraint firstItem="C3L-xs-fFf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5pB-Mu-BeP"/>
                             <constraint firstItem="htm-hd-jvz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9vd-Jr-BhH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C3L-xs-fFf" secondAttribute="trailing" constant="25" id="BqK-Td-IEC"/>
+                            <constraint firstItem="C3L-xs-fFf" firstAttribute="top" secondItem="Bzr-If-Aij" secondAttribute="bottom" constant="9" id="CMs-DG-dSu"/>
+                            <constraint firstItem="Bzr-If-Aij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="DoF-ZI-NLq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3L-xs-fFf" secondAttribute="bottom" constant="17.670000000000002" id="Kct-TV-1Sg"/>
+                            <constraint firstItem="Bzr-If-Aij" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="10" id="Ras-hu-aOs"/>
                             <constraint firstItem="C3L-xs-fFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="dz1-FZ-Wox"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C3L-xs-fFf" secondAttribute="bottom" constant="30" id="gLL-th-2NR"/>
-                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="20" id="kdZ-NT-UkS"/>
+                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="7" id="kdZ-NT-UkS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C3L-xs-fFf" secondAttribute="trailing" constant="25" id="lDm-AZ-uNT"/>
-                            <constraint firstItem="XJ6-ds-mUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="tMZ-sV-Zat"/>
-                            <constraint firstItem="C3L-xs-fFf" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="40" id="wJZ-3q-DOY"/>
+                            <constraint firstItem="XJ6-ds-mUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="tMZ-sV-Zat"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ6-ds-mUV" secondAttribute="trailing" constant="20" id="wcG-jA-faJ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" id="Mrg-N0-rj0">
+                        <color key="badgeColor" name="grey"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="mainRecommendCollectionView" destination="htm-hd-jvz" id="t6H-VF-9WG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.79999999999995" y="59.11330049261084"/>
+            <point key="canvasLocation" x="1871.2" y="59.11330049261084"/>
+        </scene>
+        <!--저장-->
+        <scene sceneID="sdB-L7-EZw">
+            <objects>
+                <viewController id="W3C-g1-QWK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rtf-6h-cPb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베이스 모집 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zI-wZ-mw6">
+                                <rect key="frame" x="92.666666666666671" y="382" width="189.66666666666663" height="48"/>
+                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="40"/>
+                                <color key="textColor" name="grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kXn-ST-duc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0zI-wZ-mw6" firstAttribute="centerY" secondItem="rtf-6h-cPb" secondAttribute="centerY" id="M9q-91-kum"/>
+                            <constraint firstItem="0zI-wZ-mw6" firstAttribute="centerX" secondItem="rtf-6h-cPb" secondAttribute="centerX" id="SyR-sM-FqZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="저장" image="heart.fill" catalog="system" id="ncT-ZC-M6K">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="20L-Xt-WyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="901"/>
         </scene>
         <!--MainRecommendResultViewController-->
         <scene sceneID="B4y-up-VEq">
@@ -165,9 +216,8 @@
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lIW-7c-2vh">
                                         <rect key="frame" x="0.0" y="70" width="375" height="187"/>
-                                        <color key="backgroundColor" name="yellow"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4fx-5Q-yLh">
-                                            <size key="itemSize" width="120" height="180"/>
+                                            <size key="itemSize" width="120" height="183"/>
                                             <size key="estimatedItemSize" width="120" height="180"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -182,21 +232,22 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w94-G3-UHU">
-                                                            <rect key="frame" x="10" y="20" width="100" height="100"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="100" id="SjZ-Yp-J32"/>
-                                                                <constraint firstAttribute="width" constant="100" id="w4R-GT-Vf7"/>
+                                                                <constraint firstAttribute="height" constant="120" id="SjZ-Yp-J32"/>
+                                                                <constraint firstAttribute="width" constant="120" id="w4R-GT-Vf7"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-IM-5h3">
-                                                            <rect key="frame" x="39.333333333333329" y="126.99999999999999" width="41.333333333333329" height="20.333333333333329"/>
-                                                            <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-IM-5h3">
+                                                            <rect key="frame" x="38.333333333333329" y="126.99999999999999" width="43.333333333333329" height="20.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh1-h7-l7Z">
-                                                            <rect key="frame" x="33.333333333333329" y="149.33333333333334" width="53.333333333333329" height="24"/>
-                                                            <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="20"/>
+                                                            <rect key="frame" x="38.333333333333329" y="149.33333333333334" width="43.333333333333329" height="20.333333333333343"/>
+                                                            <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
+                                                            <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -206,7 +257,7 @@
                                                         <constraint firstItem="xh1-h7-l7Z" firstAttribute="top" secondItem="yrs-IM-5h3" secondAttribute="bottom" constant="2" id="Tcc-dd-JHJ"/>
                                                         <constraint firstItem="yrs-IM-5h3" firstAttribute="top" secondItem="w94-G3-UHU" secondAttribute="bottom" constant="7" id="nKX-MQ-9If"/>
                                                         <constraint firstItem="xh1-h7-l7Z" firstAttribute="centerX" secondItem="A3B-e0-6ww" secondAttribute="centerX" id="o9q-Rt-tv3"/>
-                                                        <constraint firstItem="w94-G3-UHU" firstAttribute="top" secondItem="A3B-e0-6ww" secondAttribute="top" constant="20" id="yPi-qC-ugv"/>
+                                                        <constraint firstItem="w94-G3-UHU" firstAttribute="top" secondItem="A3B-e0-6ww" secondAttribute="top" id="yPi-qC-ugv"/>
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                                 <color key="backgroundColor" name="white"/>
@@ -219,18 +270,54 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F69-01-I8M">
-                                        <rect key="frame" x="25" y="19.999999999999996" width="71.666666666666671" height="33.666666666666657"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F69-01-I8M">
+                                        <rect key="frame" x="60" y="19.999999999999996" width="48.666666666666657" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
+                                        <color key="textColor" name="grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Ew-re-oHv">
+                                        <rect key="frame" x="118.66666666666669" y="19.999999999999996" width="74" height="33.666666666666657"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-F8-V8W">
+                                                <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
+                                                <color key="textColor" red="0.92539656159999995" green="0.3658511639" blue="0.33722069859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Miv-qM-SZa">
+                                                <rect key="frame" x="49.666666666666671" y="0.0" width="24.333333333333329" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
+                                                <color key="textColor" name="grey"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-7I-U8z">
+                                        <rect key="frame" x="23" y="23" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="OHr-hP-RNE"/>
+                                            <constraint firstAttribute="height" constant="25" id="dPJ-KQ-KdB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어때이" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEY-wa-b7u">
+                                        <rect key="frame" x="202.66666666666666" y="19.999999999999996" width="72.666666666666657" height="33.666666666666657"/>
                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                         <color key="textColor" name="grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" name="yellow"/>
+                                <color key="backgroundColor" name="white"/>
                                 <constraints>
+                                    <constraint firstItem="nEY-wa-b7u" firstAttribute="top" secondItem="gie-Le-Zzb" secondAttribute="top" constant="20" id="4Vc-Xo-YHw"/>
                                     <constraint firstItem="lIW-7c-2vh" firstAttribute="top" secondItem="gie-Le-Zzb" secondAttribute="top" constant="70" id="Afp-5A-KLI"/>
-                                    <constraint firstItem="F69-01-I8M" firstAttribute="leading" secondItem="gie-Le-Zzb" secondAttribute="leading" constant="25" id="GKi-ur-irP"/>
+                                    <constraint firstItem="DFh-7I-U8z" firstAttribute="top" secondItem="gie-Le-Zzb" secondAttribute="top" constant="23" id="By2-Hk-lgj"/>
+                                    <constraint firstItem="2Ew-re-oHv" firstAttribute="leading" secondItem="F69-01-I8M" secondAttribute="trailing" constant="10" id="GKg-Kc-scz"/>
+                                    <constraint firstItem="F69-01-I8M" firstAttribute="leading" secondItem="gie-Le-Zzb" secondAttribute="leading" constant="60" id="GKi-ur-irP"/>
+                                    <constraint firstItem="2Ew-re-oHv" firstAttribute="top" secondItem="gie-Le-Zzb" secondAttribute="top" constant="20" id="IVa-tO-GrY"/>
                                     <constraint firstAttribute="bottom" secondItem="lIW-7c-2vh" secondAttribute="bottom" constant="54" id="Men-9k-xsR"/>
+                                    <constraint firstItem="nEY-wa-b7u" firstAttribute="leading" secondItem="2Ew-re-oHv" secondAttribute="trailing" constant="10" id="Pos-rQ-Url"/>
+                                    <constraint firstItem="DFh-7I-U8z" firstAttribute="leading" secondItem="gie-Le-Zzb" secondAttribute="leading" constant="23" id="bI1-D5-rdS"/>
                                     <constraint firstAttribute="trailing" secondItem="lIW-7c-2vh" secondAttribute="trailing" id="mq4-px-PLY"/>
                                     <constraint firstItem="lIW-7c-2vh" firstAttribute="leading" secondItem="gie-Le-Zzb" secondAttribute="leading" id="sGa-0W-oN4"/>
                                     <constraint firstItem="F69-01-I8M" firstAttribute="top" secondItem="gie-Le-Zzb" secondAttribute="top" constant="20" id="uGZ-Yp-Obv"/>
@@ -279,7 +366,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lh-jk-7fg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741.5999999999999" y="59.11330049261084"/>
+            <point key="canvasLocation" x="2684" y="59.11330049261084"/>
         </scene>
         <!--TestResultCollectionViewController-->
         <scene sceneID="xWC-1F-PCr">
@@ -393,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMw-qv-f5N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2533.5999999999999" y="-484.72906403940891"/>
+            <point key="canvasLocation" x="3476" y="-484.72906403940891"/>
         </scene>
         <!--SurveyNavigationViewController-->
         <scene sceneID="tnV-RV-HGO">
@@ -401,13 +488,38 @@
                 <viewControllerPlaceholder storyboardIdentifier="SurveyNavigationViewController" storyboardName="Survey" referencedIdentifier="SurveyNavigationViewController" id="gM9-Kz-fV3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxC-7M-rQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340" y="57"/>
+            <point key="canvasLocation" x="3282.4000000000001" y="56.896551724137936"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="IIW-j6-0wN">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="aLu-2d-G1o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EHk-CD-Szj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="grey"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="L5l-7Z-tmN"/>
+                        <segue destination="W3C-g1-QWK" kind="relationship" relationship="viewControllers" id="vp3-HH-rZ0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SGi-ah-iUN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="59.11330049261084"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Giftatte22Icon.png" width="568" height="596"/>
         <image name="giftIcon.png" width="68" height="67"/>
-        <image name="xmark" catalog="system" width="128" height="113"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="xmark" width="128" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="OnBoardColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
