@@ -45,6 +45,9 @@ class SurveyItemViewController: UIViewController{
         self.navigationController?.pushViewController(goNextPage, animated: true)
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,7 +177,7 @@ extension SurveyItemViewController: UIPickerViewDelegate, UIPickerViewDataSource
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 30))
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 140, height: 30))
         let itemImage = UIImageView(frame: CGRect(x: -55, y: -3, width: 34, height: 37))
         
         if category == "입학/졸업"{

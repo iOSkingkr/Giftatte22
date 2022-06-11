@@ -34,7 +34,7 @@ class StartAnimationViewController: UIViewController {
     @objc func fire()
     {
 
-        guard let rootVC = self.storyboard?.instantiateViewController(identifier: "ViewController") else{return}
+        guard let rootVC = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") else{return}
 //        self.present(rootVC, animated: true, completion: nil)
         let navigation = UINavigationController(rootViewController: rootVC)
         navigation.transitioningDelegate = self.transitionHandler

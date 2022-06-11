@@ -19,13 +19,16 @@ class MainRecommendResultViewController: UIViewController {
     var seconddoc = "5000000"
     var thirdcollect = "appInfo"
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         getOnboardingData()
-        roundBottomView()
         
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
         
@@ -39,8 +42,8 @@ class MainRecommendResultViewController: UIViewController {
         
         self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
-        self.bottomView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
-        recommendTop5CollectionView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
+//        self.bottomView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
+//        recommendTop5CollectionView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
         recommendTop5CollectionView.dataSource = self
         recommendTop5CollectionView.delegate = self
@@ -55,8 +58,7 @@ class MainRecommendResultViewController: UIViewController {
         
         defaultImg.layer.mask = layer
         
-        
-        xMarkBackButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 100, bottom: 100, right: 1)
+    
     }
     
    
@@ -88,7 +90,7 @@ class MainRecommendResultViewController: UIViewController {
              seconddoc = "50000000"
              thirdcollect = "appInfo"
          case 3:
-             let onboardingRef = db.collection("onboarding")
+             let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("useless").collection("appInfo")
              onboardingRef.getDocuments(){(querySnapshot, err) in
                  if let err = err {
                      print("Error getting documents: \(err)")
@@ -113,11 +115,30 @@ class MainRecommendResultViewController: UIViewController {
                  }
              }
          case 4:
-             firstcollect = "presents"
-             firstdoc = "ALL"
-             secondcollect = "20"
-             seconddoc = "50000005"
-             thirdcollect = "appInfo"
+             let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("summer").collection("appInfo")
+             onboardingRef.getDocuments(){(querySnapshot, err) in
+                 if let err = err {
+                     print("Error getting documents: \(err)")
+                 } else {
+                     for document in querySnapshot!.documents {
+                        
+                         do{
+                             let data = document.data()
+                             let jsonData = try JSONSerialization.data(withJSONObject: data)
+                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                             onboardingDataArray.append(userInfo)
+                           
+                             self.onboardingDataArray = onboardingDataArray
+                             self.recommendTop5CollectionView.reloadData()
+                             
+                        
+                         }catch let err{
+                             print("err: \(err)")
+                         }
+                         
+                     }
+                 }
+             }
          default:
            print("nowpage 0~5사이가 아닙니다.")
          }
@@ -148,27 +169,18 @@ class MainRecommendResultViewController: UIViewController {
     }
     
     
-    
-    //UIView 모서리 설정
-    func roundBottomView() {
-        bottomView.clipsToBounds = true
-        bottomView.layer.cornerRadius = 30 //둥글기 정도
-        bottomView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner
-        )
-      
-    }
+ 
     
     let recommendResultImageArray: Array<UIImage> = [Images.noBGParentsGiftImage, Images.noBGTwentyWomenGiftImage, Images.noBGTwentyMenGiftImage, Images.noBGUselessGiftImage, Images.noBGSummerGiftImage]
     
     let recommendResultImageBackgroundColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
   
-    
-    @IBOutlet var xMarkBackButton: UIButton!
+   
     @IBOutlet var defaultImg: UIImageView!
     
     @IBOutlet var recommendTop5CollectionView: UICollectionView!
     
-    @IBOutlet var bottomView: UIView!
+
     
     @IBOutlet var defaultTitleTopLabel: UILabel!
     //roundBottomView의 상단 타이틀 위에 있는 Label
@@ -179,11 +191,6 @@ class MainRecommendResultViewController: UIViewController {
     @IBOutlet var defaultTop5Label: UILabel!
     //콜렉션 뷰에 들어갈 Top5 제목 Label
     
-    
-    
-    @IBAction func mainRecommendResultBackButton(_ sender: Any) {
-        dismiss(animated: true)
-    }
     
 }
 
@@ -203,16 +210,16 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             if let imagedata = try? Data(contentsOf: url){
                 top5Cell.top5ImageView.image = UIImage(data: imagedata)
                 top5Cell.top5ImageView.layer.cornerRadius = 15
-                top5Cell.top5ImageView.contentMode = .scaleAspectFill
+                top5Cell.top5ImageView.contentMode = .scaleToFill
                 
             }
         }
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
         
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
+        let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
+        numberFormatter.numberStyle = .decimal //decimal 사용
         
-        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice))!
+        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
         top5Cell.top5PriceLabel.text =
         String("\(lowPrice)원~")
         

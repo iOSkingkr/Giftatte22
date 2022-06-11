@@ -11,26 +11,41 @@ import Firebase
 
 
 class ViewController: UIViewController {
-//    var onboardingDataArray: [Gift] = []
+    //    var onboardingDataArray: [Gift] = []
     
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
-
-    @IBAction func didTapRecommendationButton(_ sender: Any) {
-        guard let goSurveyViewController = storyboard?.instantiateViewController(withIdentifier: "SurveyNavigationViewController") as? SurveyNavigationViewController else{return}
-        goSurveyViewController.modalPresentationStyle = .fullScreen
-        present(goSurveyViewController,animated: true)
-    }
+    
+    @IBOutlet var hotCategoryCollectionView: UICollectionView!
+    
+    let hotCategoryImagesArray: Array<UIImage> = [Images.baby, Images.book, Images.clothes, Images.computer, Images.cosmetics, Images.giftcard, Images.interior, Images.lifeitem, Images.watch]
+    
     
     let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
     
     let topLabelArray = Strings.collectTitleArray
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         addCollectionView()
+        addHotCategoryCollectionView()
         self.view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
+        
+        
+        
+    }
+    
+    
+    func addHotCategoryCollectionView(){
+        self.hotCategoryCollectionView?.delegate = self
+        self.hotCategoryCollectionView?.dataSource = self
+        self.hotCategoryCollectionView?.register(HotCategoryCollectionViewCell.self,forCellWithReuseIdentifier: "HotCategoryCollectionViewCell")
         
         
         
@@ -43,34 +58,53 @@ class ViewController: UIViewController {
         layout.spacing = -197
         layout.isPagingEnabled = true
         layout.sideItemAlpha = 0.5
-      
+        
         
         mainRecommendCollectionView.collectionViewLayout = layout
         
         self.mainRecommendCollectionView?.delegate = self
         self.mainRecommendCollectionView?.dataSource = self
         self.mainRecommendCollectionView?.register(MainRecommendCollectionViewCell.self, forCellWithReuseIdentifier: "MainRecommendCollectionViewCell")
+        
+      
+        
+        
     }
-    
-    
-    
-    
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
-   
+    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-       
         return 1
     }
     
+    //여기 설정해야함
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return mainRecommendCollectImageArray.count
+     
+        if collectionView == hotCategoryCollectionView{
+            return hotCategoryImagesArray.count
+        }
+        if collectionView == mainRecommendCollectionView{
+            return mainRecommendCollectImageArray.count
+        }
+     
+        return hotCategoryImagesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        if collectionView == hotCategoryCollectionView{
+
+//            let frameWidth = hotCategoryCollectionView.frame.width
+//            let horizontalMargin2: CGFloat = frameWidth * (35 / 375)
+//            let width2 = ((frameWidth2 - (horizontalMargin2 * 2)) / 9)
+//            let height2 = width2
+            let width2 = hotCategoryCollectionView.frame.width / 9 - 1
+            hotCategoryCollectionView.contentMode = .scaleAspectFill
+            return CGSize(width: width2, height: width2)
+        }
+       
         let frameWidth = self.view.frame.width
         let horizontalMargin: CGFloat = frameWidth * (56 / 375)
         let width = frameWidth - (horizontalMargin * 2)
@@ -86,45 +120,74 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         //        }
         //
         return CGSize(width: width, height: height)
+        
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == mainRecommendCollectionView{
+            guard let cell = mainRecommendCollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendCollectionViewCell", for: indexPath) as? MainRecommendCollectionViewCell else{
+                return UICollectionViewCell()
+            }
+            
+            cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
+            cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
+            cell.customBottomLabel.text = Strings.collectContentsArray
+            
+            //
+            //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
+            //        cell.customView.isUserInteractionEnabled = true
+            //        cell.customView.tag = indexPath.row
+            //        cell.customView.addGestureRecognizer(tapGestureRecognizer)
+            
+            cell.layer.cornerRadius = 30
+            cell.clipsToBounds = true
+            
+            
+            return cell
+        }
+        if collectionView == hotCategoryCollectionView{
         
-        //OnBoardCollectionViewCell에 onBoardImageView에 data에 cell 을 넣을 것임
+        guard let hotcell = hotCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "HotCategoryCollectionViewCell", for: indexPath) as? HotCategoryCollectionViewCell else {
+            return UICollectionViewCell()
+        }
         
-        let cell = mainRecommendCollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendCollectionViewCell", for: indexPath) as! MainRecommendCollectionViewCell
+        hotcell.hotCategoryImage1.image = hotCategoryImagesArray[indexPath.row]
+//        hotcell.hotCategoryLabel.text = "이름"
         
-        cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
-        cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
-        cell.customBottomLabel.text = Strings.collectContentsArray
+        return hotcell
+        }
+        let cell = hotCategoryCollectionView.dequeueReusableCell(withReuseIdentifier: "HotCategoryCollectionViewCell", for: indexPath) as! HotCategoryCollectionViewCell
         
-//
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))
-//        cell.customView.isUserInteractionEnabled = true
-//        cell.customView.tag = indexPath.row
-//        cell.customView.addGestureRecognizer(tapGestureRecognizer)
-        
-        cell.layer.cornerRadius = 30
-        cell.clipsToBounds = true
-        
- 
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
         
-        //modal 방식으로 전체화면으로 띄워주기
-        nextVC.modalPresentationStyle = .fullScreen
-        nextVC.modalTransitionStyle = .crossDissolve
+        if collectionView == mainRecommendCollectionView{
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
         nextVC.nowPage = indexPath.row
-        self.present(nextVC, animated: true)
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        }
+        
+        if collectionView == hotCategoryCollectionView{
+            guard let goVC = storyboard?.instantiateViewController(withIdentifier: "HotCategoryViewController") as? HotCategoryViewController else {return}
+            goVC.nowCategory = indexPath.row
+            
+            self.navigationController?.pushViewController(goVC, animated: true)
+        }
+        //        nextVC.modalPresentationStyle = .fullScreen
+        //        nextVC.modalTransitionStyle = .crossDissolve
+        
+        //        navigation.modalPresentationStyle = .fullScreen
+        
+        //        self.present(nextVC, animated: true)
         
     }
     
-
+    
     
 }
 

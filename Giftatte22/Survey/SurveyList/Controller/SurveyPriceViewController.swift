@@ -29,6 +29,9 @@ class SurveyPriceViewController: UIViewController {
         self.navigationController?.pushViewController(goNextPage, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

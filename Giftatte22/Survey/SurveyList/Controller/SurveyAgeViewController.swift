@@ -23,6 +23,9 @@ class SurveyAgeViewController: UIViewController {
         goSurveyThreeView.gender = gender
         self.navigationController?.pushViewController(goSurveyThreeView, animated: true)
     }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -31,4 +31,6 @@ struct Strings{
     var itemNameList3: [String] = ["전자제품", "생활용품", "상품권", "책"]
     var itemNameList4: [String] = ["시계/신발", "전자제품", "생활용품", "상품권"]
     
+    
+    
 }

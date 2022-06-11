@@ -1,24 +1,21 @@
 //
-//  NavigationVC.swift
+//  SurveyNavigationController.swift
 //  Giftatte22
 //
-//  Created by 이재희 on 2022/04/20.
+//  Created by duck on 2022/06/09.
 //
 
 import UIKit
 
-class SurveyNavigationViewController: UINavigationController {
-    
-
-    
+class SurveyNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
     
+
     /*
     // MARK: - Navigation
 

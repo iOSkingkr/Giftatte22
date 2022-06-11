@@ -23,13 +23,26 @@ class SurveyGenderViewController: UIViewController {
         self.navigationController?.pushViewController(goSurveyTwoView, animated: true)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         manBT.setRounded()
         womanBT.setRounded()
         anyBT.setRounded()
         // Do any additional setup after loading the view.
+        
+        
+        
     }
+    
+    
+    
     
     //MARK: - IBAction  버튼 눌렀을 경우, 다음 페이지로 이동함
         @IBAction func pushManBT(_ sender: Any) {

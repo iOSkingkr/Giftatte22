@@ -64,6 +64,8 @@ class MainRecommendCollectionViewCell: UICollectionViewCell {
         self.customView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         self.customView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
         self.customView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 1).isActive = true
+//        self.customView.widthAnchor.constraint(equalToConstant: 326).isActive = true
+//        self.customView.heightAnchor.constraint(equalToConstant: 408).isActive = true
         
        
     }

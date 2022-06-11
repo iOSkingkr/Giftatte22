@@ -19,29 +19,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--SurveyNavigationViewController-->
-        <scene sceneID="AzA-i8-xr2">
-            <objects>
-                <navigationController storyboardIdentifier="SurveyNavigationViewController" title="SurveyNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="swt-zl-0g8" customClass="SurveyNavigationViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bY3-Yc-k3E"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow.backward" catalog="system" backIndicatorTransitionMaskImage="arrow.backward" id="vGS-n7-KXg">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="grey"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" name="grey"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="24L-VU-EE8" kind="relationship" relationship="rootViewController" id="FR7-cO-EBp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n6V-cz-Rtv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1623.2" y="125.61576354679804"/>
-        </scene>
         <!--SurveyHomeViewController-->
         <scene sceneID="KRZ-i8-Vj3">
             <objects>
@@ -68,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="didTapFindGiftButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lco-Sw-5qZ">
-                                <rect key="frame" x="24" y="696" width="327" height="52"/>
+                                <rect key="frame" x="24" y="647" width="327" height="52"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="NnW-qb-iDb"/>
@@ -95,22 +72,15 @@
                             <constraint firstItem="ayg-WM-tCX" firstAttribute="top" secondItem="Ax8-1I-WFU" secondAttribute="top" constant="80" id="vhP-Q0-fbr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="W9V-un-e68">
-                        <barButtonItem key="backBarButtonItem" title=" " id="V3u-IS-Cbu"/>
-                        <barButtonItem key="leftBarButtonItem" title=" " image="arrow.backward" catalog="system" id="xxS-Cy-0EF">
-                            <color key="tintColor" name="grey"/>
-                            <connections>
-                                <action selector="didTapBackButton:" destination="24L-VU-EE8" id="9DL-bj-qjZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="w2b-yh-p9N"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="didTapFindGiftButton" destination="lco-Sw-5qZ" id="hyp-ch-ZW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WBI-Yc-5vi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2535.1999999999998" y="0.73891625615763545"/>
+            <point key="canvasLocation" x="3386.4000000000001" y="20.689655172413794"/>
         </scene>
         <!--SurveyGenderViewController-->
         <scene sceneID="K7h-nA-sr1">
@@ -210,7 +180,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="어때이" id="NiH-xE-v0c">
-                        <barButtonItem key="backBarButtonItem" title=" " id="hIZ-0E-PnE"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="hIZ-0E-PnE">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="anyBT" destination="xnX-xo-Kei" id="yel-XF-lQZ"/>
@@ -220,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBE-AV-dZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3280.8000000000002" y="20.689655172413794"/>
+            <point key="canvasLocation" x="5165.6000000000004" y="20.689655172413794"/>
         </scene>
         <!--SurveyAgeViewController-->
         <scene sceneID="n2t-4s-5sf">
@@ -362,7 +334,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="어때이" id="8Kq-IR-k7u">
-                        <barButtonItem key="backBarButtonItem" title=" " id="mWn-DY-RYE"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="mWn-DY-RYE">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="age10" destination="ctG-0W-MSB" id="mzS-SQ-TE4"/>
@@ -375,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dN6-1q-fNJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4045.5999999999999" y="20.689655172413794"/>
+            <point key="canvasLocation" x="5930.3999999999996" y="20.689655172413794"/>
         </scene>
         <!--SurveyEventViewController-->
         <scene sceneID="7SP-QJ-pCy">
@@ -480,7 +454,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="어때이" id="kgF-rh-csO">
-                        <barButtonItem key="backBarButtonItem" title=" " id="pIS-EJ-Sun"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="pIS-EJ-Sun">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="MNJ-mF-rmy" id="2s7-YA-6Bz"/>
@@ -490,7 +466,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KO9-Wa-foC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4799.1999999999998" y="20.689655172413794"/>
+            <point key="canvasLocation" x="6684" y="20.689655172413794"/>
         </scene>
         <!--SurveyPriceViewController-->
         <scene sceneID="7Lk-12-oLm">
@@ -617,7 +593,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="어때이" id="keh-we-Tx5">
-                        <barButtonItem key="backBarButtonItem" title=" " id="Za9-OO-vcP"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="Za9-OO-vcP">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="price100000to200000" destination="9Ob-LL-nRE" id="Wa0-2F-GxC"/>
@@ -629,7 +607,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzm-Ng-saw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5548" y="20.689655172413794"/>
+            <point key="canvasLocation" x="7432.8000000000002" y="20.689655172413794"/>
         </scene>
         <!--SurveyItemViewController-->
         <scene sceneID="rmM-cB-IaW">
@@ -740,7 +718,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="어때이" id="2B7-8j-c3F">
-                        <barButtonItem key="backBarButtonItem" title=" " id="0bf-jk-LvZ"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="0bf-jk-LvZ">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="itemImage" destination="yJQ-TY-bRK" id="p43-7z-l7A"/>
@@ -751,7 +731,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gF7-qF-XXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6306.3999999999996" y="20.689655172413794"/>
+            <point key="canvasLocation" x="8191.1999999999998" y="20.689655172413794"/>
         </scene>
         <!--SurveyResultViewController-->
         <scene sceneID="Hpm-Yr-zOb">
@@ -865,7 +845,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fna-qV-aiw">
-                                                            <rect key="frame" x="7" y="66" width="41.666666666666664" height="18"/>
+                                                            <rect key="frame" x="7" y="66" width="41.333333333333336" height="18"/>
                                                             <fontDescription key="fontDescription" name="SFPro-Heavy" family="SF Pro" pointSize="15"/>
                                                             <color key="textColor" name="grey"/>
                                                             <nil key="highlightedColor"/>
@@ -909,7 +889,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이 선물 어때이?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBP-g4-lpu">
-                                            <rect key="frame" x="101" y="27.999999999999996" width="173" height="33.666666666666657"/>
+                                            <rect key="frame" x="101.33333333333333" y="27.999999999999996" width="172.66666666666669" height="33.666666666666657"/>
                                             <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                             <color key="textColor" name="grey"/>
                                             <nil key="highlightedColor"/>
@@ -941,19 +921,45 @@
                             <constraint firstItem="nwy-aL-sJK" firstAttribute="top" secondItem="mee-9g-G1H" secondAttribute="top" id="tbb-ja-sHd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="추천 선물" id="cF7-ba-kVp"/>
+                    <navigationItem key="navigationItem" title="추천 선물" id="cF7-ba-kVp">
+                        <barButtonItem key="backBarButtonItem" title=" " id="U8K-ny-Rry">
+                            <color key="tintColor" name="grey"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="testResultCollecionVeiw" destination="nwy-aL-sJK" id="E4F-88-WCn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNT-9f-NK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8116" y="20.689655172413794"/>
+            <point key="canvasLocation" x="10000.799999999999" y="20.689655172413794"/>
+        </scene>
+        <!--SurveyNavigationViewController-->
+        <scene sceneID="C3f-tD-Ll8">
+            <objects>
+                <navigationController storyboardIdentifier="SurveyNavigationViewController" title="SurveyNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="P4u-dQ-ndN" customClass="SurveyNavigationViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ㅈ같다" image="star" catalog="system" id="Mm0-Kc-oRa">
+                        <color key="badgeColor" name="grey"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wGk-Rs-uZp">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="24L-VU-EE8" kind="relationship" relationship="rootViewController" id="PBE-qM-VsG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mU4-xp-64d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444" y="20.689655172413794"/>
         </scene>
     </scenes>
     <resources>
         <image name="Giftatte22Icon.png" width="568" height="596"/>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="star" catalog="system" width="128" height="116"/>
         <namedColor name="grey">
             <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
