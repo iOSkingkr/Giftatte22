@@ -133,7 +133,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
             
             cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
             cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
-            cell.customBottomLabel.text = Strings.collectContentsArray
+            cell.customBottomLabel.text = Strings.collectContentsArray[indexPath.row]
             
             //
             //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.defaultpage(_:)))

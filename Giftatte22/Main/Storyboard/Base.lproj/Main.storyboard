@@ -190,22 +190,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="by8-qf-ucg">
-                                <rect key="frame" x="151.66666666666666" y="362" width="71.666666666666657" height="88"/>
+                                <rect key="frame" x="158.33333333333334" y="380.33333333333331" width="58.666666666666657" height="51.333333333333314"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sv8-54-gaT">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="33.666666666666664"/>
-                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
-                                        <color key="textColor" name="grey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3A-5Y-lWt">
-                                        <rect key="frame" x="0.0" y="35.666666666666686" width="71.666666666666671" height="28.666666666666671"/>
-                                        <fontDescription key="fontDescription" name="SFPro-Medium" family="SF Pro" pointSize="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sv8-54-gaT">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="27.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="23"/>
                                         <color key="textColor" name="grey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e11-QS-cJC">
-                                        <rect key="frame" x="0.0" y="66.333333333333314" width="71.666666666666671" height="21.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="29.666666666666686" width="58.666666666666664" height="21.666666666666671"/>
                                         <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="18"/>
                                         <color key="textColor" name="grey"/>
                                         <nil key="highlightedColor"/>
@@ -277,7 +271,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5RZ-t4-2hb">
-                                <rect key="frame" x="23.000000000000014" y="498" width="245.33333333333337" height="25"/>
+                                <rect key="frame" x="23.000000000000014" y="479.66666666666669" width="245.33333333333337" height="25"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-7I-U8z">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -338,7 +332,6 @@
                     <connections>
                         <outlet property="defaultContentsLabel" destination="e11-QS-cJC" id="vIo-tA-wal"/>
                         <outlet property="defaultImg" destination="aEF-QR-3Id" id="Zzc-YT-DLa"/>
-                        <outlet property="defaultTitleBottomLabel" destination="s3A-5Y-lWt" id="drf-qQ-kks"/>
                         <outlet property="defaultTitleTopLabel" destination="sv8-54-gaT" id="yk1-tF-48R"/>
                         <outlet property="defaultTop5Label" destination="F69-01-I8M" id="Sh7-sa-fyc"/>
                         <outlet property="recommendTop5CollectionView" destination="lIW-7c-2vh" id="5pz-T8-O1z"/>
