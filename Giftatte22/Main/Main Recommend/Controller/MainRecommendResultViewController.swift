@@ -32,7 +32,7 @@ class MainRecommendResultViewController: UIViewController {
         
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
         
-//        self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray[nowPage]
+        self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray[nowPage]
         
         self.defaultContentsLabel.text = Strings.defaultContentsLabelArray[nowPage]
         
@@ -184,7 +184,7 @@ class MainRecommendResultViewController: UIViewController {
     
     @IBOutlet var defaultTitleTopLabel: UILabel!
     //roundBottomView의 상단 타이틀 위에 있는 Label
-//    @IBOutlet var defaultTitleBottomLabel: UILabel!
+    @IBOutlet var defaultTitleBottomLabel: UILabel!
     //roundBottomView의 상단 타이틀 아래에 있는 Label
     @IBOutlet var defaultContentsLabel: UILabel!
     //roundBottomView의 내용 들어갈 Label
