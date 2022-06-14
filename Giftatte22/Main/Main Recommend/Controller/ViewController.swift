@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var hotCategoryCollectionView: UICollectionView!
     
-    let hotCategoryImagesArray: Array<UIImage> = [Images.baby, Images.book, Images.clothes, Images.computer, Images.cosmetics, Images.giftcard, Images.interior, Images.lifeitem, Images.watch]
+    let hotCategoryImagesArray: Array<UIImage> = [Images.y_baby, Images.y_book, Images.y_clothes, Images.y_computer, Images.y_cosmetics, Images.y_giftcard, Images.y_interior, Images.y_lifeitem, Images.y_watch]
     
     
     let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]

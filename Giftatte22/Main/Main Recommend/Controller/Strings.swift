@@ -16,13 +16,13 @@ struct Strings{
     
     
     //MainRecommendResultViewController
-    static let defaultTopTitleLabelArray = ["#요즘 부모님들 이거 좋아해", "#내돈내산하기 아까운 \n 그렇지만 갖고싶은", "#훈훈함 장착가능 아이템", "#내돈내산 절대 안함" , "#더우니 시원한 선물ㄱㄱ"]
+    static let defaultTopTitleLabelArray = ["50대 부모님 추천 선물", "20대 여자 추천 선물" , "20대 남자 추천 선물" ,"쓸모없는 선물 Top9", "여름 필수템 추천"]
     
-    static let defaultBottomTitleLabelArray = ["#만족_100프로_부모님_선물","#친구가_좋아할_만한_선물","#친구에게_가장_필요한_선물","#내친구에게_찰떡_아이템ㅋㅋ","#HOT_여름_필수템"]
+    static let defaultBottomTitleLabelArray = ["#요즘_부모님들_이거_좋아해", "#내돈내산하기_아까운_아이템", "#훈훈함_장착가능_아이템", "#내돈내산_절대_안함" , "#더우니_시원한_선물ㄱㄱ"]
     
     static let defaultTop5LabelArray = "이런 선물은 어때요?"
     
-    static let defaultContentsLabelArray = ["#만족_100프로 부모님선물","#친구가 좋아할 만한선물","#친구에게 가장 필요한 선물","#내친구에게 찰떡 아이템ㅋㅋ","#HOT 여름 필수템"]
+    static let defaultContentsLabelArray = ["#만족_100프로_부모님선물","#친구가_좋아할_만한선물","#친구에게_가장_필요한_선물","#내친구에게_찰떡_아이템ㅋㅋ","#HOT_여름_필수템"]
     
     //Survey
     var itemNameList0: [String] = ["옷", "신발/시계", "전자제품", "책"]

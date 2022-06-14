@@ -9,11 +9,11 @@ import UIKit
 
 struct Images {
     // mainRecommendCollectionView image
-    static let parentsGiftImage: UIImage = UIImage(named:"parentsGiftImage.png")!
-    static let summerGiftImage: UIImage = UIImage(named:"summerGiftImage.png")!
-    static let twentyMenGiftImage: UIImage = UIImage(named:"twentyMenGiftImage.png")!
-    static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImage.png")!
-    static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImage.png")!
+    static let parentsGiftImage: UIImage = UIImage(named:"parentsGiftImg.png")!
+    static let summerGiftImage: UIImage = UIImage(named:"summerGiftImg.png")!
+    static let twentyMenGiftImage: UIImage = UIImage(named:"twentyMenGiftImg.png")!
+    static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImg.png")!
+    static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImg.png")!
     
     // mainRecommendResult image
     static let noBGParentsGiftImage: UIImage = UIImage(named:"noBGParentsGiftImage.png")!
@@ -22,7 +22,16 @@ struct Images {
     static let noBGTwentyWomenGiftImage: UIImage = UIImage(named:"noBGTwentyWomenGiftImage.png")!
     static let noBGUselessGiftImage: UIImage = UIImage(named:"noBGUselessGiftImage.png")!
     
-    
+    // hot_category
+    static let y_baby: UIImage = UIImage(named: "y_baby.png")!
+    static let y_book: UIImage = UIImage(named: "y_book.png")!
+    static let y_clothes: UIImage = UIImage(named: "y_clothes.png")!
+    static let y_computer: UIImage = UIImage(named: "y_computer.png")!
+    static let y_cosmetics: UIImage = UIImage(named: "y_cosmetics.png")!
+    static let y_giftcard: UIImage = UIImage(named: "y_giftcard.png")!
+    static let y_interior: UIImage = UIImage(named: "y_interior.png")!
+    static let y_lifeitem: UIImage = UIImage(named: "y_lifeitem.png")!
+    static let y_watch: UIImage = UIImage(named: "y_watch.png")!
     
     
     
