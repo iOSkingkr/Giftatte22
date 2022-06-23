@@ -36,7 +36,7 @@ class SurveyItemViewController: UIViewController{
     @IBOutlet var selectedPickerUIView: UIView!
     
     private func pushNextPage(item: String){
-        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "TestResultCollectionViewController") as? TestResultCollectionViewController else { return }
+        guard let goNextPage = self.storyboard?.instantiateViewController(identifier: "SurveyResultCollectionViewController") as? SurveyResultCollectionViewController else { return }
         goNextPage.age = age
         goNextPage.gender = gender
         goNextPage.category = category

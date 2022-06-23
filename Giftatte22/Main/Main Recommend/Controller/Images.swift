@@ -15,6 +15,13 @@ struct Images {
     static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImg.png")!
     static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImg.png")!
     
+    //  크기수정한 이미지
+    static let parentsImage: UIImage = UIImage(named:"parentsImage.png")!
+    static let summerImage: UIImage = UIImage(named:"summerImage.png")!
+    static let twentyMenImage: UIImage = UIImage(named:"twentyMenImage.png")!
+    static let twentyWomenImage: UIImage = UIImage(named:"twentyWomanImage.png")!
+    static let uselessImage: UIImage = UIImage(named:"uselessImage.png")!
+    
     // mainRecommendResult image
     static let noBGParentsGiftImage: UIImage = UIImage(named:"noBGParentsGiftImage.png")!
     static let noBGSummerGiftImage: UIImage = UIImage(named:"noBGSummerGiftImage.png")!
