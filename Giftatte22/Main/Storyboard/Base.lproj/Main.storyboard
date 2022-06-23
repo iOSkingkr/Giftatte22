@@ -60,7 +60,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="htm-hd-jvz">
-                                <rect key="frame" x="0.0" y="169.33333333333334" width="375" height="437.33333333333326"/>
+                                <rect key="frame" x="0.0" y="169" width="375" height="417"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bha-Oe-quI">
                                     <size key="itemSize" width="326" height="408"/>
@@ -82,7 +82,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Bzr-If-Aij">
-                                <rect key="frame" x="23" y="609.66666666666663" width="171.66666666666666" height="19.333333333333371"/>
+                                <rect key="frame" x="23" y="595.66666666666663" width="171.66666666666666" height="19.333333333333371"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요즘 인기 카테고리" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lls-Nk-M6V">
                                         <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="19.333333333333332"/>
@@ -99,7 +99,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yp1-hn-H5p">
-                                <rect key="frame" x="0.0" y="649" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="629" width="375" height="70"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="vte-Yg-JB1"/>
@@ -132,13 +132,13 @@
                             <constraint firstItem="htm-hd-jvz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9vd-Jr-BhH"/>
                             <constraint firstItem="Yp1-hn-H5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AxI-dk-p5r"/>
                             <constraint firstItem="Bzr-If-Aij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="DoF-ZI-NLq"/>
-                            <constraint firstItem="Bzr-If-Aij" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="3" id="F2C-pU-hgW"/>
+                            <constraint firstItem="Bzr-If-Aij" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="9.6699999999999999" id="Rox-Sm-xQp"/>
                             <constraint firstItem="Yp1-hn-H5p" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wu0-jG-iLp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yp1-hn-H5p" secondAttribute="bottom" constant="10" id="ceQ-bd-7wN"/>
-                            <constraint firstItem="Yp1-hn-H5p" firstAttribute="top" secondItem="Bzr-If-Aij" secondAttribute="bottom" constant="20" id="iof-Ih-Bi1"/>
-                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="7" id="kdZ-NT-UkS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yp1-hn-H5p" secondAttribute="bottom" constant="30" id="ceQ-bd-7wN"/>
+                            <constraint firstItem="Yp1-hn-H5p" firstAttribute="top" secondItem="Bzr-If-Aij" secondAttribute="bottom" constant="14" id="iof-Ih-Bi1"/>
                             <constraint firstItem="XJ6-ds-mUV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="tMZ-sV-Zat"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XJ6-ds-mUV" secondAttribute="trailing" constant="20" id="wcG-jA-faJ"/>
+                            <constraint firstItem="htm-hd-jvz" firstAttribute="top" secondItem="XJ6-ds-mUV" secondAttribute="bottom" constant="6.6699999999999999" id="xle-Do-Zdg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Vc-tp-qwN"/>
@@ -150,36 +150,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2813.5999999999999" y="59.11330049261084"/>
-        </scene>
-        <!--저장-->
-        <scene sceneID="sdB-L7-EZw">
-            <objects>
-                <viewController id="W3C-g1-QWK" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rtf-6h-cPb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베이스 모집 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zI-wZ-mw6">
-                                <rect key="frame" x="92.666666666666671" y="382" width="189.66666666666663" height="48"/>
-                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="40"/>
-                                <color key="textColor" name="grey"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kXn-ST-duc"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="0zI-wZ-mw6" firstAttribute="centerY" secondItem="rtf-6h-cPb" secondAttribute="centerY" id="M9q-91-kum"/>
-                            <constraint firstItem="0zI-wZ-mw6" firstAttribute="centerX" secondItem="rtf-6h-cPb" secondAttribute="centerX" id="SyR-sM-FqZ"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="저장" image="heart.fill" catalog="system" id="ncT-ZC-M6K">
-                        <color key="badgeColor" name="AccentColor"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="20L-Xt-WyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="929" y="859"/>
         </scene>
         <!--MainRecommendResultViewController-->
         <scene sceneID="B4y-up-VEq">
@@ -612,7 +582,7 @@
         <scene sceneID="yCa-5P-ZzX">
             <objects>
                 <viewControllerPlaceholder storyboardName="Survey" referencedIdentifier="SurveyNavigationViewController" id="NRX-ch-3ts" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ㅈ같다" image="star" catalog="system" id="171-M3-zpK">
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass.circle" catalog="system" id="171-M3-zpK">
                         <color key="badgeColor" name="grey"/>
                     </tabBarItem>
                 </viewControllerPlaceholder>
@@ -634,7 +604,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="aOb-ix-Ff3" kind="relationship" relationship="viewControllers" id="L5l-7Z-tmN"/>
-                        <segue destination="W3C-g1-QWK" kind="relationship" relationship="viewControllers" id="vp3-HH-rZ0"/>
                         <segue destination="NRX-ch-3ts" kind="relationship" relationship="viewControllers" id="hF6-gr-zBk"/>
                     </connections>
                 </tabBarController>
@@ -667,12 +636,8 @@
     <resources>
         <image name="Giftatte22Icon.png" width="568" height="596"/>
         <image name="giftIcon.png" width="68" height="67"/>
-        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <namedColor name="OnBoardColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

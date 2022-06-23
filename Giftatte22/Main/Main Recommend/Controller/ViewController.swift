@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     let hotCategoryImagesArray: Array<UIImage> = [Images.y_baby, Images.y_book, Images.y_clothes, Images.y_computer, Images.y_cosmetics, Images.y_giftcard, Images.y_interior, Images.y_lifeitem, Images.y_watch]
     
     
-    let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsGiftImage, Images.twentyWomenGiftImage, Images.twentyMenGiftImage, Images.uselessGiftImage, Images.summerGiftImage]
+    let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsImage, Images.twentyWomenImage, Images.twentyMenImage, Images.uselessImage, Images.summerImage]
     
     let topLabelArray = Strings.collectTitleArray
     
@@ -155,6 +155,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         
         hotcell.hotCategoryImage1.image = hotCategoryImagesArray[indexPath.row]
 //        hotcell.hotCategoryLabel.text = "이름"
+            
+            hotcell.hotCategoryLabel1.text = "전자제품"
         
         return hotcell
         }

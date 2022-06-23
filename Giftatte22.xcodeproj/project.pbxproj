@@ -45,6 +45,14 @@
 		8CB79C4628129799000D914A /* MainRecommendResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */; };
 		8CDEAE4527FEBDC600304715 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDEAE4327FEBD7900304715 /* NotoSansCJKkr-Regular.otf */; };
 		8CDEAE4627FEBDC800304715 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8CDEAE4427FEBD8800304715 /* NotoSansCJKkr-Bold.otf */; };
+		8CE0A751286440AD00CD4515 /* twentyMenImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A74C286440AC00CD4515 /* twentyMenImage.png */; };
+		8CE0A752286440AD00CD4515 /* parentsImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A74D286440AD00CD4515 /* parentsImage.png */; };
+		8CE0A753286440AD00CD4515 /* twentyWomanImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A74E286440AD00CD4515 /* twentyWomanImage.png */; };
+		8CE0A754286440AD00CD4515 /* uselessImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A74F286440AD00CD4515 /* uselessImage.png */; };
+		8CE0A755286440AD00CD4515 /* summerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A750286440AD00CD4515 /* summerImage.png */; };
+		8CE0A7572864487C00CD4515 /* SurveyResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0A7562864487C00CD4515 /* SurveyResultCollectionViewController.swift */; };
+		8CE0A75928644B3600CD4515 /* SurveyResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */; };
+		8CE0A75B286455A500CD4515 /* defaultAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A75A286455A500CD4515 /* defaultAnimation.json */; };
 		8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDA86E2823C2EF0007BE67 /* Images.swift */; };
 		A8094BF128113EB200716A45 /* MainRecommendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094BF028113EB200716A45 /* MainRecommendCollectionViewCell.swift */; };
 		A8094BF328113EE000716A45 /* MainRecommendResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8094BF228113EE000716A45 /* MainRecommendResultViewController.swift */; };
@@ -132,6 +140,14 @@
 		8CB79C4528129799000D914A /* MainRecommendResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainRecommendResultCollectionViewCell.swift; path = "Giftatte22/Main/Main Recommend/Cell/MainRecommendResultCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		8CDEAE4327FEBD7900304715 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
 		8CDEAE4427FEBD8800304715 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		8CE0A74C286440AC00CD4515 /* twentyMenImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyMenImage.png; sourceTree = "<group>"; };
+		8CE0A74D286440AD00CD4515 /* parentsImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parentsImage.png; sourceTree = "<group>"; };
+		8CE0A74E286440AD00CD4515 /* twentyWomanImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomanImage.png; sourceTree = "<group>"; };
+		8CE0A74F286440AD00CD4515 /* uselessImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uselessImage.png; sourceTree = "<group>"; };
+		8CE0A750286440AD00CD4515 /* summerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerImage.png; sourceTree = "<group>"; };
+		8CE0A7562864487C00CD4515 /* SurveyResultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyResultCollectionViewController.swift; path = Giftatte22/Survey/SurveyResult/Controller/SurveyResultCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyResultCollectionViewCell.swift; path = Giftatte22/Survey/SurveyResult/Cell/SurveyResultCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		8CE0A75A286455A500CD4515 /* defaultAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultAnimation.json; sourceTree = "<group>"; };
 		8CEDA86E2823C2EF0007BE67 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		A8094BF028113EB200716A45 /* MainRecommendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRecommendCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8094BF228113EE000716A45 /* MainRecommendResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRecommendResultViewController.swift; sourceTree = "<group>"; };
@@ -320,6 +336,7 @@
 		8C25C07A280FE44700D2B2E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0A75A286455A500CD4515 /* defaultAnimation.json */,
 				8C8E9A0128435CD5008A840B /* gift.json */,
 				8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */,
 			);
@@ -347,6 +364,11 @@
 		8CDEAE4927FEE11D00304715 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0A74D286440AD00CD4515 /* parentsImage.png */,
+				8CE0A750286440AD00CD4515 /* summerImage.png */,
+				8CE0A74C286440AC00CD4515 /* twentyMenImage.png */,
+				8CE0A74E286440AD00CD4515 /* twentyWomanImage.png */,
+				8CE0A74F286440AD00CD4515 /* uselessImage.png */,
 				A85914582858E24A003DDF3C /* parentsGiftImg.png */,
 				A859145A2858E24A003DDF3C /* summerGiftImg.png */,
 				A85914572858E24A003DDF3C /* twentyMenGiftImg.png */,
@@ -448,6 +470,7 @@
 		A85DE7BA28129C4900043439 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0A7562864487C00CD4515 /* SurveyResultCollectionViewController.swift */,
 				8CA9ABEB282901E500B569F7 /* TestResultCollectionViewController.swift */,
 				A878B9C928114BBB0091EE28 /* SurveyResultViewController.swift */,
 			);
@@ -457,6 +480,7 @@
 		A85DE7BB28129C4F00043439 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */,
 				8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */,
 				A878B9CB28114F4B0091EE28 /* SurveyResultTableViewCell.swift */,
 			);
@@ -577,7 +601,10 @@
 				8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */,
 				3A65489027D650750043D3B5 /* LaunchScreen.storyboard in Resources */,
 				8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */,
+				8CE0A752286440AD00CD4515 /* parentsImage.png in Resources */,
+				8CE0A751286440AD00CD4515 /* twentyMenImage.png in Resources */,
 				8CDEAE4527FEBDC600304715 /* NotoSansCJKkr-Regular.otf in Resources */,
+				8CE0A755286440AD00CD4515 /* summerImage.png in Resources */,
 				A8094BF828113F6400716A45 /* Main.storyboard in Resources */,
 				8C43B9BB283CA1B900FDC155 /* noBGUselessGiftImage.png in Resources */,
 				8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */,
@@ -585,6 +612,7 @@
 				A8651AD5282E454400C28C83 /* book.png in Resources */,
 				A859146D2858E9CB003DDF3C /* y_baby.png in Resources */,
 				8CDEAE4627FEBDC800304715 /* NotoSansCJKkr-Bold.otf in Resources */,
+				8CE0A753286440AD00CD4515 /* twentyWomanImage.png in Resources */,
 				A859146C2858E9CB003DDF3C /* y_clothes.png in Resources */,
 				A8651AD9282E454400C28C83 /* lifeitem.png in Resources */,
 				A8651AD2282E454400C28C83 /* computer.png in Resources */,
@@ -598,6 +626,7 @@
 				A859145E2858E24A003DDF3C /* uselessGiftImg.png in Resources */,
 				A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */,
 				8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */,
+				8CE0A754286440AD00CD4515 /* uselessImage.png in Resources */,
 				A859145C2858E24A003DDF3C /* twentyMenGiftImg.png in Resources */,
 				A85914712858E9CB003DDF3C /* y_cosmetics.png in Resources */,
 				8C43B9BC283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png in Resources */,
@@ -608,6 +637,7 @@
 				8C43B9B8283CA1B900FDC155 /* noBGSummerGiftImage.png in Resources */,
 				CE7508622851F40F00A576F6 /* SF-Pro.ttf in Resources */,
 				A85914692858E9CB003DDF3C /* y_interior.png in Resources */,
+				8CE0A75B286455A500CD4515 /* defaultAnimation.json in Resources */,
 				A8651AD7282E454400C28C83 /* watch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,9 +704,11 @@
 				8CA9ABF228291D2800B569F7 /* TestResultCollectionReusableView.swift in Sources */,
 				A83BFFEB27F42E4F0035E12C /* SurveyGenderViewController.swift in Sources */,
 				A878B9CA28114BBB0091EE28 /* SurveyResultViewController.swift in Sources */,
+				8CE0A7572864487C00CD4515 /* SurveyResultCollectionViewController.swift in Sources */,
 				8C25C07D280FE4D300D2B2E4 /* StartAnimationViewController.swift in Sources */,
 				8C50D474282E2782007DB1F3 /* SurveyEventViewController.swift in Sources */,
 				A8094BF128113EB200716A45 /* MainRecommendCollectionViewCell.swift in Sources */,
+				8CE0A75928644B3600CD4515 /* SurveyResultCollectionViewCell.swift in Sources */,
 				A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */,
 				A85A8FF2281FA603004260EE /* TestLayout.swift in Sources */,
 				A83BFFE927F42B5D0035E12C /* SurveyHomeViewController.swift in Sources */,
