@@ -19,6 +19,7 @@ class SurveyResultCollectionViewController: UIViewController {
     @IBOutlet var surveyResultMidBottomLabel: UILabel!
     @IBOutlet var surveyResultBottomCollectionView: UICollectionView!
     
+    @IBOutlet var surveyResultView: UIView!
     var gender: String = ""
     var age: String = ""
     var category: String = ""
@@ -34,36 +35,14 @@ class SurveyResultCollectionViewController: UIViewController {
         super.viewDidLoad()
         
         
-        let time = DispatchTime.now() + (2.5)
-        
-        DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
-        }
-        
-        let defaultView: AnimationView = .init(name: "defaultAnimation")
-        self.view.addSubview(defaultView)
-        
-        defaultView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-        defaultView.center = self.view.center
-        defaultView.contentMode = .scaleAspectFill
-        
-        defaultView.play()
-        
+        surveyResultView.isHidden = true
         getResultGiftData()
         surveyResultBottomCollectionView.delegate = self
         surveyResultBottomCollectionView.dataSource = self
-        //
-        //        if let url = URL(string: resultDataArray[0].imageUrl){
-        //            if let imagedata = try? Data(contentsOf: url){
-        //                surveyResultMainImage.image = UIImage(data: imagedata)
-        //            }else{
-        //                surveyResultMainImage.image = UIImage(named: "parentsImage.png")
-        //            }
-        //        }
-        //
-        //        surveyResultMidTopLabel.text = resultDataArray[0].keyword
-        surveyResultMidBottomLabel.text = "사세요"
-        surveyResultMainImage.image = UIImage(named: "parentsImage.png")
         
+                
+        surveyResultMidBottomLabel.text = "사세요"
+
         
         // Do any additional setup after loading the view.
     }
@@ -118,7 +97,15 @@ class SurveyResultCollectionViewController: UIViewController {
                         
                         self.resultDataArray = resultDataArray
                         self.surveyResultBottomCollectionView.reloadData()
-                        
+                        if self.resultDataArray.count != 0{
+                        if let url = URL(string: self.resultDataArray[0].imageUrl){
+                            if let imagedata = try? Data(contentsOf: url){
+                                self.surveyResultMainImage.image = UIImage(data: imagedata)
+                            }
+                        }
+                
+                        self.surveyResultMidTopLabel.text = self.resultDataArray[0].keyword
+                        }
                     }catch let err{
                         print("err: \(err)")
                     }
@@ -126,6 +113,21 @@ class SurveyResultCollectionViewController: UIViewController {
                 }
                 if self.resultDataArray.count == 0 {
                     self.resultDataArray = [Gift(highPrice: 0, imageUrl: "https://shopping-phinf.pstatic.net/main_2778888/3.jpg", keyword: "가격대에 제품이 없어요", lowPrice: 0, meanPrice: 0, rank: 0, score: 0, webUrl: "https://github.com/DevKDuck")]
+                    self.surveyResultView.isHidden = false
+                    self.surveyResultMidTopLabel.text = "찾으시는 선물은 없습니다 ㅠㅠ"
+                    let time = DispatchTime.now() + (5.0)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
+                    }
+                    
+                    let defaultView: AnimationView = .init(name: "defaultAnimation")
+                    self.view.addSubview(defaultView)
+                    
+                    defaultView.frame = CGRect(x: 0, y: 0, width: 220, height: 220)
+                    defaultView.center = self.surveyResultView.center
+                    defaultView.contentMode = .scaleAspectFill
+                    
+                    defaultView.play()
                 }
             }
             

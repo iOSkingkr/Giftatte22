@@ -117,14 +117,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의 성별은 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-oO-Jkj" userLabel="선물 받을 사람의  성별은 무엇인가요?">
-                                <rect key="frame" x="60" y="125" width="288.66666666666669" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의  성별은 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-oO-Jkj" userLabel="선물 받을 사람의  성별은 무엇인가요?">
+                                <rect key="frame" x="60" y="125" width="153" height="48"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="mDA-1P-dOt">
-                                <rect key="frame" x="60" y="193" width="255" height="454"/>
+                                <rect key="frame" x="60" y="217" width="255" height="454"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="manBT" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7uQ-Ut-heA">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="144"/>
@@ -229,14 +229,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의나이대는 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1F-Cs-evi">
-                                <rect key="frame" x="60" y="125" width="301" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물 받을 사람의 나이대는 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1F-Cs-evi">
+                                <rect key="frame" x="60.000000000000014" y="125" width="170.33333333333337" height="48"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rm0-pl-2QQ">
-                                <rect key="frame" x="60" y="193" width="255" height="452"/>
+                                <rect key="frame" x="60" y="217" width="255" height="452"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctG-0W-MSB">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
@@ -503,14 +503,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물의 가격대는 얼마로 생각하고 있나요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qq-Jw-faj" userLabel="선물의 가격대는 얼마로 생각하고 있나요?">
-                                <rect key="frame" x="60" y="125" width="323.33333333333331" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물의 가격대는  얼마로 생각하고 있나요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qq-Jw-faj" userLabel="선물의 가격대는 얼마로 생각하고 있나요?">
+                                <rect key="frame" x="60.000000000000014" y="125" width="192.33333333333337" height="48"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="OqV-lA-BE3">
-                                <rect key="frame" x="60" y="193" width="255" height="463"/>
+                                <rect key="frame" x="60" y="217" width="255" height="463"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ud0-Nj-Y1k">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="83"/>
@@ -644,17 +644,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그 사람에게 제일 필요할 것 같은 것은?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEw-R9-Qk2" userLabel="그 사람에게 제일 필요할 것 같은 것은?">
-                                <rect key="frame" x="60" y="125" width="298.33333333333331" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="그 사람에게 제일  필요할 것 같은 것은?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WEw-R9-Qk2" userLabel="그 사람에게 제일 필요할 것 같은 것은?">
+                                <rect key="frame" x="59.999999999999986" y="125" width="162.66666666666663" height="48"/>
                                 <fontDescription key="fontDescription" name="SFPro-Regular" family="SF Pro" pointSize="20"/>
                                 <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRN-O9-AEt">
-                                <rect key="frame" x="30" y="179" width="315" height="524"/>
+                                <rect key="frame" x="30" y="203" width="315" height="500"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5c-HO-6hQ">
-                                        <rect key="frame" x="58" y="450" width="199" height="44"/>
+                                        <rect key="frame" x="58" y="426" width="199" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="2UR-BS-igq"/>
                                         </constraints>
@@ -816,26 +816,34 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdw-py-jTS">
+                                <rect key="frame" x="77.666666666666686" y="64" width="220" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="E2j-HV-2fJ"/>
+                                    <constraint firstAttribute="height" constant="220" id="vka-l9-CWL"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CAg-Qt-4ut">
                                 <rect key="frame" x="0.0" y="512" width="375" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aa9-1X-zGE">
-                                    <size key="itemSize" width="143" height="180"/>
-                                    <size key="estimatedItemSize" width="143" height="180"/>
+                                    <size key="itemSize" width="143" height="157"/>
+                                    <size key="estimatedItemSize" width="143" height="157"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="23" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SurveyResultCollectionViewCell" reuseIdentifier="SurveyResultCollectionViewCell" id="dow-PH-qWo" customClass="SurveyResultCollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
-                                        <rect key="frame" x="23" y="13.666666666666666" width="143" height="180"/>
+                                        <rect key="frame" x="23" y="25" width="143" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ubZ-Si-DMj">
-                                            <rect key="frame" x="0.0" y="0.0" width="143" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="157"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UG-lf-7eU">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1UG-lf-7eU">
                                                     <rect key="frame" x="0.0" y="0.0" width="143" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="143" id="Q0I-HS-dCT"/>
@@ -867,7 +875,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="xhP-vn-D0z" secondAttribute="trailing" id="zjF-3r-r6V"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="143" height="180"/>
+                                        <size key="customSize" width="143" height="157"/>
                                         <connections>
                                             <outlet property="surveyResultBottomCollectionBottomLabel" destination="wxr-fe-OMt" id="VT5-hu-Bw2"/>
                                             <outlet property="surveyResultBottomCollectionTopLabel" destination="xhP-vn-D0z" id="yxr-Ik-CNg"/>
@@ -885,9 +893,11 @@
                             <constraint firstItem="sMq-u5-rJ2" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="M7f-yE-u0N"/>
                             <constraint firstItem="qGl-xU-UbB" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="MhH-jt-pxA"/>
                             <constraint firstItem="ym4-T3-H7w" firstAttribute="top" secondItem="sMq-u5-rJ2" secondAttribute="bottom" constant="10" id="N8m-bq-uMN"/>
+                            <constraint firstItem="mdw-py-jTS" firstAttribute="top" secondItem="16C-Yl-KyN" secondAttribute="top" constant="20" id="cAa-SI-5Iq"/>
                             <constraint firstItem="ym4-T3-H7w" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="ilN-S8-C6H"/>
                             <constraint firstItem="QN2-6M-L3I" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="q8F-DT-Ply"/>
                             <constraint firstItem="QN2-6M-L3I" firstAttribute="top" secondItem="ym4-T3-H7w" secondAttribute="bottom" constant="48" id="wZb-AI-eum"/>
+                            <constraint firstItem="mdw-py-jTS" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="wrd-QE-Mo0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -895,6 +905,7 @@
                         <outlet property="surveyResultMainImage" destination="qGl-xU-UbB" id="0FG-4X-Bdg"/>
                         <outlet property="surveyResultMidBottomLabel" destination="ym4-T3-H7w" id="7Xd-Gt-IS5"/>
                         <outlet property="surveyResultMidTopLabel" destination="sMq-u5-rJ2" id="a81-62-Ova"/>
+                        <outlet property="surveyResultView" destination="mdw-py-jTS" id="WoY-Kj-GCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWu-ca-hzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1106,7 +1117,7 @@
         <scene sceneID="C3f-tD-Ll8">
             <objects>
                 <navigationController storyboardIdentifier="SurveyNavigationViewController" title="SurveyNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="P4u-dQ-ndN" customClass="SurveyNavigationViewController" customModule="Giftatte22" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ㅈ같다" image="star" catalog="system" id="Mm0-Kc-oRa">
+                    <tabBarItem key="tabBarItem" title="검색" image="magnifyingglass.circle" catalog="system" id="Mm0-Kc-oRa">
                         <color key="badgeColor" name="grey"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1127,7 +1138,7 @@
     </scenes>
     <resources>
         <image name="Giftatte22Icon.png" width="568" height="596"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="121"/>
         <namedColor name="grey">
             <color red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
