@@ -12,7 +12,7 @@ import FirebaseFirestore
 class HotCategoryViewController: UIViewController {
     
     var nowCategory = 0
-    let categoryLabeArray = ["출산 축하해요!","독서왕이 되어 볼까요!","이런 꾸안꾸룩 입으면 나도 패피!","시대가 빠르게 변하고 있는 각박한 사회!!나도 전자기기 장만!","한듯 안한듯 화장이 요새 대세에요","부담될떄는 상품권이 최고죠","코로나 시대 집도 신경쓰는 당신을 위한 선물이 똭!","살면서 이건 꼭 필요한데 내가 사긴 싫죠.. ","악세사리에 뽀인트를 주고 싶다!!"]
+
     
     var hotCategoryDataArray: [Gift] = []
     var firstcollect = "presents"
@@ -32,9 +32,7 @@ class HotCategoryViewController: UIViewController {
         super.viewDidLoad()
         getHotCategoryData()
         
-        hotCategoryResultLabel.text = categoryLabeArray[nowCategory]
-        
-        hotCategoryResultImage.image = hotCategoryImagesArray[nowCategory]
+
         
         hotCategoryResultCollectionView.dataSource = self
         hotCategoryResultCollectionView.delegate = self
@@ -120,7 +118,12 @@ class HotCategoryViewController: UIViewController {
                             
                             self.hotCategoryDataArray = hotCategoryDataArray
                             self.hotCategoryResultCollectionView.reloadData()
-                            
+                            if let url = URL(string: self.hotCategoryDataArray[0].imageUrl){
+                                if let imagedata = try? Data(contentsOf: url){
+                                    self.hotCategoryResultImage.image = UIImage(data: imagedata)
+                                }
+                            }
+                            self.hotCategoryResultLabel.text = self.hotCategoryDataArray[0].keyword
                         }catch let err{
                             print("err: \(err)")
                         }

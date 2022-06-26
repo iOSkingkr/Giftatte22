@@ -210,7 +210,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             if let imagedata = try? Data(contentsOf: url){
                 top5Cell.top5ImageView.image = UIImage(data: imagedata)
                 top5Cell.top5ImageView.layer.cornerRadius = 15
-                top5Cell.top5ImageView.contentMode = .scaleToFill
+                top5Cell.top5ImageView.contentMode = .scaleAspectFill
                 
             }
         }
@@ -237,7 +237,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, siForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: 300, height: 130)
     }

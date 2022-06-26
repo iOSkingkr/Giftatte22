@@ -40,6 +40,14 @@ class SurveyResultCollectionViewController: UIViewController {
         surveyResultBottomCollectionView.delegate = self
         surveyResultBottomCollectionView.dataSource = self
         
+        let bounds = surveyResultMainImage.bounds
+        let pathCircle = UIBezierPath(ovalIn: bounds)
+        
+        let layer = CAShapeLayer()
+        layer.path = pathCircle.cgPath
+        
+        surveyResultMainImage.layer.mask = layer
+        
                 
         surveyResultMidBottomLabel.text = "사세요"
 
@@ -101,6 +109,8 @@ class SurveyResultCollectionViewController: UIViewController {
                         if let url = URL(string: self.resultDataArray[0].imageUrl){
                             if let imagedata = try? Data(contentsOf: url){
                                 self.surveyResultMainImage.image = UIImage(data: imagedata)
+                                
+                                
                             }
                         }
                 
@@ -148,7 +158,11 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         
         cell.surveyResultBottomCollectionTopLabel.text = resultDataArray[indexPath.row].keyword
         
-        cell.surveyResultBottomCollectionBottomLabel.text = String("최저\(resultDataArray[indexPath.row].lowPrice)원")
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        let lowPrice = numberFormatter.string(from: NSNumber(value: resultDataArray[indexPath.row].lowPrice)) ?? "0"
+        cell.surveyResultBottomCollectionBottomLabel.text = String("최저\(lowPrice)원")
         
         if let url = URL(string: resultDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
