@@ -25,18 +25,25 @@ class SurveyGenderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    
         
         manBT.setRounded()
         womanBT.setRounded()
         anyBT.setRounded()
         // Do any additional setup after loading the view.
         
+        let button =  UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        button.setTitle("어때이", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.addTarget(self, action: #selector(clickOnButton), for: .touchUpInside)
+        navigationItem.titleView = button
         
         
     }
@@ -56,6 +63,11 @@ class SurveyGenderViewController: UIViewController {
         @IBAction func pushAnyBT(_ sender: Any) {
             pushNextPage(gender: "ALL")
         }
+    
+    @objc func clickOnButton() {
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "SurveyHomeViewController") as? SurveyHomeViewController else { return }
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
 }
 
 extension UIButton{

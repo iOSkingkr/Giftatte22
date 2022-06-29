@@ -43,6 +43,14 @@ class SurveyPriceViewController: UIViewController {
         price100000to200000.setRounded()
         priceAnything.setRounded()
         // Do any additional setup after loading the view.
+        
+        
+        let button =  UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        button.setTitle("어때이", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.addTarget(self, action: #selector(clickOnButton), for: .touchUpInside)
+        navigationItem.titleView = button
     }
     
     @IBAction func didTapPriceUnder30000(_ sender: Any) {
@@ -60,6 +68,10 @@ class SurveyPriceViewController: UIViewController {
     @IBAction func didTapPriceAll(_ sender: Any) {
         pushNextPage(price: "ALL")
     }
+    @objc func clickOnButton() {
+            guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "SurveyHomeViewController") as? SurveyHomeViewController else { return }
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }
     
     /*
     // MARK: - Navigation

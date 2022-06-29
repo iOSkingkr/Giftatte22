@@ -58,6 +58,19 @@ class SurveyItemViewController: UIViewController{
         print("gender: \(gender), age: \(age), category: \(category), price: \(price)")
         // Do any additional setup after loading the view.
         whiteBackgroundUIView.layer.cornerRadius = 10
+        
+        
+        let button =  UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        button.setTitle("어때이", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.addTarget(self, action: #selector(clickOnButton), for: .touchUpInside)
+        navigationItem.titleView = button
+    }
+    
+    @objc func clickOnButton() {
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "SurveyHomeViewController") as? SurveyHomeViewController else { return }
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     @IBAction func didTapShowResultButton(_ sender: Any) {

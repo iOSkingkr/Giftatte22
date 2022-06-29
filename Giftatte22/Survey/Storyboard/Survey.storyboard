@@ -82,7 +82,7 @@
                             <constraint firstItem="ayg-WM-tCX" firstAttribute="top" secondItem="Ax8-1I-WFU" secondAttribute="top" constant="80" id="vhP-Q0-fbr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w2b-yh-p9N"/>
+                    <navigationItem key="navigationItem" title="   " id="w2b-yh-p9N"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="didTapFindGiftButton" destination="lco-Sw-5qZ" id="hyp-ch-ZW8"/>
@@ -189,7 +189,7 @@
                             <constraint firstItem="QCJ-oO-Jkj" firstAttribute="leading" secondItem="0cv-IN-9Cq" secondAttribute="leading" constant="60" id="yYe-yr-nyy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="어때이" id="NiH-xE-v0c">
+                    <navigationItem key="navigationItem" title=" " id="NiH-xE-v0c">
                         <barButtonItem key="backBarButtonItem" title=" " id="hIZ-0E-PnE">
                             <color key="tintColor" name="grey"/>
                         </barButtonItem>
@@ -1125,6 +1125,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wGk-Rs-uZp">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="grey"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

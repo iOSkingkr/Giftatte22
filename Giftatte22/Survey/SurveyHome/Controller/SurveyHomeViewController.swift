@@ -14,6 +14,9 @@ class SurveyHomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.topItem?.title = " "
+
+        
     }
     
     override func viewDidLoad() {

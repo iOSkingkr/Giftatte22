@@ -29,6 +29,8 @@ class SurveyAgeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
         print("gender: \(gender)")
@@ -38,6 +40,14 @@ class SurveyAgeViewController: UIViewController {
         age40.setRounded()
         age50.setRounded()
         ageAnything.setRounded()
+        
+        
+        let button =  UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 40)
+        button.setTitle("어때이", for: .normal)
+        button.setTitleColor(.gray, for: .normal)
+        button.addTarget(self, action: #selector(clickOnButton), for: .touchUpInside)
+        navigationItem.titleView = button
     }
     
     //MARK: - IBAction 버튼 클릭시 다음 페이지로 이동
@@ -64,6 +74,11 @@ class SurveyAgeViewController: UIViewController {
     @IBAction func clickAgeAnything(_ sender: Any) {
         pushNextPage(age: "ALL")
     }
+    
+    @objc func clickOnButton() {
+        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "SurveyHomeViewController") as? SurveyHomeViewController else { return }
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
 
     /*
     // MARK: - Navigation
@@ -76,4 +91,5 @@ class SurveyAgeViewController: UIViewController {
     */
 
 }
+
 
