@@ -50,12 +50,12 @@ class MainRecommendCollectionViewCell: UICollectionViewCell {
         
         self.customTopLabel.translatesAutoresizingMaskIntoConstraints = false
         self.customTopLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
-        self.customTopLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 340).isActive = true
+        self.customTopLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 310).isActive = true
        
         self.customBottomLabel.translatesAutoresizingMaskIntoConstraints = false
         self.customBottomLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor,constant: 20).isActive = true
         self.customBottomLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: 20).isActive = true
-        self.customBottomLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 380).isActive = true
+        self.customBottomLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 350).isActive = true
         
     
         

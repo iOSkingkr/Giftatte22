@@ -60,17 +60,17 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="htm-hd-jvz">
-                                <rect key="frame" x="0.0" y="169" width="375" height="417"/>
+                                <rect key="frame" x="0.0" y="169.00000000000003" width="375" height="421.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bha-Oe-quI">
                                     <size key="itemSize" width="326" height="408"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="25" minY="0.0" maxX="24" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" restorationIdentifier="MainRecommendCollectionViewCell" reuseIdentifier="MainRecommendCollectionViewCell" id="q8g-XO-oBq" customClass="MainRecommendCollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
-                                        <rect key="frame" x="37" y="0.0" width="326" height="408"/>
+                                        <rect key="frame" x="25" y="0.0" width="326" height="408"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v3w-A4-aOO">
                                             <rect key="frame" x="0.0" y="0.0" width="326" height="408"/>
@@ -130,7 +130,7 @@
                             <constraint firstItem="htm-hd-jvz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9vd-Jr-BhH"/>
                             <constraint firstItem="Yp1-hn-H5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AxI-dk-p5r"/>
                             <constraint firstItem="Bzr-If-Aij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="DoF-ZI-NLq"/>
-                            <constraint firstItem="Bzr-If-Aij" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="9.6699999999999999" id="Rox-Sm-xQp"/>
+                            <constraint firstItem="Bzr-If-Aij" firstAttribute="top" secondItem="htm-hd-jvz" secondAttribute="bottom" constant="5" id="NCq-ur-cek"/>
                             <constraint firstItem="Yp1-hn-H5p" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Wu0-jG-iLp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yp1-hn-H5p" secondAttribute="bottom" constant="30" id="ceQ-bd-7wN"/>
                             <constraint firstItem="Yp1-hn-H5p" firstAttribute="top" secondItem="Bzr-If-Aij" secondAttribute="bottom" constant="14" id="iof-Ih-Bi1"/>
@@ -211,7 +211,7 @@
                                                         <constraint firstAttribute="width" constant="143" id="w4R-GT-Vf7"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-IM-5h3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-IM-5h3">
                                                     <rect key="frame" x="50" y="107" width="43.333333333333343" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                                     <color key="textColor" name="grey"/>
@@ -324,9 +324,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-8p-bEn">
-                                <rect key="frame" x="167" y="396" width="41.333333333333343" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="151.66666666666666" y="389.33333333333331" width="71.666666666666657" height="33.666666666666686"/>
+                                <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
+                                <color key="textColor" name="grey"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="di5-Tp-bmw">
@@ -337,7 +337,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jgZ-QM-RH2">
-                                <rect key="frame" x="41.000000000000014" y="486.33333333333331" width="245.33333333333337" height="25"/>
+                                <rect key="frame" x="41.000000000000014" y="493" width="245.33333333333337" height="25"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-MS-5bF">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -406,7 +406,7 @@
                                                         <constraint firstAttribute="height" constant="100" id="jBe-YX-u9j"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-ro-txi">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-ro-txi">
                                                     <rect key="frame" x="50" y="107" width="43.333333333333343" height="20.333333333333329"/>
                                                     <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                                     <color key="textColor" name="grey"/>
