@@ -17,6 +17,7 @@ class SurveyResultCollectionViewController: UIViewController {
     @IBOutlet var surveyResultMidTopLabel: UILabel!
     
     @IBOutlet var surveyResultMidBottomLabel: UILabel!
+    @IBOutlet var surveyResultAtteLabel: UIStackView!
     @IBOutlet var surveyResultBottomCollectionView: UICollectionView!
     
     @IBOutlet var surveyResultView: UIView!
@@ -124,7 +125,7 @@ class SurveyResultCollectionViewController: UIViewController {
                 if self.resultDataArray.count == 0 {
                     self.resultDataArray = [Gift(highPrice: 0, imageUrl: "https://shopping-phinf.pstatic.net/main_2778888/3.jpg", keyword: "가격대에 제품이 없어요", lowPrice: 0, meanPrice: 0, rank: 0, score: 0, webUrl: "https://github.com/DevKDuck")]
                     self.surveyResultView.isHidden = false
-                    self.surveyResultMidTopLabel.text = "찾으시는 선물은 없습니다 ㅠㅠ"
+                    self.surveyResultMidTopLabel.text = "찾으시는 선물이 없습니다 ㅠㅠ\n 다시 고르러 가볼까요?"
                     let time = DispatchTime.now() + (5.0)
                     
                     DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
@@ -136,8 +137,11 @@ class SurveyResultCollectionViewController: UIViewController {
                     defaultView.frame = CGRect(x: 0, y: 0, width: 220, height: 220)
                     defaultView.center = self.surveyResultView.center
                     defaultView.contentMode = .scaleAspectFill
-                    
                     defaultView.play()
+                    
+                    self.surveyResultBottomCollectionView.isHidden = true
+                    self.surveyResultMidBottomLabel.isHidden = true
+                    self.surveyResultAtteLabel.isHidden = true
                 }
             }
             

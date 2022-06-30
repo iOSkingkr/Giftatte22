@@ -164,7 +164,7 @@ extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewD
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: hotCategoryDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
         bottomCell.hotCategoryResultBottomLabel.text =
-        String("\(lowPrice)원~")
+        String("최저\(lowPrice)원~")
         
         return bottomCell
         

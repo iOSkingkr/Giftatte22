@@ -304,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				8C102D832854782500D85382 /* HotCategoryViewController.swift */,
-				8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */,
 				A8094BF228113EE000716A45 /* MainRecommendResultViewController.swift */,
 				8C1711B7280FE8CA00D330DD /* Strings.swift */,
 				8CEDA86E2823C2EF0007BE67 /* Images.swift */,
@@ -312,6 +311,7 @@
 				8C1711B9280FE92400D330DD /* CarouselLayout.swift */,
 				A8094BF428113EE800716A45 /* ViewController.swift */,
 				8CA9ABF128291D2800B569F7 /* TestResultCollectionReusableView.swift */,
+				8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
