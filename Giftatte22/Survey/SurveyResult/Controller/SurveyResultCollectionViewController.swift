@@ -161,6 +161,7 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         let cell = surveyResultBottomCollectionView.dequeueReusableCell(withReuseIdentifier: "SurveyResultCollectionViewCell", for: indexPath) as! SurveyResultCollectionViewCell
         
         cell.surveyResultBottomCollectionTopLabel.text = resultDataArray[indexPath.row].keyword
+        cell.surveyResultBottomCollectionTopLabel.adjustsFontSizeToFitWidth = true
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal

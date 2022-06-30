@@ -212,23 +212,29 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrs-IM-5h3">
-                                                    <rect key="frame" x="50" y="107" width="43.333333333333343" height="20.333333333333329"/>
+                                                    <rect key="frame" x="1.6666666666666714" y="110" width="140" height="20.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="24g-2V-jBi"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh1-h7-l7Z">
-                                                    <rect key="frame" x="50" y="129.33333333333334" width="43.333333333333343" height="20.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xh1-h7-l7Z">
+                                                    <rect key="frame" x="1.6666666666666714" y="153" width="140" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="QSA-aZ-CzX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="w94-G3-UHU" firstAttribute="centerX" secondItem="A3B-e0-6ww" secondAttribute="centerX" id="9s7-dr-Lgn"/>
+                                                <constraint firstAttribute="bottom" secondItem="xh1-h7-l7Z" secondAttribute="bottom" constant="10" id="A8h-NI-yYj"/>
                                                 <constraint firstItem="yrs-IM-5h3" firstAttribute="centerX" secondItem="A3B-e0-6ww" secondAttribute="centerX" id="O04-XS-0S0"/>
-                                                <constraint firstItem="xh1-h7-l7Z" firstAttribute="top" secondItem="yrs-IM-5h3" secondAttribute="bottom" constant="2" id="Tcc-dd-JHJ"/>
-                                                <constraint firstItem="yrs-IM-5h3" firstAttribute="top" secondItem="w94-G3-UHU" secondAttribute="bottom" constant="7" id="nKX-MQ-9If"/>
+                                                <constraint firstItem="yrs-IM-5h3" firstAttribute="top" secondItem="w94-G3-UHU" secondAttribute="bottom" constant="10" id="nKX-MQ-9If"/>
                                                 <constraint firstItem="xh1-h7-l7Z" firstAttribute="centerX" secondItem="A3B-e0-6ww" secondAttribute="centerX" id="o9q-Rt-tv3"/>
                                                 <constraint firstItem="w94-G3-UHU" firstAttribute="top" secondItem="A3B-e0-6ww" secondAttribute="top" id="yPi-qC-ugv"/>
                                             </constraints>
@@ -244,7 +250,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5RZ-t4-2hb">
-                                <rect key="frame" x="23.000000000000014" y="491.66666666666669" width="245.33333333333337" height="25.000000000000057"/>
+                                <rect key="frame" x="41.000000000000014" y="491.66666666666669" width="245.33333333333337" height="25.000000000000057"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFh-7I-U8z">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -263,7 +269,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtn-pa-Xnh">
-                                                <rect key="frame" x="56.666666666666671" y="0.0" width="73.000000000000014" height="25"/>
+                                                <rect key="frame" x="56.666666666666657" y="0.0" width="73" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRr-F8-V8W">
                                                         <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="25"/>
@@ -272,7 +278,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Miv-qM-SZa">
-                                                        <rect key="frame" x="48.666666666666671" y="0.0" width="24.333333333333329" height="25"/>
+                                                        <rect key="frame" x="48.666666666666686" y="0.0" width="24.333333333333329" height="25"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                                         <color key="textColor" name="grey"/>
                                                         <nil key="highlightedColor"/>
@@ -293,7 +299,7 @@
                         <viewLayoutGuide key="safeArea" id="ajm-Aa-yrl"/>
                         <color key="backgroundColor" name="white"/>
                         <constraints>
-                            <constraint firstItem="5RZ-t4-2hb" firstAttribute="leading" secondItem="ajm-Aa-yrl" secondAttribute="leading" constant="23" id="7JU-aM-KdH"/>
+                            <constraint firstItem="5RZ-t4-2hb" firstAttribute="leading" secondItem="ajm-Aa-yrl" secondAttribute="leading" constant="41" id="7JU-aM-KdH"/>
                             <constraint firstItem="aEF-QR-3Id" firstAttribute="centerX" secondItem="sF0-BF-cOC" secondAttribute="centerX" id="EST-tI-UNB"/>
                             <constraint firstItem="5RZ-t4-2hb" firstAttribute="top" secondItem="by8-qf-ucg" secondAttribute="bottom" constant="48" id="VNd-Zf-oaZ"/>
                             <constraint firstItem="by8-qf-ucg" firstAttribute="centerY" secondItem="sF0-BF-cOC" secondAttribute="centerY" id="dYx-eU-ZGC"/>
@@ -406,25 +412,31 @@
                                                         <constraint firstAttribute="height" constant="100" id="jBe-YX-u9j"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-ro-txi">
-                                                    <rect key="frame" x="50" y="107" width="43.333333333333343" height="20.333333333333329"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-ro-txi">
+                                                    <rect key="frame" x="1.6666666666666714" y="110" width="140" height="20.333333333333343"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="3fP-p0-TcG"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-7w-Vzg">
-                                                    <rect key="frame" x="50" y="129.33333333333334" width="43.333333333333343" height="20.333333333333343"/>
-                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-7w-Vzg">
+                                                    <rect key="frame" x="1.6666666666666714" y="153" width="140" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="140" id="ViS-Qr-dlr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="14"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="d3Z-7w-Vzg" firstAttribute="top" secondItem="mtu-ro-txi" secondAttribute="bottom" constant="2" id="4Cd-bD-Pkm"/>
                                                 <constraint firstItem="d3Z-7w-Vzg" firstAttribute="centerX" secondItem="ul4-d0-BFW" secondAttribute="centerX" id="6Vv-97-pPb"/>
                                                 <constraint firstItem="jTC-4M-YdB" firstAttribute="top" secondItem="ul4-d0-BFW" secondAttribute="top" id="Pe9-So-2lb"/>
-                                                <constraint firstItem="mtu-ro-txi" firstAttribute="top" secondItem="jTC-4M-YdB" secondAttribute="bottom" constant="7" id="cyU-TL-Eon"/>
-                                                <constraint firstItem="mtu-ro-txi" firstAttribute="centerX" secondItem="ul4-d0-BFW" secondAttribute="centerX" id="dhG-1t-6m3"/>
+                                                <constraint firstItem="mtu-ro-txi" firstAttribute="top" secondItem="jTC-4M-YdB" secondAttribute="bottom" constant="10" id="cyU-TL-Eon"/>
+                                                <constraint firstAttribute="bottom" secondItem="d3Z-7w-Vzg" secondAttribute="bottom" constant="10" id="d08-3U-rjf"/>
+                                                <constraint firstItem="mtu-ro-txi" firstAttribute="centerX" secondItem="ul4-d0-BFW" secondAttribute="centerX" id="oCX-Dj-d0r"/>
                                                 <constraint firstItem="jTC-4M-YdB" firstAttribute="centerX" secondItem="ul4-d0-BFW" secondAttribute="centerX" id="qle-cH-EJy"/>
                                             </constraints>
                                         </collectionViewCellContentView>
