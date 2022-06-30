@@ -221,7 +221,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
         top5Cell.top5PriceLabel.text =
-        String("\(lowPrice)원~")
+        String("최저\(lowPrice)원~")
         
         return top5Cell
         

@@ -901,6 +901,7 @@
                     </view>
                     <navigationItem key="navigationItem" title=" " id="CMY-F7-MYz"/>
                     <connections>
+                        <outlet property="surveyResultAtteLabel" destination="QN2-6M-L3I" id="eD7-jA-qWA"/>
                         <outlet property="surveyResultBottomCollectionView" destination="CAg-Qt-4ut" id="UMh-sK-Npc"/>
                         <outlet property="surveyResultMainImage" destination="qGl-xU-UbB" id="0FG-4X-Bdg"/>
                         <outlet property="surveyResultMidBottomLabel" destination="ym4-T3-H7w" id="7Xd-Gt-IS5"/>
