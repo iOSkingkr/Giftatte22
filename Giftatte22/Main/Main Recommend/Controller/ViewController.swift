@@ -101,14 +101,15 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
 //            let width2 = ((frameWidth2 - (horizontalMargin2 * 2)) / 9)
 //            let height2 = width2
             let width2 = hotCategoryCollectionView.frame.width / 9 - 1
-            hotCategoryCollectionView.contentMode = .scaleAspectFill
-            return CGSize(width: width2, height: width2)
+            let height = hotCategoryCollectionView.frame.height
+//            hotCategoryCollectionView.contentMode = .scaleAspectFill
+            return CGSize(width: width2, height: height)
         }
        
-        let frameWidth = self.view.frame.width
-        let horizontalMargin: CGFloat = frameWidth * (56 / 375)
-        let width = frameWidth - (horizontalMargin * 2)
-        let height = width * (442 / 260)
+//        let frameWidth = self.view.frame.width
+//        let horizontalMargin: CGFloat = frameWidth * (24.5 / 375)
+//        let width = frameWidth - (horizontalMargin * 2)
+//        let height = width * (408 / 326)
         //        let collectionHeight: CGFloat = 382
         //        //collectionView.frame.height
         
@@ -119,7 +120,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
         //            width = height * (263 / 500)
         //        }
         //
-        return CGSize(width: width, height: height)
+//        print("\(width)이건 넓이야\(height)이건 하잇이야\(horizontalMargin)이건 마진이야\(frameWidth)이건 프레임넓이야")
+        return CGSize(width: 326, height: 408)
         
     }
     
