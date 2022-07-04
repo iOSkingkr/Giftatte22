@@ -158,7 +158,7 @@ extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewD
             }
         }
         bottomCell.hotCategoryResultTopLabel.text = hotCategoryDataArray[indexPath.row].keyword
-        
+//        bottomCell.hotCategoryResultTopLabel.adjustsFontSizeToFitWidth = true
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
         numberFormatter.numberStyle = .decimal //decimal 사용
         
