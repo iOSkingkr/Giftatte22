@@ -778,35 +778,35 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QN2-6M-L3I">
-                                <rect key="frame" x="41.000000000000014" y="418.33333333333331" width="253.33333333333337" height="35"/>
+                                <rect key="frame" x="41.000000000000014" y="435.33333333333331" width="243.33333333333337" height="25"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-kl-cXc">
-                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="lDF-Rd-Hdz"/>
-                                            <constraint firstAttribute="height" constant="35" id="oGJ-TK-6jR"/>
+                                            <constraint firstAttribute="width" constant="25" id="lDF-Rd-Hdz"/>
+                                            <constraint firstAttribute="height" constant="25" id="oGJ-TK-6jR"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Exa-0p-wbV">
-                                        <rect key="frame" x="43.000000000000014" y="0.0" width="210.33333333333337" height="35"/>
+                                        <rect key="frame" x="33.000000000000014" y="0.0" width="210.33333333333337" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이런" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unW-xK-tp8">
-                                                <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="25"/>
                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                                 <color key="textColor" name="grey"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtt-3W-AB8">
-                                                <rect key="frame" x="56.666666666666657" y="0.0" width="73" height="35"/>
+                                                <rect key="frame" x="56.666666666666657" y="0.0" width="73" height="25"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선물" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzs-wc-F6o">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.666666666666664" height="25"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                                         <color key="textColor" red="0.92539656159999995" green="0.3658511639" blue="0.33722069859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="은" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-T0-BeR">
-                                                        <rect key="frame" x="48.666666666666686" y="0.0" width="24.333333333333329" height="35"/>
+                                                        <rect key="frame" x="48.666666666666686" y="0.0" width="24.333333333333329" height="25"/>
                                                         <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                                         <color key="textColor" name="grey"/>
                                                         <nil key="highlightedColor"/>
@@ -814,7 +814,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="어때이" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn0-z6-H2h">
-                                                <rect key="frame" x="137.66666666666666" y="0.0" width="72.666666666666657" height="35"/>
+                                                <rect key="frame" x="137.66666666666666" y="0.0" width="72.666666666666657" height="25"/>
                                                 <fontDescription key="fontDescription" name="SFPro-Bold" family="SF Pro" pointSize="28"/>
                                                 <color key="textColor" name="grey"/>
                                                 <nil key="highlightedColor"/>
@@ -848,12 +848,9 @@
                                                         <constraint firstAttribute="height" constant="100" id="tkn-cd-eRI"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-vn-D0z">
-                                                    <rect key="frame" x="0.0" y="110" width="143" height="20.333333333333343"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="140" id="lTR-Di-rhi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhP-vn-D0z">
+                                                    <rect key="frame" x="0.0" y="110" width="143" height="19.333333333333343"/>
+                                                    <fontDescription key="fontDescription" name="SFPro-Semibold" family="SF Pro" pointSize="16"/>
                                                     <color key="textColor" name="grey"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -901,7 +898,7 @@
                             <constraint firstItem="ym4-T3-H7w" firstAttribute="top" secondItem="sMq-u5-rJ2" secondAttribute="bottom" constant="10" id="N8m-bq-uMN"/>
                             <constraint firstItem="mdw-py-jTS" firstAttribute="top" secondItem="16C-Yl-KyN" secondAttribute="top" constant="20" id="cAa-SI-5Iq"/>
                             <constraint firstItem="ym4-T3-H7w" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="ilN-S8-C6H"/>
-                            <constraint firstItem="QN2-6M-L3I" firstAttribute="top" secondItem="ym4-T3-H7w" secondAttribute="bottom" constant="48" id="wZb-AI-eum"/>
+                            <constraint firstItem="QN2-6M-L3I" firstAttribute="top" secondItem="ym4-T3-H7w" secondAttribute="bottom" constant="65" id="wZb-AI-eum"/>
                             <constraint firstItem="mdw-py-jTS" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="wrd-QE-Mo0"/>
                         </constraints>
                     </view>
