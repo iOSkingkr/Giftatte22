@@ -33,7 +33,7 @@ class SurveyResultCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLayout()
+//        setupLayout()
         surveyResultView.isHidden = true
         getResultGiftData()
         surveyResultBottomCollectionView.delegate = self
@@ -47,7 +47,7 @@ class SurveyResultCollectionViewController: UIViewController {
         // 이미지를 동그랗게 만드는 간단한 방법! 사이즈의 절반으로 설정하면 원이다!
         surveyResultMainImage.layer.cornerRadius = 110
         
-        surveyResultMidBottomLabel.text = "추천해요"
+        surveyResultMidBottomLabel.text = "추천해요💝"
     }
     
     func getResultGiftData(){
@@ -119,7 +119,7 @@ class SurveyResultCollectionViewController: UIViewController {
                 if self.resultDataArray.count == 0 {
                     self.resultDataArray = [Gift(highPrice: 0, imageUrl: "https://shopping-phinf.pstatic.net/main_2778888/3.jpg", keyword: "가격대에 제품이 없어요", lowPrice: 0, meanPrice: 0, rank: 0, score: 0, webUrl: "https://github.com/DevKDuck")]
                     self.surveyResultView.isHidden = false
-                    self.surveyResultMidTopLabel.text = "찾으시는 선물이 없습니다 ㅠㅠ\n 다시 고르러 가볼까요?"
+                    self.surveyResultMidTopLabel.text = "찾으시는 선물이 없습니다 ㅠㅠ\n 금액대를 다시 골라볼까요?"
                     let time = DispatchTime.now() + (5.0)
                     
                     DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
@@ -142,13 +142,13 @@ class SurveyResultCollectionViewController: UIViewController {
         }
     }
     
-    func setupLayout() {
-        surveyResultBottomCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        surveyResultBottomCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        surveyResultBottomCollectionView.topAnchor.constraint(equalTo: surveyResultAtteLabel.bottomAnchor, constant: 20).isActive = true
-        surveyResultBottomCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        surveyResultBottomCollectionView.heightAnchor.constraint(equalToConstant: 180).isActive = true
-    }
+//    func setupLayout() {
+//        surveyResultBottomCollectionView.translatesAutoresizingMaskIntoConstraints = false
+//        surveyResultBottomCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        surveyResultBottomCollectionView.topAnchor.constraint(equalTo: surveyResultAtteLabel.bottomAnchor, constant: 20).isActive = true
+//        surveyResultBottomCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        surveyResultBottomCollectionView.heightAnchor.constraint(equalToConstant: 180).isActive = true
+//    }
 }
 
 
