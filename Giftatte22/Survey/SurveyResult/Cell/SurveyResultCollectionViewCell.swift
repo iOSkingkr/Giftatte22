@@ -10,6 +10,7 @@ import UIKit
 class SurveyResultCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var surveyResultBottomImageView: UIImageView!
-    @IBOutlet var surveyResultBottomCollectionTopLabel: UILabel!
     @IBOutlet var surveyResultBottomCollectionBottomLabel: UILabel!
+    
+    @IBOutlet var surveyResultBottomCollectionTopLabel: UILabel!
 }

@@ -13,12 +13,14 @@ import Lottie
 class SurveyResultCollectionViewController: UIViewController {
     
     @IBOutlet var surveyResultMainImage: UIImageView!
+    
     @IBOutlet var surveyResultMidTopLabel: UILabel!
+    
     @IBOutlet var surveyResultMidBottomLabel: UILabel!
     @IBOutlet var surveyResultAtteLabel: UIStackView!
     @IBOutlet var surveyResultBottomCollectionView: UICollectionView!
-    @IBOutlet var surveyResultView: UIView!
     
+    @IBOutlet var surveyResultView: UIView!
     var gender: String = ""
     var age: String = ""
     var category: String = ""
@@ -33,21 +35,25 @@ class SurveyResultCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLayout()
+        
         surveyResultView.isHidden = true
         getResultGiftData()
         surveyResultBottomCollectionView.delegate = self
         surveyResultBottomCollectionView.dataSource = self
-//
-//        let bounds = surveyResultMainImage.bounds
-//        let pathCircle = UIBezierPath(ovalIn: bounds)
-//        let layer = CAShapeLayer()
-//        layer.path = pathCircle.cgPath
-//        surveyResultMainImage.layer.mask = layer
-        // 이미지를 동그랗게 만드는 간단한 방법! 사이즈의 절반으로 설정하면 원이다!
-        surveyResultMainImage.layer.cornerRadius = 110
         
-        surveyResultMidBottomLabel.text = "추천해요"
+        let bounds = surveyResultMainImage.bounds
+        let pathCircle = UIBezierPath(ovalIn: bounds)
+        
+        let layer = CAShapeLayer()
+        layer.path = pathCircle.cgPath
+        
+        surveyResultMainImage.layer.mask = layer
+        
+                
+        surveyResultMidBottomLabel.text = "사세요"
+
+        
+        // Do any additional setup after loading the view.
     }
     
     func getResultGiftData(){
@@ -141,14 +147,6 @@ class SurveyResultCollectionViewController: UIViewController {
             
         }
     }
-    
-    func setupLayout() {
-        surveyResultBottomCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        surveyResultBottomCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        surveyResultBottomCollectionView.topAnchor.constraint(equalTo: surveyResultAtteLabel.bottomAnchor, constant: 20).isActive = true
-        surveyResultBottomCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        surveyResultBottomCollectionView.heightAnchor.constraint(equalToConstant: 180).isActive = true
-    }
 }
 
 
@@ -163,7 +161,6 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         let cell = surveyResultBottomCollectionView.dequeueReusableCell(withReuseIdentifier: "SurveyResultCollectionViewCell", for: indexPath) as! SurveyResultCollectionViewCell
         
         cell.surveyResultBottomCollectionTopLabel.text = resultDataArray[indexPath.row].keyword
-//        cell.surveyResultBottomCollectionTopLabel.adjustsFontSizeToFitWidth = true
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal

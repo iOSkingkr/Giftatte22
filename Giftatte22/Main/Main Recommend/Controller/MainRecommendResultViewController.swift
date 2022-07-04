@@ -215,7 +215,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             }
         }
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
-//        top5Cell.top5NameLabel.adjustsFontSizeToFitWidth = true
+        
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
         numberFormatter.numberStyle = .decimal //decimal 사용
         
