@@ -783,10 +783,10 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CAg-Qt-4ut">
-                                <rect key="frame" x="0.0" y="538" width="375" height="210"/>
+                                <rect key="frame" x="0.0" y="588" width="375" height="180"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="210" id="aIt-UJ-ukX"/>
+                                    <constraint firstAttribute="height" constant="180" id="aIt-UJ-ukX"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aa9-1X-zGE">
                                     <size key="itemSize" width="143" height="180"/>
@@ -796,7 +796,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SurveyResultCollectionViewCell" reuseIdentifier="SurveyResultCollectionViewCell" id="dow-PH-qWo" customClass="SurveyResultCollectionViewCell" customModule="Giftatte22" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="15" width="143" height="180"/>
+                                        <rect key="frame" x="30" y="0.0" width="143" height="180"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ubZ-Si-DMj">
                                             <rect key="frame" x="0.0" y="0.0" width="143" height="180"/>
@@ -847,7 +847,7 @@
                                 </cells>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QN2-6M-L3I">
-                                <rect key="frame" x="40.000000000000014" y="503" width="243.33333333333337" height="25"/>
+                                <rect key="frame" x="40.000000000000014" y="553" width="243.33333333333337" height="25"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Giftatte22Icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="xzt-kl-cXc">
                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -899,7 +899,7 @@
                             <constraint firstItem="qGl-xU-UbB" firstAttribute="top" secondItem="16C-Yl-KyN" secondAttribute="top" constant="20" id="5gd-W8-BbB"/>
                             <constraint firstItem="CAg-Qt-4ut" firstAttribute="leading" secondItem="16C-Yl-KyN" secondAttribute="leading" id="Abb-wz-etw"/>
                             <constraint firstItem="q5a-2z-zGa" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="ELf-RQ-EPJ"/>
-                            <constraint firstItem="16C-Yl-KyN" firstAttribute="bottom" secondItem="CAg-Qt-4ut" secondAttribute="bottom" constant="30" id="JGe-SM-yXk"/>
+                            <constraint firstItem="16C-Yl-KyN" firstAttribute="bottom" secondItem="CAg-Qt-4ut" secondAttribute="bottom" constant="10" id="JGe-SM-yXk"/>
                             <constraint firstItem="q5a-2z-zGa" firstAttribute="centerY" secondItem="w9t-yV-Vep" secondAttribute="centerY" id="Ksx-Td-2iK"/>
                             <constraint firstItem="qGl-xU-UbB" firstAttribute="centerX" secondItem="w9t-yV-Vep" secondAttribute="centerX" id="MhH-jt-pxA"/>
                             <constraint firstItem="CAg-Qt-4ut" firstAttribute="trailing" secondItem="16C-Yl-KyN" secondAttribute="trailing" id="Yp6-Nz-C2s"/>

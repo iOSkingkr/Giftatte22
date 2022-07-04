@@ -53,9 +53,9 @@ class ViewController: UIViewController {
     
     func addCollectionView(){
         let layout = CarouselLayout()
-        layout.itemSize = CGSize(width: mainRecommendCollectionView.frame.size.width*0.796, height: mainRecommendCollectionView.frame.size.height)
+        layout.itemSize = CGSize(width: mainRecommendCollectionView.frame.size.width*(326.0/375.0), height: mainRecommendCollectionView.frame.size.height)
         layout.sideItemScale = 175/251
-        layout.spacing = -197
+        layout.spacing = -10
         layout.isPagingEnabled = true
         layout.sideItemAlpha = 0.5
         
@@ -106,22 +106,22 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
             return CGSize(width: width2, height: height)
         }
        
-//        let frameWidth = self.view.frame.width
-//        let horizontalMargin: CGFloat = frameWidth * (24.5 / 375)
-//        let width = frameWidth - (horizontalMargin * 2)
-//        let height = width * (408 / 326)
-        //        let collectionHeight: CGFloat = 382
-        //        //collectionView.frame.height
+        let frameWidth = self.view.frame.width
+        let horizontalMargin: CGFloat = frameWidth * (24.5 / 375)
+        let width = frameWidth - (horizontalMargin * 2)
+        let height = width * (408 / 326)
+//                let collectionHeight: CGFloat = 382
+                //collectionView.frame.height
         
-        //        if collectionHeight < height {
-        //
-        //            print(height)
-        //            height = collectionHeight
-        //            width = height * (263 / 500)
-        //        }
-        //
+//                if collectionHeight < height {
+//
+//                    print(height)
+//                    height = collectionHeight
+//                    width = height * (263 / 500)
+//                }
+        
 //        print("\(width)이건 넓이야\(height)이건 하잇이야\(horizontalMargin)이건 마진이야\(frameWidth)이건 프레임넓이야")
-        return CGSize(width: 326, height: 408)
+        return CGSize(width: 326, height: height)
         
     }
     
