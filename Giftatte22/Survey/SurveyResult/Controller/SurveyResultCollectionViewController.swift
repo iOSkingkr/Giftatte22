@@ -169,7 +169,7 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         numberFormatter.numberStyle = .decimal
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: resultDataArray[indexPath.row].lowPrice)) ?? "0"
-        cell.surveyResultBottomCollectionBottomLabel.text = String("최저\(lowPrice)원")
+        cell.surveyResultBottomCollectionBottomLabel.text = String("최저  \(lowPrice)원")
         
         if let url = URL(string: resultDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){

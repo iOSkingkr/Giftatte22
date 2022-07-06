@@ -32,12 +32,12 @@ class CarouselLayout: UICollectionViewFlowLayout {
         let xInset = (collectionViewSize.width - self.itemSize.width) / 2
         let yInset = (collectionViewSize.height - self.itemSize.height) / 2
         
-        print("\(yInset) 와이인셋")
-        print("\(xInset) 엑스인셋")
-        print("\(collectionViewSize.width) 컬렉션뷰사이즈 넓이")
-        print("\(collectionViewSize.height) 컬렉션뷰사이즈 높이")
-        print("\(self.itemSize.width) 아이템사이즈 넓이")
-        print("\(self.itemSize.height) 아이템사이즈 높이")
+//        print("\(yInset) 와이인셋")
+//        print("\(xInset) 엑스인셋")
+//        print("\(collectionViewSize.width) 컬렉션뷰사이즈 넓이")
+//        print("\(collectionViewSize.height) 컬렉션뷰사이즈 높이")
+//        print("\(self.itemSize.width) 아이템사이즈 넓이")
+//        print("\(self.itemSize.height) 아이템사이즈 높이")
 //        mini12기준
 //        18.99999999999997 와이인셋
 //        38.25 엑스인셋

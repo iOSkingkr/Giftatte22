@@ -204,13 +204,13 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
-        top5Cell.layer.cornerRadius = 15
+//        top5Cell.layer.cornerRadius = 15
 
         if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
                 top5Cell.top5ImageView.image = UIImage(data: imagedata)
                 top5Cell.top5ImageView.layer.cornerRadius = 15
-                top5Cell.top5ImageView.contentMode = .scaleAspectFill
+                top5Cell.top5ImageView.contentMode = .scaleToFill
                 
             }
         }
@@ -221,7 +221,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
         top5Cell.top5PriceLabel.text =
-        String("최저\(lowPrice)원~")
+        String("최저  \(lowPrice)원~")
         
         return top5Cell
         

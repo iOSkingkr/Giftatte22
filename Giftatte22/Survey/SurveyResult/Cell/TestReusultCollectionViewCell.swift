@@ -9,14 +9,14 @@ import UIKit
 
 class TestReusultCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet var testResultCollecionCell: UIView!
-    
-    @IBOutlet var testResultImageView: UIImageView!
-    
-    @IBOutlet var testResultProductPriceLabel: UILabel!
-    @IBOutlet var testResultProductNameLabel: UILabel!
-    
-    @IBOutlet var resultRankLabel: UILabel!
-    
-    
+//    @IBOutlet var testResultCollecionCell: UIView!
+//
+//    @IBOutlet var testResultImageView: UIImageView!
+//
+//    @IBOutlet var testResultProductPriceLabel: UILabel!
+//    @IBOutlet var testResultProductNameLabel: UILabel!
+//
+//    @IBOutlet var resultRankLabel: UILabel!
+//
+//
 }
