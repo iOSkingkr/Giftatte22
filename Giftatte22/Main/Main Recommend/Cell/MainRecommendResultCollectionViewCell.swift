@@ -9,13 +9,9 @@ import UIKit
 import FirebaseFirestore
 
 class MainRecommendResultCollectionViewCell: UICollectionViewCell{
-
-
     @IBOutlet var top5ImageView: UIImageView!
-    
     @IBOutlet var top5NameLabel: UILabel!
-    
     @IBOutlet var top5PriceLabel: UILabel!
 }
-    
+
 

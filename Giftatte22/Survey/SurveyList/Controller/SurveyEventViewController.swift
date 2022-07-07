@@ -114,15 +114,6 @@ class SurveyEventViewController: UIViewController {
 
     func selectedPickerViewUICustom() {
         pickerView.subviews[1].backgroundColor = .clear
-
-//        let upLine = UIView(frame: CGRect(x: 100, y: 0, width: 150, height: 0.8))
-//        let underLine = UIView(frame: CGRect(x: 100, y: 60, width: 150, height: 0.8))
-//
-//        upLine.backgroundColor = UIColor.gray
-//        underLine.backgroundColor = UIColor(rgb: 0x0061B4)
-//
-//        pickerView.subviews[1].addSubview(upLine)
-//        pickerView.subviews[1].addSubview(underLine)
    }
 }
 

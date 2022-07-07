@@ -7,6 +7,7 @@
 
 import UIKit
 
+//로띠애니메이션이 끝나고 Main화면으로 넘어갈때 왼쪽에서 오른쪽으로 화면이 전환하도록 하는 트렌지션
 class TransitionHandler : NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -24,7 +25,7 @@ class TransitionHandler : NSObject, UIViewControllerAnimatedTransitioning, UIVie
         let container = transitionContext.containerView
         let fromView = transitionContext.view(forKey: .from)!
         let toView = transitionContext.view(forKey: .to)!
-        let offScreenLeft = CGAffineTransform(translationX: 0, y: 0) // (-container.frame.size.width,0)
+        let offScreenLeft = CGAffineTransform(translationX: 0, y: 0)
         let offScreenRight = CGAffineTransform(translationX: container.frame.size.width, y: 0)
                 toView.transform = offScreenLeft
                 container.addSubview(toView)

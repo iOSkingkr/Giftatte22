@@ -38,15 +38,7 @@ class SurveyResultCollectionViewController: UIViewController {
         getResultGiftData()
         surveyResultBottomCollectionView.delegate = self
         surveyResultBottomCollectionView.dataSource = self
-//
-//        let bounds = surveyResultMainImage.bounds
-//        let pathCircle = UIBezierPath(ovalIn: bounds)
-//        let layer = CAShapeLayer()
-//        layer.path = pathCircle.cgPath
-//        surveyResultMainImage.layer.mask = layer
-        // 이미지를 동그랗게 만드는 간단한 방법! 사이즈의 절반으로 설정하면 원이다!
         surveyResultMainImage.layer.cornerRadius = 110
-        
         surveyResultMidBottomLabel.text = "추천해요💝"
     }
     
@@ -96,25 +88,20 @@ class SurveyResultCollectionViewController: UIViewController {
                         default:
                             print("price가 default입니다. ")
                         }
-                        //                        resultGiftDataArray.append(userInfo)
-                        
+
                         self.resultDataArray = resultDataArray
                         self.surveyResultBottomCollectionView.reloadData()
                         if self.resultDataArray.count != 0{
                         if let url = URL(string: self.resultDataArray[0].imageUrl){
                             if let imagedata = try? Data(contentsOf: url){
                                 self.surveyResultMainImage.image = UIImage(data: imagedata)
-                                
-                                
                             }
                         }
-                
                         self.surveyResultMidTopLabel.text = self.resultDataArray[0].keyword
                         }
                     }catch let err{
                         print("err: \(err)")
                     }
-                    
                 }
                 if self.resultDataArray.count == 0 {
                     self.resultDataArray = [Gift(highPrice: 0, imageUrl: "https://shopping-phinf.pstatic.net/main_2778888/3.jpg", keyword: "가격대에 제품이 없어요", lowPrice: 0, meanPrice: 0, rank: 0, score: 0, webUrl: "https://github.com/DevKDuck")]

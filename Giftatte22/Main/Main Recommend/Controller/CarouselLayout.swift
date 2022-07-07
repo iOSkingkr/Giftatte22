@@ -28,30 +28,15 @@ class CarouselLayout: UICollectionViewFlowLayout {
         guard let collectionView = self.collectionView else {return}
         
         let collectionViewSize = collectionView.bounds.size
-        
         let xInset = (collectionViewSize.width - self.itemSize.width) / 2
-        let yInset = (collectionViewSize.height - self.itemSize.height) / 2
-        
-//        print("\(yInset) 와이인셋")
-//        print("\(xInset) 엑스인셋")
-//        print("\(collectionViewSize.width) 컬렉션뷰사이즈 넓이")
-//        print("\(collectionViewSize.height) 컬렉션뷰사이즈 높이")
-//        print("\(self.itemSize.width) 아이템사이즈 넓이")
-//        print("\(self.itemSize.height) 아이템사이즈 높이")
-//        mini12기준
-//        18.99999999999997 와이인셋
-//        38.25 엑스인셋
-//        375.0 컬렉션뷰사이즈 넓이
-//        454.6666666666667 컬렉션뷰사이즈 높이
-//        298.5 아이템사이즈 넓이
-//        416.66666666666674 아이템사이즈 높이
+        //        let yInset = (collectionViewSize.height - self.itemSize.height) / 2
         
         self.sectionInset = UIEdgeInsets(top: 0, left: xInset, bottom: 0, right: xInset)
         
-        let itemWidth = self.itemSize.width
+        //        let itemWidth = self.itemSize.width
         
-//        let scaledItemOffset = (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
-//  뒤에있는 셀을 중복하여 클릭하여 겹치지 않도록 수정 
+        //        let scaledItemOffset = (itemWidth - (itemWidth*(self.sideItemScale + (1 - self.sideItemScale)/2))) / 2
+        //  뒤에있는 셀을 중복하여 클릭하여 겹치지 않도록 수정 
         
         self.minimumLineSpacing = 0
         self.scrollDirection = .horizontal
@@ -80,7 +65,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
         let maxDistance = 2*(self.itemSize.width + self.minimumLineSpacing)
         let distance = min(abs(collectionCenter - center), maxDistance)
         
-       
+        
         let ratio = (maxDistance - distance)/maxDistance
         
         let alpha = ratio * (1 - self.sideItemAlpha) + self.sideItemAlpha

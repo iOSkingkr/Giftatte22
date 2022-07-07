@@ -11,19 +11,14 @@ class SurveyHomeViewController: UIViewController {
 
     @IBOutlet var didTapFindGiftButton: UIButton!
     
-    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.topItem?.title = " "
-
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+          
         didTapFindGiftButton.layer.cornerRadius = 25
         // Do any additional setup after loading the view.
     }
@@ -31,10 +26,6 @@ class SurveyHomeViewController: UIViewController {
     // 버튼 눌렀을때, 다음 뷰로 이동하게 해주는 액션함수
     @IBAction func didTapFindGiftButton(_ sender: Any) {
         guard let goSurveyOneView = self.storyboard?.instantiateViewController(identifier: "SurveyGenderViewController") as? SurveyGenderViewController else { return }
-        
-//        goSurveyOneView.modalPresentationStyle = .fullScreen
-//        goSurveyOneView.modalTransitionStyle = .crossDissolve
-//        self.present(goSurveyOneView, animated: true, completion: nil)
         
        self.navigationController?.pushViewController(goSurveyOneView, animated: true)
     }

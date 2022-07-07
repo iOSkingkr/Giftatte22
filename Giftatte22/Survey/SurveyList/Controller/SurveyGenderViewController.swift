@@ -13,7 +13,7 @@ class SurveyGenderViewController: UIViewController {
     @IBOutlet var womanBT: UIButton!
     @IBOutlet var anyBT: UIButton!
     
-
+    
     private func pushNextPage(gender: String){
         guard let goSurveyTwoView = self.storyboard?.instantiateViewController(identifier: "SurveyAgeViewController") as? SurveyAgeViewController else { return }
         //남성버튼 클릭했을때, gender에 m이 저장?선택된 것 + m이 다음 페이지뷰에도 전달되어야함
@@ -25,13 +25,11 @@ class SurveyGenderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
-       
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
         
         manBT.setRounded()
         womanBT.setRounded()
@@ -48,21 +46,18 @@ class SurveyGenderViewController: UIViewController {
         
     }
     
-    
-    
-    
     //MARK: - IBAction  버튼 눌렀을 경우, 다음 페이지로 이동함
-        @IBAction func pushManBT(_ sender: Any) {
-            pushNextPage(gender: "m")
-        }
-        
-        @IBAction func pushWomanBT(_ sender: Any) {
-            pushNextPage(gender: "f")
-       }
-        
-        @IBAction func pushAnyBT(_ sender: Any) {
-            pushNextPage(gender: "ALL")
-        }
+    @IBAction func pushManBT(_ sender: Any) {
+        pushNextPage(gender: "m")
+    }
+    
+    @IBAction func pushWomanBT(_ sender: Any) {
+        pushNextPage(gender: "f")
+    }
+    
+    @IBAction func pushAnyBT(_ sender: Any) {
+        pushNextPage(gender: "ALL")
+    }
     
     @objc func clickOnButton() {
         guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "SurveyHomeViewController") as? SurveyHomeViewController else { return }

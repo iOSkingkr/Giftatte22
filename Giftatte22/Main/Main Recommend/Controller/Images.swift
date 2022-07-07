@@ -8,14 +8,8 @@
 import UIKit
 
 struct Images {
-    // mainRecommendCollectionView image
-    static let parentsGiftImage: UIImage = UIImage(named:"parentsGiftImg.png")!
-    static let summerGiftImage: UIImage = UIImage(named:"summerGiftImg.png")!
-    static let twentyMenGiftImage: UIImage = UIImage(named:"twentyMenGiftImg.png")!
-    static let twentyWomenGiftImage: UIImage = UIImage(named:"twentyWomenGiftImg.png")!
-    static let uselessGiftImage: UIImage = UIImage(named:"uselessGiftImg.png")!
     
-    //  크기수정한 이미지
+    // mainRecommendCollectionView image
     static let parentsImage: UIImage = UIImage(named:"parentsImage.png")!
     static let summerImage: UIImage = UIImage(named:"summerImage.png")!
     static let twentyMenImage: UIImage = UIImage(named:"twentyMenImage.png")!

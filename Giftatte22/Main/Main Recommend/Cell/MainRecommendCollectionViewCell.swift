@@ -50,8 +50,6 @@ class MainRecommendCollectionViewCell: UICollectionViewCell {
         
         self.customTopLabel.translatesAutoresizingMaskIntoConstraints = false
         self.customTopLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20).isActive = true
-//        self.customTopLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 310).isActive = true
-        
         self.customTopLabel.topAnchor.constraint(equalTo: self.customView.bottomAnchor, constant: -100).isActive = true
        
         self.customBottomLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -59,17 +57,11 @@ class MainRecommendCollectionViewCell: UICollectionViewCell {
         self.customBottomLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: 20).isActive = true
         self.customBottomLabel.topAnchor.constraint(equalTo: self.customTopLabel.bottomAnchor, constant: 10).isActive = true
         
-    
-        
-        
         self.customView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         self.customView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         self.customView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
         self.customView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 1).isActive = true
-//        self.customView.widthAnchor.constraint(equalToConstant: 326).isActive = true
-//        self.customView.heightAnchor.constraint(equalToConstant: 408).isActive = true
-        
-       
+
     }
     required init?(coder aDecoder: NSCoder) {
           fatalError("init(coder:) has not been implemented")

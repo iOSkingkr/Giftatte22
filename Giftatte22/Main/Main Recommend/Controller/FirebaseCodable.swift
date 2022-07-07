@@ -16,5 +16,4 @@ struct Gift: Codable{
     let rank: Int
     let score: Int
     let webUrl: String
-//    let webUrl: URL
 }

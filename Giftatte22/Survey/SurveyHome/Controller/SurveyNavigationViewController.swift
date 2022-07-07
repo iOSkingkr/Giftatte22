@@ -9,9 +9,6 @@ import UIKit
 
 class SurveyNavigationViewController: UINavigationController {
     
-
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 

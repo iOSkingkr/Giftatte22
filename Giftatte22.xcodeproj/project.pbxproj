@@ -31,12 +31,6 @@
 		8C964001284C84BD00709094 /* Giftatte22Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C964000284C84BC00709094 /* Giftatte22Icon.png */; };
 		8C96B1C72851EC5B009222C9 /* SurveyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96B1C62851EC5B009222C9 /* SurveyNavigationController.swift */; };
 		8C96B1CB28535610009222C9 /* HotCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C96B1CA28535610009222C9 /* HotCategoryCollectionViewCell.swift */; };
-		8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */; };
-		8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */; };
-		8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */; };
-		8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D70283230CD00FECF38 /* summerGiftImage.png */; };
-		8CA22D76283230CD00FECF38 /* parentsGiftImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA22D71283230CD00FECF38 /* parentsGiftImage.png */; };
-		8CA9ABEE2829027B00B569F7 /* TestReusultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */; };
 		8CA9ABF02829195600B569F7 /* TestResultCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */; };
 		8CA9ABF228291D2800B569F7 /* TestResultCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA9ABF128291D2800B569F7 /* TestResultCollectionReusableView.swift */; };
 		8CA9ABF4282920AF00B569F7 /* giftIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA9ABF3282920AF00B569F7 /* giftIcon.png */; };
@@ -61,11 +55,6 @@
 		A83BFFE927F42B5D0035E12C /* SurveyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFE827F42B5D0035E12C /* SurveyHomeViewController.swift */; };
 		A83BFFEB27F42E4F0035E12C /* SurveyGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */; };
 		A83BFFED27F4566D0035E12C /* SurveyAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */; };
-		A859145B2858E24A003DDF3C /* twentyWomenGiftImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914562858E24A003DDF3C /* twentyWomenGiftImg.png */; };
-		A859145C2858E24A003DDF3C /* twentyMenGiftImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914572858E24A003DDF3C /* twentyMenGiftImg.png */; };
-		A859145D2858E24A003DDF3C /* parentsGiftImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914582858E24A003DDF3C /* parentsGiftImg.png */; };
-		A859145E2858E24A003DDF3C /* uselessGiftImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914592858E24A003DDF3C /* uselessGiftImg.png */; };
-		A859145F2858E24A003DDF3C /* summerGiftImg.png in Resources */ = {isa = PBXBuildFile; fileRef = A859145A2858E24A003DDF3C /* summerGiftImg.png */; };
 		A85914692858E9CB003DDF3C /* y_interior.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914602858E9CA003DDF3C /* y_interior.png */; };
 		A859146A2858E9CB003DDF3C /* y_watch.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914612858E9CA003DDF3C /* y_watch.png */; };
 		A859146B2858E9CB003DDF3C /* y_book.png in Resources */ = {isa = PBXBuildFile; fileRef = A85914622858E9CA003DDF3C /* y_book.png */; };
@@ -120,12 +109,6 @@
 		8C964000284C84BC00709094 /* Giftatte22Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Giftatte22Icon.png; sourceTree = "<group>"; };
 		8C96B1C62851EC5B009222C9 /* SurveyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyNavigationController.swift; sourceTree = "<group>"; };
 		8C96B1CA28535610009222C9 /* HotCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyMenGiftImage.png; sourceTree = "<group>"; };
-		8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uselessGiftImage.png; sourceTree = "<group>"; };
-		8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomenGiftImage.png; sourceTree = "<group>"; };
-		8CA22D70283230CD00FECF38 /* summerGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerGiftImage.png; sourceTree = "<group>"; };
-		8CA22D71283230CD00FECF38 /* parentsGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parentsGiftImage.png; sourceTree = "<group>"; };
-		8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReusultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8CA9ABEF2829195600B569F7 /* TestResultCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		8CA9ABF128291D2800B569F7 /* TestResultCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestResultCollectionReusableView.swift; sourceTree = "<group>"; };
 		8CA9ABF3282920AF00B569F7 /* giftIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giftIcon.png; sourceTree = "<group>"; };
@@ -150,11 +133,6 @@
 		A83BFFE827F42B5D0035E12C /* SurveyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyHomeViewController.swift; sourceTree = "<group>"; };
 		A83BFFEA27F42E4F0035E12C /* SurveyGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyGenderViewController.swift; sourceTree = "<group>"; };
 		A83BFFEC27F4566D0035E12C /* SurveyAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyAgeViewController.swift; sourceTree = "<group>"; };
-		A85914562858E24A003DDF3C /* twentyWomenGiftImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyWomenGiftImg.png; sourceTree = "<group>"; };
-		A85914572858E24A003DDF3C /* twentyMenGiftImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twentyMenGiftImg.png; sourceTree = "<group>"; };
-		A85914582858E24A003DDF3C /* parentsGiftImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parentsGiftImg.png; sourceTree = "<group>"; };
-		A85914592858E24A003DDF3C /* uselessGiftImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uselessGiftImg.png; sourceTree = "<group>"; };
-		A859145A2858E24A003DDF3C /* summerGiftImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerGiftImg.png; sourceTree = "<group>"; };
 		A85914602858E9CA003DDF3C /* y_interior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y_interior.png; sourceTree = "<group>"; };
 		A85914612858E9CA003DDF3C /* y_watch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y_watch.png; sourceTree = "<group>"; };
 		A85914622858E9CA003DDF3C /* y_book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = y_book.png; sourceTree = "<group>"; };
@@ -357,21 +335,11 @@
 				8CE0A74C286440AC00CD4515 /* twentyMenImage.png */,
 				8CE0A74E286440AD00CD4515 /* twentyWomanImage.png */,
 				8CE0A74F286440AD00CD4515 /* uselessImage.png */,
-				A85914582858E24A003DDF3C /* parentsGiftImg.png */,
-				A859145A2858E24A003DDF3C /* summerGiftImg.png */,
-				A85914572858E24A003DDF3C /* twentyMenGiftImg.png */,
-				A85914562858E24A003DDF3C /* twentyWomenGiftImg.png */,
-				A85914592858E24A003DDF3C /* uselessGiftImg.png */,
 				8C43B9B5283CA1B900FDC155 /* noBGParentsGiftImage.png */,
 				8C43B9B3283CA1B900FDC155 /* noBGSummerGiftImage.png */,
 				8C43B9B4283CA1B900FDC155 /* noBGTwentyMenGiftImage.png */,
 				8C43B9B7283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png */,
 				8C43B9B6283CA1B900FDC155 /* noBGUselessGiftImage.png */,
-				8CA22D71283230CD00FECF38 /* parentsGiftImage.png */,
-				8CA22D70283230CD00FECF38 /* summerGiftImage.png */,
-				8CA22D6D283230CC00FECF38 /* twentyMenGiftImage.png */,
-				8CA22D6F283230CD00FECF38 /* twentyWomenGiftImage.png */,
-				8CA22D6E283230CC00FECF38 /* uselessGiftImage.png */,
 				A85914642858E9CA003DDF3C /* y_baby.png */,
 				A85914622858E9CA003DDF3C /* y_book.png */,
 				A85914632858E9CA003DDF3C /* y_clothes.png */,
@@ -464,7 +432,6 @@
 			isa = PBXGroup;
 			children = (
 				8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */,
-				8CA9ABED2829027B00B569F7 /* TestReusultCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -573,23 +540,18 @@
 				A85914702858E9CB003DDF3C /* y_computer.png in Resources */,
 				8C964001284C84BD00709094 /* Giftatte22Icon.png in Resources */,
 				A859146A2858E9CB003DDF3C /* y_watch.png in Resources */,
-				A859145B2858E24A003DDF3C /* twentyWomenGiftImg.png in Resources */,
 				A8651AD1282E454400C28C83 /* baby.png in Resources */,
 				A8651AD4282E454400C28C83 /* interior.png in Resources */,
-				A859145F2858E24A003DDF3C /* summerGiftImg.png in Resources */,
 				A8651AD6282E454400C28C83 /* cosmetics.png in Resources */,
 				A8651AD3282E454400C28C83 /* giftcard.png in Resources */,
 				8C963FFF284C82CE00709094 /* Assets.xcassets in Resources */,
-				8CA22D72283230CD00FECF38 /* twentyMenGiftImage.png in Resources */,
 				3A65489027D650750043D3B5 /* LaunchScreen.storyboard in Resources */,
-				8CA22D74283230CD00FECF38 /* twentyWomenGiftImage.png in Resources */,
 				8CE0A752286440AD00CD4515 /* parentsImage.png in Resources */,
 				8CE0A751286440AD00CD4515 /* twentyMenImage.png in Resources */,
 				8CDEAE4527FEBDC600304715 /* NotoSansCJKkr-Regular.otf in Resources */,
 				8CE0A755286440AD00CD4515 /* summerImage.png in Resources */,
 				A8094BF828113F6400716A45 /* Main.storyboard in Resources */,
 				8C43B9BB283CA1B900FDC155 /* noBGUselessGiftImage.png in Resources */,
-				8CA22D75283230CD00FECF38 /* summerGiftImage.png in Resources */,
 				A859146E2858E9CB003DDF3C /* y_lifeitem.png in Resources */,
 				A8651AD5282E454400C28C83 /* book.png in Resources */,
 				A859146D2858E9CB003DDF3C /* y_baby.png in Resources */,
@@ -599,17 +561,12 @@
 				A8651AD9282E454400C28C83 /* lifeitem.png in Resources */,
 				A8651AD2282E454400C28C83 /* computer.png in Resources */,
 				8C533A2727FDFF2B0034DA9A /* 1120-get-started-slider.json in Resources */,
-				A859145D2858E24A003DDF3C /* parentsGiftImg.png in Resources */,
 				A8651AD8282E454400C28C83 /* clothes.png in Resources */,
-				8CA22D76283230CD00FECF38 /* parentsGiftImage.png in Resources */,
 				8C8E9A0228435CD5008A840B /* gift.json in Resources */,
 				8C43B9B9283CA1B900FDC155 /* noBGTwentyMenGiftImage.png in Resources */,
 				A859146F2858E9CB003DDF3C /* y_giftcard.png in Resources */,
-				A859145E2858E24A003DDF3C /* uselessGiftImg.png in Resources */,
 				A87B0D9727FF29AB005BE8BB /* Survey.storyboard in Resources */,
-				8CA22D73283230CD00FECF38 /* uselessGiftImage.png in Resources */,
 				8CE0A754286440AD00CD4515 /* uselessImage.png in Resources */,
-				A859145C2858E24A003DDF3C /* twentyMenGiftImg.png in Resources */,
 				A85914712858E9CB003DDF3C /* y_cosmetics.png in Resources */,
 				8C43B9BC283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png in Resources */,
 				A859146B2858E9CB003DDF3C /* y_book.png in Resources */,
@@ -690,7 +647,6 @@
 				A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */,
 				A83BFFE927F42B5D0035E12C /* SurveyHomeViewController.swift in Sources */,
 				8C954B8B2854979A00D7C476 /* HotCategoryResultCollectionViewCell.swift in Sources */,
-				8CA9ABEE2829027B00B569F7 /* TestReusultCollectionViewCell.swift in Sources */,
 				3A65488427D650740043D3B5 /* AppDelegate.swift in Sources */,
 				8CA9ABF02829195600B569F7 /* TestResultCollectionViewFlowLayout.swift in Sources */,
 				8C1711B8280FE8CA00D330DD /* Strings.swift in Sources */,

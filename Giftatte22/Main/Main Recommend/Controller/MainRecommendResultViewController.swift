@@ -26,42 +26,24 @@ class MainRecommendResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         getOnboardingData()
-        
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
-        
         self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray[nowPage]
-        
         self.defaultContentsLabel.text = Strings.defaultContentsLabelArray[nowPage]
-        
-//        self.defaultTop5Label.text = Strings.defaultTop5LabelArray
-        
         self.defaultImg.image = recommendResultImageArray[nowPage]
-        
         self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
-        
-//        self.bottomView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
-//        recommendTop5CollectionView.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
         recommendTop5CollectionView.dataSource = self
         recommendTop5CollectionView.delegate = self
+        
         //defaultImg 원형 mask
-        
-        
         let bounds = defaultImg.bounds
         let pathCircle = UIBezierPath(ovalIn: bounds)
-        
         let layer = CAShapeLayer()
         layer.path = pathCircle.cgPath
-        
         defaultImg.layer.mask = layer
-        
-    
-    }
-    
-   
+        }
     
     func getOnboardingData() {
         var onboardingDataArray:[Gift] = []
@@ -74,16 +56,13 @@ class MainRecommendResultViewController: UIViewController {
              secondcollect = "50"
              seconddoc = "50000003"
              thirdcollect = "appInfo"
-                          
          case 1:
-
              firstcollect = "presents"
              firstdoc = "f"
              secondcollect = "20"
              seconddoc = "50000000"
              thirdcollect = "appInfo"
          case 2:
-
              firstcollect = "presents"
              firstdoc = "m"
              secondcollect = "20"
@@ -106,12 +85,10 @@ class MainRecommendResultViewController: UIViewController {
                              self.onboardingDataArray = onboardingDataArray
                              self.recommendTop5CollectionView.reloadData()
                              
-                        
                          }catch let err{
                              print("err: \(err)")
                          }
-                         
-                     }
+                    }
                  }
              }
          case 4:
@@ -130,12 +107,10 @@ class MainRecommendResultViewController: UIViewController {
                            
                              self.onboardingDataArray = onboardingDataArray
                              self.recommendTop5CollectionView.reloadData()
-                             
                         
                          }catch let err{
                              print("err: \(err)")
                          }
-                         
                      }
                  }
              }
@@ -177,11 +152,7 @@ class MainRecommendResultViewController: UIViewController {
   
    
     @IBOutlet var defaultImg: UIImageView!
-    
     @IBOutlet var recommendTop5CollectionView: UICollectionView!
-    
-
-    
     @IBOutlet var defaultTitleTopLabel: UILabel!
     //roundBottomView의 상단 타이틀 위에 있는 Label
     @IBOutlet var defaultTitleBottomLabel: UILabel!
@@ -190,7 +161,6 @@ class MainRecommendResultViewController: UIViewController {
     //roundBottomView의 내용 들어갈 Label
     @IBOutlet var defaultTop5Label: UILabel!
     //콜렉션 뷰에 들어갈 Top5 제목 Label
-    
     
 }
 
@@ -204,38 +174,30 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
-//        top5Cell.layer.cornerRadius = 15
 
         if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
             if let imagedata = try? Data(contentsOf: url){
                 top5Cell.top5ImageView.image = UIImage(data: imagedata)
                 top5Cell.top5ImageView.layer.cornerRadius = 15
                 top5Cell.top5ImageView.contentMode = .scaleToFill
-                
             }
         }
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
-//        top5Cell.top5NameLabel.adjustsFontSizeToFitWidth = true
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
         numberFormatter.numberStyle = .decimal //decimal 사용
         
-        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
-        top5Cell.top5PriceLabel.text =
-        String("최저  \(lowPrice)원~")
+        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0"
+        top5Cell.top5PriceLabel.text = String("최저  \(lowPrice)원~")
         
         return top5Cell
-        
     }
     
-   
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         if let encoded = onboardingDataArray[indexPath.row].webUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded){
             UIApplication.shared.open(myURL, options: [:])
         }
-        
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -246,13 +208,9 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
 extension UIColor {
     
     class var parentsGiftColor: UIColor? {return UIColor(named: "parentsGiftColor")}
-    
     class var twentyMenGiftColor: UIColor? {return UIColor(named: "twentyMenGiftColor")}
-    
     class var twentyWomenGiftColor: UIColor? {return UIColor(named: "twentyWomenGiftColor")}
-    
     class var summerGiftColor: UIColor? {return UIColor(named: "summerGiftColor")}
-    
     class var uselessColor: UIColor? {return UIColor(named: "uselessColor")}
     
-}
+} //MainRecommendResult 중앙에 이모티콘을 자리해야 하기 때문에 배경색이 없는 이미지를 넣었기 때문에 바탕색 추가해줌

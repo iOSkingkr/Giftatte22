@@ -9,7 +9,6 @@ import UIKit
 
 class HotCategoryResultCollectionViewCell: UICollectionViewCell {
     @IBOutlet var hotCategoryResultBottomImage: UIImageView!
-    
     @IBOutlet var hotCategoryResultBottomLabel: UILabel!
     @IBOutlet var hotCategoryResultTopLabel: UILabel!
 }
