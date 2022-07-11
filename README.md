@@ -36,9 +36,19 @@
 
 - 에어비앤비에서 제공하는 Lottie 애니메이션 (JSON 파일) 추가
 
+# <img alt="Kingfisher" src ="https://img.shields.io/badge/Kingfisher-FA5A55.svg?&style=for-the-badge&logo=Kingfisher&logoColor=white">
+
+- Kingfisher 라이브러리를 이용하여 url을 가지고 있는 이미지를 다운로드하여 캐시하여 비동기식 호출을 보완함
+
+
+
 # 🛍️ TODO
-- 파이어베이스에서 받아오는 데이터 관리 부분
-- 가격이나 카테고리별 유연하게 선택할 수 있도록 기능 구현 필요
+- 계절에 맞게 카드뉴스 업데이트 필요
+- 더욱 다양한 데이터 추가 필요
+
+
+
+
 
 
 
