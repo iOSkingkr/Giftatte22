@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 import Lottie
+import Kingfisher
 
 class SurveyResultCollectionViewController: UIViewController {
     
@@ -92,11 +93,8 @@ class SurveyResultCollectionViewController: UIViewController {
                         self.resultDataArray = resultDataArray
                         self.surveyResultBottomCollectionView.reloadData()
                         if self.resultDataArray.count != 0{
-                        if let url = URL(string: self.resultDataArray[0].imageUrl){
-                            if let imagedata = try? Data(contentsOf: url){
-                                self.surveyResultMainImage.image = UIImage(data: imagedata)
-                            }
-                        }
+                            let kingfisherurl = URL(string: self.resultDataArray[0].imageUrl)
+                            self.surveyResultMainImage.kf.setImage(with: kingfisherurl)
                         self.surveyResultMidTopLabel.text = self.resultDataArray[0].keyword
                         }
                     }catch let err{
@@ -158,13 +156,11 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         let lowPrice = numberFormatter.string(from: NSNumber(value: resultDataArray[indexPath.row].lowPrice)) ?? "0"
         cell.surveyResultBottomCollectionBottomLabel.text = String("최저  \(lowPrice)원")
         
-        if let url = URL(string: resultDataArray[indexPath.row].imageUrl){
-            if let imagedata = try? Data(contentsOf: url){
-                cell.surveyResultBottomImageView.image = UIImage(data: imagedata)
-                cell.surveyResultBottomImageView.contentMode = .scaleAspectFill
-                cell.surveyResultBottomImageView.layer.cornerRadius = 15
-            }
-        }
+        let kingfisherurl = URL(string: resultDataArray[indexPath.row].imageUrl)
+        cell.surveyResultBottomImageView.kf.setImage(with: kingfisherurl)
+        cell.surveyResultBottomImageView.contentMode = .scaleAspectFill
+        cell.surveyResultBottomImageView.layer.cornerRadius = 15
+        
         return cell
     }
     

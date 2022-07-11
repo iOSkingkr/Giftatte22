@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import Firebase
+import Kingfisher
 
 
 class MainRecommendResultViewController: UIViewController {
@@ -174,14 +175,21 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
-
-        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
-            if let imagedata = try? Data(contentsOf: url){
-                top5Cell.top5ImageView.image = UIImage(data: imagedata)
-                top5Cell.top5ImageView.layer.cornerRadius = 15
-                top5Cell.top5ImageView.contentMode = .scaleToFill
-            }
+        
+        if let kingurl = URL(string: onboardingDataArray[indexPath.row].imageUrl){
+            top5Cell.top5ImageView.kf.setImage(with: kingurl)
+            top5Cell.top5ImageView.layer.cornerRadius = 15
+            top5Cell.top5ImageView.contentMode = .scaleToFill
         }
+
+//        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
+//            if let imagedata = try? Data(contentsOf: url){
+//                top5Cell.top5ImageView.image = UIImage(data: imagedata)
+//                top5Cell.top5ImageView.layer.cornerRadius = 15
+//                top5Cell.top5ImageView.contentMode = .scaleToFill
+//            }
+//        } // Kingfisher 변경 전 코드 
+        
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
         numberFormatter.numberStyle = .decimal //decimal 사용

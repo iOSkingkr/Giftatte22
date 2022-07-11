@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import Kingfisher
 
 class HotCategoryViewController: UIViewController {
     
@@ -112,11 +113,11 @@ class HotCategoryViewController: UIViewController {
                         
                         self.hotCategoryDataArray = hotCategoryDataArray
                         self.hotCategoryResultCollectionView.reloadData()
-                        if let url = URL(string: self.hotCategoryDataArray[0].imageUrl){
-                            if let imagedata = try? Data(contentsOf: url){
-                                self.hotCategoryResultImage.image = UIImage(data: imagedata)
-                            }
-                        }
+                        
+                        let kingfisherurl = URL(string: self.hotCategoryDataArray[0].imageUrl)
+                        self.hotCategoryResultImage.kf.setImage(with: kingfisherurl)
+                        
+                        
                         self.hotCategoryResultLabel.text = self.hotCategoryDataArray[0].keyword
                     }catch let err{
                         print("err: \(err)")
@@ -138,13 +139,12 @@ extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewD
         let bottomCell = hotCategoryResultCollectionView.dequeueReusableCell(withReuseIdentifier: "HotCategoryResultCollectionViewCell", for: indexPath) as! HotCategoryResultCollectionViewCell
         bottomCell.layer.cornerRadius = 15
         
-        if let url = URL(string: hotCategoryDataArray[indexPath.row].imageUrl){
-            if let imagedata = try? Data(contentsOf: url){
-                bottomCell.hotCategoryResultBottomImage.image = UIImage(data: imagedata)
-                bottomCell.hotCategoryResultBottomImage.layer.cornerRadius = 15
-                bottomCell.hotCategoryResultBottomImage.contentMode = .scaleToFill
-            }
-        }
+        let kingfisherurl = URL(string: hotCategoryDataArray[indexPath.row].imageUrl)
+        bottomCell.hotCategoryResultBottomImage.kf.setImage(with: kingfisherurl)
+        bottomCell.hotCategoryResultBottomImage.layer.cornerRadius = 15
+        bottomCell.hotCategoryResultBottomImage.contentMode = .scaleToFill
+        
+        
         bottomCell.hotCategoryResultTopLabel.text = hotCategoryDataArray[indexPath.row].keyword
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
         numberFormatter.numberStyle = .decimal //decimal 사용
