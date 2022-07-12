@@ -38,7 +38,7 @@
 
 # <img alt="Kingfisher" src ="https://img.shields.io/badge/Kingfisher-FA5A55.svg?&style=for-the-badge&logo=Kingfisher&logoColor=white">
 
-- Kingfisher 라이브러리를 이용하여 url을 가지고 있는 이미지를 다운로드하여 캐시하여 비동기식 호출을 보완함
+- Kingfisher 라이브러리를 이용해 url을 가지고 있는 이미지를 다운로드하고 캐싱하여 비동기식 호출을 보완함
 
 
 
