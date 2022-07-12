@@ -169,10 +169,17 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
+        LoadingIndigator.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            LoadingIndigator.hideLoading()
+        }
+        
         return onboardingDataArray.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
         

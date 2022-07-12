@@ -11,6 +11,8 @@ import Firebase
 import Lottie
 import Kingfisher
 
+
+
 class SurveyResultCollectionViewController: UIViewController {
     
     @IBOutlet var surveyResultMainImage: UIImageView!
@@ -27,6 +29,15 @@ class SurveyResultCollectionViewController: UIViewController {
     var item: String = ""
     var resultDataArray: [Gift] = []
     
+    lazy var xmarkButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(buttonPressed))
+        return button
+    }()
+    
+    @objc func buttonPressed(_sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
@@ -41,7 +52,11 @@ class SurveyResultCollectionViewController: UIViewController {
         surveyResultBottomCollectionView.dataSource = self
         surveyResultMainImage.layer.cornerRadius = 110
         surveyResultMidBottomLabel.text = "추천해요💝"
+        
+        self.navigationItem.rightBarButtonItem = self.xmarkButton
+    
     }
+    
     
     func getResultGiftData(){
         let db : Firestore = Firestore.firestore()
@@ -126,25 +141,47 @@ class SurveyResultCollectionViewController: UIViewController {
             
         }
     }
-    
-//    func setupLayout() {
-//        surveyResultBottomCollectionView.translatesAutoresizingMaskIntoConstraints = false
-//        surveyResultBottomCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        surveyResultBottomCollectionView.topAnchor.constraint(equalTo: surveyResultAtteLabel.bottomAnchor, constant: 20).isActive = true
-//        surveyResultBottomCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//        surveyResultBottomCollectionView.heightAnchor.constraint(equalToConstant: 180).isActive = true
-//    }
 }
 
-
+class LoadingIndigator{
+    static func showLoading() {
+        DispatchQueue.main.async{
+            guard let window = UIApplication.shared.windows.last else {return}
+            let loadingIndigatorView: UIActivityIndicatorView
+            if let existedView = window.subviews.first(where: {$0 is UIActivityIndicatorView}) as? UIActivityIndicatorView{
+                loadingIndigatorView = existedView
+            } else {
+                loadingIndigatorView = UIActivityIndicatorView(style: .large)
+                loadingIndigatorView.frame = window.frame
+                loadingIndigatorView.color = .systemYellow
+                window.addSubview(loadingIndigatorView)
+            }
+            loadingIndigatorView.startAnimating()
+        }
+    }
+    static func hideLoading(){
+        DispatchQueue.main.async {
+            guard let window = UIApplication.shared.windows.last else {return}
+            window.subviews.filter({ $0 is UIActivityIndicatorView}).forEach{$0.removeFromSuperview()}
+        }
+    }
+}
 
 
 extension SurveyResultCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        LoadingIndigator.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            LoadingIndigator.hideLoading()
+        }
         return resultDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+       
+        
         let cell = surveyResultBottomCollectionView.dequeueReusableCell(withReuseIdentifier: "SurveyResultCollectionViewCell", for: indexPath) as! SurveyResultCollectionViewCell
         
         cell.surveyResultBottomCollectionTopLabel.text = resultDataArray[indexPath.row].keyword

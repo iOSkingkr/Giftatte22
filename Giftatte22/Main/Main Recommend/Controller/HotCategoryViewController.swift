@@ -128,13 +128,22 @@ class HotCategoryViewController: UIViewController {
     }
 }
 
+
+
 extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        LoadingIndigator.showLoading()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            LoadingIndigator.hideLoading()
+        }
         return hotCategoryDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         
         let bottomCell = hotCategoryResultCollectionView.dequeueReusableCell(withReuseIdentifier: "HotCategoryResultCollectionViewCell", for: indexPath) as! HotCategoryResultCollectionViewCell
         bottomCell.layer.cornerRadius = 15

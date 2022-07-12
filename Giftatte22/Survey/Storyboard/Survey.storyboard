@@ -919,7 +919,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qWu-ca-hzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9064.7999999999993" y="20.689655172413794"/>
+            <point key="canvasLocation" x="8970" y="21"/>
         </scene>
         <!--SurveyResultViewController-->
         <scene sceneID="Hpm-Yr-zOb">
