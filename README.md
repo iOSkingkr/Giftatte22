@@ -3,6 +3,8 @@
   
   <br></br>
  <img src="https://img.shields.io/badge/-Giftattee22-yellow"> <img src="https://img.shields.io/badge/Xcode-13.2.1-blue"> <img src="https://img.shields.io/badge/swift-5.5.2-blue"> <img src="https://img.shields.io/badge/iOS-15.4.1-blue"> <img src="https://img.shields.io/badge/Cocoapods-1.11.3-blue">
+ 
+ 
 
 
 # [<img alt="Naver" src ="https://img.shields.io/badge/Naver-03C75A.svg?&style=for-the-badge&logo=Naver&logoColor=white"/>](https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md#%EC%87%BC%ED%95%91)
@@ -45,6 +47,11 @@
 # 🛍️ TODO
 - 계절에 맞게 카드뉴스 업데이트 필요
 - 더욱 다양한 데이터 추가 필요
+
+# [<img src = "https://is4-ssl.mzstatic.com/image/thumb/Purple122/v4/a2/54/d6/a254d682-d6b5-c42d-44a5-791c3ff7871b/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png" width = "800" height = "360">](https://apps.apple.com/app/id1633404339)
+지금 App Sotre에서 만나보세요. (1.0.2ver)
+
+
 
 
 
