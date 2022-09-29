@@ -1,0 +1,122 @@
+첫번째트라이
+
+1. s를 .map 고차함수를 이용하여 알파벳들을 배열에 담는다.
+
+2. setS라는 Set을 만든다. 
+
+이유는 Set은 특성상 중복된 인자를 가지지 않기 때문
+
+ 
+
+3. 그래서 smap의 모든 인자들을 for in 반복문을 이용해서 setS에 insert한다. 
+
+s가 baabaa일경우 setS에는 b와 a만들어간다. 
+
+ 
+
+4.  indices와 .map을 이용해 set의 요소들에 접근하고
+
+각 요소들을 두번 더하도록 하여 wordArray에 .append하였다.
+
+ 
+
+5.s를 받아 요소를 바꿀 수 있도록 str2 변수를 생성하였다.
+
+6.replacingOccurences 메서드를 이용해 wordArray의 요소가 있다면 빈문자열 "" 로 바꾸도록 하였다.
+
+이때 wordArray의 모든 요소에 접근하기 위핸 0..<wordArray.count의 범위로 반복했고
+
+한번씩 변경하더라도 남은 잔재들이 있을경우 몇번 반복을 해야하기 때문에 s.count /2만큼 반복하였다.
+
+문자가 지워지기 때문에 /2 의 몫으로 범위를 지정했다.
+
+ 
+
+결과는 처참했다... 
+
+
+ 
+
+import Foundation
+
+
+
+func solution(_ s:String) -> Int{
+    let smap = s.map({String($0)})
+    var setS = Set<String>()
+    for i in 0..<smap.count{
+        setS.insert(smap[i])
+    }
+    print(setS)
+    
+    var wordArray = [String]()
+    let indices = setS.indices.map{$0}
+    for i in 0..<setS.count{
+        wordArray.append(setS[indices[i]] + setS[indices[i]])
+    }
+    
+    var str2 = s
+    
+    for _ in 0..<s.count{
+        for i in 0..<wordArray.count{
+            str2 = str2.replacingOccurrences(of: wordArray[i], with: "")
+        }
+    }
+    return str2 == "" ? 1 : 0
+    
+}
+두번째 트라이
+
+ 
+
+var stack 이라는 문자 배열을 만듦
+
+ 
+
+s의 갯수가 짝수이거나 s의 갯수가 0이 아닐 경우에 
+
+for in 반복문으로 s에 접근하게 되면 c인자는 character 형의 문자들을 받게 된다. 
+
+ 
+
+이때 stack이 .isEmpty 빈배열이라면  stack에 c를 추가하고
+
+아닐경우 stack의 .last(옵셔널타입)! 마지막 문자가 c와 같을 경우 stack의 마지막 문자를 지워라 stack.removeLast() 
+
+같지 않을경우에는 stack에 c를 추가해라
+
+ 
+
+삼항연산자를 이용해서 stack이 비어있다면 1을 반환하고 비어있지 않으면 0을 반환해라 
+
+ 
+
+마지막 else 구문은 
+
+s의 갯수가 홀수이고 s의 갯수가 0일경우 0을 반환해라  
+
+ 
+
+ 
+
+ 
+
+func solution(_ s:String) -> Int{
+    if s.count%2 == 0 && s.count != 0{
+        var stack = [Character]()
+        for c in s {
+            if stack.isEmpty {
+                stack.append(c)
+            }else {
+                if stack.last! == c{
+                stack.removeLast()
+            }else{
+                stack.append(c)
+            }
+            }
+        }
+        return stack.isEmpty ? 1 : 0
+    }else{
+        return 0
+    }
+}
