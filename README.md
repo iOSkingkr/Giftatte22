@@ -49,7 +49,7 @@
 - 더욱 다양한 데이터 추가 필요
 
 # [<img src = "https://is4-ssl.mzstatic.com/image/thumb/Purple122/v4/a2/54/d6/a254d682-d6b5-c42d-44a5-791c3ff7871b/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png" width = "800" height = "360">](https://apps.apple.com/app/id1633404339)
-지금 App Sotre에서 만나보세요. (1.0.2ver)
+지금 App Store에서 만나보세요. (1.0.2ver)
 
 
 
