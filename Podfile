@@ -12,4 +12,5 @@ target 'Giftatte22' do
    pod 'Firebase/Core'
    pod 'Firebase/Database'
    pod 'Firebase'
+   pod 'Firebase/Messaging'
 end

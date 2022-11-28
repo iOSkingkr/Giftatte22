@@ -103,6 +103,7 @@
 		8C43B9B6283CA1B900FDC155 /* noBGUselessGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noBGUselessGiftImage.png; sourceTree = "<group>"; };
 		8C43B9B7283CA1B900FDC155 /* noBGTwentyWomenGiftImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noBGTwentyWomenGiftImage.png; sourceTree = "<group>"; };
 		8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyEventViewController.swift; sourceTree = "<group>"; };
+		8C526C262934B5B300F3A78C /* Giftatte22.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Giftatte22.entitlements; sourceTree = "<group>"; };
 		8C533A2627FDFF2A0034DA9A /* 1120-get-started-slider.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "1120-get-started-slider.json"; sourceTree = "<group>"; };
 		8C8B2CAD2851C93A0020A730 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Giftatte22/Main/StartAnimation/Controller/TabBarViewController.swift; sourceTree = SOURCE_ROOT; };
 		8C8E9A0128435CD5008A840B /* gift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gift.json; sourceTree = "<group>"; };
@@ -206,6 +207,7 @@
 		3A65488227D650740043D3B5 /* Giftatte22 */ = {
 			isa = PBXGroup;
 			children = (
+				8C526C262934B5B300F3A78C /* Giftatte22.entitlements */,
 				8C25C073280FE33100D2B2E4 /* Font */,
 				8C25C074280FE36700D2B2E4 /* Main */,
 				A87B0D9827FF29C9005BE8BB /* Survey */,
@@ -812,6 +814,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Giftatte22/Giftatte22.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2PAPBBTST;
 				INFOPLIST_FILE = Giftatte22/Info.plist;
@@ -822,6 +825,9 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSkingkr.Gitftatte22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -833,6 +839,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Giftatte22/Giftatte22.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2PAPBBTST;
 				INFOPLIST_FILE = Giftatte22/Info.plist;
@@ -843,6 +850,9 @@
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iOSkingkr.Gitftatte22;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
