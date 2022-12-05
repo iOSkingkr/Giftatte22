@@ -24,10 +24,23 @@ class MainRecommendResultViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    lazy var activityIndigator: UIActivityIndicatorView = {
+        let activityIndigator = UIActivityIndicatorView()
+        
+        activityIndigator.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        activityIndigator.center = self.view.center
+        
+        activityIndigator.color = .yellow
+        activityIndigator.style = .large
+        return activityIndigator
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.addSubview(activityIndigator)
+        activityIndigator.startAnimating()
+        
         getOnboardingData()
         self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
         self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray[nowPage]
@@ -44,80 +57,80 @@ class MainRecommendResultViewController: UIViewController {
         let layer = CAShapeLayer()
         layer.path = pathCircle.cgPath
         defaultImg.layer.mask = layer
-        }
+    }
     
     func getOnboardingData() {
         var onboardingDataArray:[Gift] = []
         let db : Firestore = Firestore.firestore()
         
-         switch nowPage{
-         case 0:
-             firstcollect = "presents"
-             firstdoc = "ALL"
-             secondcollect = "50"
-             seconddoc = "50000003"
-             thirdcollect = "appInfo"
-         case 1:
-             firstcollect = "presents"
-             firstdoc = "f"
-             secondcollect = "20"
-             seconddoc = "50000000"
-             thirdcollect = "appInfo"
-         case 2:
-             firstcollect = "presents"
-             firstdoc = "m"
-             secondcollect = "20"
-             seconddoc = "50000000"
-             thirdcollect = "appInfo"
-         case 3:
-             let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("useless").collection("appInfo")
-             onboardingRef.getDocuments(){(querySnapshot, err) in
-                 if let err = err {
-                     print("Error getting documents: \(err)")
-                 } else {
-                     for document in querySnapshot!.documents {
+        switch nowPage{
+        case 0:
+            firstcollect = "presents"
+            firstdoc = "ALL"
+            secondcollect = "50"
+            seconddoc = "50000003"
+            thirdcollect = "appInfo"
+        case 1:
+            firstcollect = "presents"
+            firstdoc = "f"
+            secondcollect = "20"
+            seconddoc = "50000000"
+            thirdcollect = "appInfo"
+        case 2:
+            firstcollect = "presents"
+            firstdoc = "m"
+            secondcollect = "20"
+            seconddoc = "50000000"
+            thirdcollect = "appInfo"
+        case 3:
+            let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("useless").collection("appInfo")
+            onboardingRef.getDocuments(){(querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
                         
-                         do{
-                             let data = document.data()
-                             let jsonData = try JSONSerialization.data(withJSONObject: data)
-                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                             onboardingDataArray.append(userInfo)
-                           
-                             self.onboardingDataArray = onboardingDataArray
-                             self.recommendTop5CollectionView.reloadData()
-                             
-                         }catch let err{
-                             print("err: \(err)")
-                         }
+                        do{
+                            let data = document.data()
+                            let jsonData = try JSONSerialization.data(withJSONObject: data)
+                            let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                            onboardingDataArray.append(userInfo)
+                            
+                            self.onboardingDataArray = onboardingDataArray
+                            self.recommendTop5CollectionView.reloadData()
+                            
+                        }catch let err{
+                            print("err: \(err)")
+                        }
                     }
-                 }
-             }
-         case 4:
-             let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("summer").collection("appInfo")
-             onboardingRef.getDocuments(){(querySnapshot, err) in
-                 if let err = err {
-                     print("Error getting documents: \(err)")
-                 } else {
-                     for document in querySnapshot!.documents {
+                }
+            }
+        case 4:
+            let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("summer").collection("appInfo")
+            onboardingRef.getDocuments(){(querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
                         
-                         do{
-                             let data = document.data()
-                             let jsonData = try JSONSerialization.data(withJSONObject: data)
-                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                             onboardingDataArray.append(userInfo)
-                           
-                             self.onboardingDataArray = onboardingDataArray
-                             self.recommendTop5CollectionView.reloadData()
-                        
-                         }catch let err{
-                             print("err: \(err)")
-                         }
-                     }
-                 }
-             }
-         default:
-           print("nowpage 0~5사이가 아닙니다.")
-         }
+                        do{
+                            let data = document.data()
+                            let jsonData = try JSONSerialization.data(withJSONObject: data)
+                            let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
+                            onboardingDataArray.append(userInfo)
+                            
+                            self.onboardingDataArray = onboardingDataArray
+                            self.recommendTop5CollectionView.reloadData()
+                            
+                        }catch let err{
+                            print("err: \(err)")
+                        }
+                    }
+                }
+            }
+        default:
+            print("nowpage 0~5사이가 아닙니다.")
+        }
         
         let onboardingRef = db.collection(firstcollect).document(firstdoc).collection(secondcollect).document(seconddoc).collection(thirdcollect)
         onboardingRef.getDocuments(){(querySnapshot, err) in
@@ -125,13 +138,13 @@ class MainRecommendResultViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                   
+                    
                     do{
                         let data = document.data()
                         let jsonData = try JSONSerialization.data(withJSONObject: data)
                         let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                         onboardingDataArray.append(userInfo)
-                
+                        
                         self.onboardingDataArray = onboardingDataArray
                         self.recommendTop5CollectionView.reloadData()
                         
@@ -144,14 +157,11 @@ class MainRecommendResultViewController: UIViewController {
         }
     }
     
-    
- 
-    
     let recommendResultImageArray: Array<UIImage> = [Images.noBGParentsGiftImage, Images.noBGTwentyWomenGiftImage, Images.noBGTwentyMenGiftImage, Images.noBGUselessGiftImage, Images.noBGSummerGiftImage]
     
     let recommendResultImageBackgroundColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
-  
-   
+    
+    
     @IBOutlet var defaultImg: UIImageView!
     @IBOutlet var recommendTop5CollectionView: UICollectionView!
     @IBOutlet var defaultTitleTopLabel: UILabel!
@@ -169,14 +179,9 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        LoadingIndigator.showLoading()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            LoadingIndigator.hideLoading()
-        }
-        
         return onboardingDataArray.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
@@ -188,14 +193,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
             top5Cell.top5ImageView.layer.cornerRadius = 15
             top5Cell.top5ImageView.contentMode = .scaleToFill
         }
-
-//        if let url = URL(string: onboardingDataArray[indexPath.row].imageUrl){
-//            if let imagedata = try? Data(contentsOf: url){
-//                top5Cell.top5ImageView.image = UIImage(data: imagedata)
-//                top5Cell.top5ImageView.layer.cornerRadius = 15
-//                top5Cell.top5ImageView.contentMode = .scaleToFill
-//            }
-//        } // Kingfisher 변경 전 코드 
+        
         
         top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
         let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
@@ -203,6 +201,8 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0"
         top5Cell.top5PriceLabel.text = String("최저  \(lowPrice)원~")
+        
+        activityIndigator.stopAnimating()
         
         return top5Cell
     }
