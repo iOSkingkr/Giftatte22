@@ -26,8 +26,21 @@ class HotCategoryViewController: UIViewController {
     @IBOutlet var hotCategoryResultLabel: UILabel!
     @IBOutlet var hotCategoryResultCollectionView: UICollectionView!
     
+    lazy var activityIndigator: UIActivityIndicatorView = {
+        let activityIndigator = UIActivityIndicatorView()
+        
+        activityIndigator.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        activityIndigator.center = self.view.center
+        
+        activityIndigator.color = .yellow
+        activityIndigator.style = .large
+        return activityIndigator
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(activityIndigator)
+        activityIndigator.startAnimating()
         getHotCategoryData()
         hotCategoryResultCollectionView.dataSource = self
         hotCategoryResultCollectionView.delegate = self
@@ -133,18 +146,12 @@ class HotCategoryViewController: UIViewController {
 extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        LoadingIndigator.showLoading()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            LoadingIndigator.hideLoading()
-        }
+
         return hotCategoryDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
-        
+   
         let bottomCell = hotCategoryResultCollectionView.dequeueReusableCell(withReuseIdentifier: "HotCategoryResultCollectionViewCell", for: indexPath) as! HotCategoryResultCollectionViewCell
         bottomCell.layer.cornerRadius = 15
         
@@ -160,6 +167,8 @@ extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewD
         
         let lowPrice = numberFormatter.string(from: NSNumber(value: hotCategoryDataArray[indexPath.row].lowPrice)) ?? "0" //옵셔널이므로 강제 언렙핑 안해도 됨
         bottomCell.hotCategoryResultBottomLabel.text = String("최저  \(lowPrice)원~")
+        
+        activityIndigator.stopAnimating()
         
         return bottomCell
         

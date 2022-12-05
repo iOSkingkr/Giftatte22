@@ -34,6 +34,19 @@ class SurveyResultCollectionViewController: UIViewController {
         return button
     }()
     
+    
+    lazy var activityIndigator: UIActivityIndicatorView = {
+        let activityIndigator = UIActivityIndicatorView()
+        
+        activityIndigator.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        activityIndigator.center = self.view.center
+        
+        activityIndigator.color = .yellow
+        activityIndigator.style = .large
+        return activityIndigator
+    }()
+    
+    
     @objc func buttonPressed(_sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
@@ -44,8 +57,10 @@ class SurveyResultCollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(activityIndigator)
+        activityIndigator.startAnimating()
         
-//        setupLayout()
+        //        setupLayout()
         surveyResultView.isHidden = true
         getResultGiftData()
         surveyResultBottomCollectionView.delegate = self
@@ -54,7 +69,7 @@ class SurveyResultCollectionViewController: UIViewController {
         surveyResultMidBottomLabel.text = "추천해요💝"
         
         self.navigationItem.rightBarButtonItem = self.xmarkButton
-    
+        
     }
     
     
@@ -104,13 +119,13 @@ class SurveyResultCollectionViewController: UIViewController {
                         default:
                             print("price가 default입니다. ")
                         }
-
+                        
                         self.resultDataArray = resultDataArray
                         self.surveyResultBottomCollectionView.reloadData()
                         if self.resultDataArray.count != 0{
                             let kingfisherurl = URL(string: self.resultDataArray[0].imageUrl)
                             self.surveyResultMainImage.kf.setImage(with: kingfisherurl)
-                        self.surveyResultMidTopLabel.text = self.resultDataArray[0].keyword
+                            self.surveyResultMidTopLabel.text = self.resultDataArray[0].keyword
                         }
                     }catch let err{
                         print("err: \(err)")
@@ -143,49 +158,23 @@ class SurveyResultCollectionViewController: UIViewController {
     }
 }
 
-class LoadingIndigator{
-    static func showLoading() {
-        DispatchQueue.main.async{
-            guard let window = UIApplication.shared.windows.last else {return}
-            let loadingIndigatorView: UIActivityIndicatorView
-            if let existedView = window.subviews.first(where: {$0 is UIActivityIndicatorView}) as? UIActivityIndicatorView{
-                loadingIndigatorView = existedView
-            } else {
-                loadingIndigatorView = UIActivityIndicatorView(style: .large)
-                loadingIndigatorView.frame = window.frame
-                loadingIndigatorView.color = .systemYellow
-                window.addSubview(loadingIndigatorView)
-            }
-            loadingIndigatorView.startAnimating()
-        }
-    }
-    static func hideLoading(){
-        DispatchQueue.main.async {
-            guard let window = UIApplication.shared.windows.last else {return}
-            window.subviews.filter({ $0 is UIActivityIndicatorView}).forEach{$0.removeFromSuperview()}
-        }
-    }
-}
 
 
 extension SurveyResultCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        LoadingIndigator.showLoading()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            LoadingIndigator.hideLoading()
-        }
+     
         return resultDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-       
+        
         
         let cell = surveyResultBottomCollectionView.dequeueReusableCell(withReuseIdentifier: "SurveyResultCollectionViewCell", for: indexPath) as! SurveyResultCollectionViewCell
         
         cell.surveyResultBottomCollectionTopLabel.text = resultDataArray[indexPath.row].keyword
-//        cell.surveyResultBottomCollectionTopLabel.adjustsFontSizeToFitWidth = true
+        //        cell.surveyResultBottomCollectionTopLabel.adjustsFontSizeToFitWidth = true
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -197,6 +186,7 @@ extension SurveyResultCollectionViewController: UICollectionViewDelegate, UIColl
         cell.surveyResultBottomImageView.kf.setImage(with: kingfisherurl)
         cell.surveyResultBottomImageView.contentMode = .scaleAspectFill
         cell.surveyResultBottomImageView.layer.cornerRadius = 15
+        activityIndigator.stopAnimating()
         
         return cell
     }
