@@ -17,7 +17,7 @@ class StartAnimationViewController: UIViewController {
         
         let time = DispatchTime.now() + (2.5)
         DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
-            self?.fire()
+            self?.goTabBarViewController()
         }
         
         let animationView: AnimationView = .init(name: "gift")
@@ -28,7 +28,7 @@ class StartAnimationViewController: UIViewController {
         animationView.play()
     }
     
-    @objc func fire()
+    func goTabBarViewController()
     {
         guard let rootVC = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") else{return}
         let navigation = UINavigationController(rootViewController: rootVC)

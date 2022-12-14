@@ -44,9 +44,10 @@ class HotCategoryViewController: UIViewController {
         getHotCategoryData()
         hotCategoryResultCollectionView.dataSource = self
         hotCategoryResultCollectionView.delegate = self
-        
         // Do any additional setup after loading the view.
     }
+    
+
     
     func getHotCategoryData(){
         var hotCategoryDataArray: [Gift] = []
@@ -112,6 +113,25 @@ class HotCategoryViewController: UIViewController {
             
         }
         let onboardingRef = db.collection(firstcollect).document(firstdoc).collection(secondcollect).document(seconddoc).collection(thirdcollect)
+//        func test(){
+//            let documents: [String] = [Gift]
+//            self.hotCategoryDataArray = documents.map{ decode(Gift.self)}
+//            self.hotCategoryResultCollectionView.reloadData()
+//        }
+//
+//        func decode<A: Decodable>(_ type: A.Type) -> Result<A, Error>{
+//            do{
+//                let data = document.data()
+//                let jsonData = try JSONSerialization.data(withJSONObject: data)
+//                let result = try JSONDecoder().decode(type, from: jsonData)
+//                return .success(result)
+//            } catch let err{
+//                print("err: \(err)")
+//                return .failure(err)
+//            }
+//        }
+        
+        
         onboardingRef.getDocuments(){(querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -129,8 +149,6 @@ class HotCategoryViewController: UIViewController {
                         
                         let kingfisherurl = URL(string: self.hotCategoryDataArray[0].imageUrl)
                         self.hotCategoryResultImage.kf.setImage(with: kingfisherurl)
-                        
-                        
                         self.hotCategoryResultLabel.text = self.hotCategoryDataArray[0].keyword
                     }catch let err{
                         print("err: \(err)")
@@ -140,7 +158,24 @@ class HotCategoryViewController: UIViewController {
         }
     }
 }
-
+//
+//func test(){
+//    let documents: [String] = [Gift]
+//    self.onboardingDataArray = documents.map{ decode(Gift.self)}
+//    self.hotCategoryResultCollectionView.reloadData()
+//}
+//
+//func decode<A: Decodable>(_ type: A.Type) -> Result<A, Error>{
+//    do{
+//        let data = Data()
+//        let jsonData = try JSONSerialization.data(withJSONObject: data)
+//        let result = try JSONDecoder().decode(type, from: jsonData)
+//        return .success(result)
+//    } catch let err{
+//        print("err: \(err)")
+//        return .failure(err)
+//    }
+//}
 
 
 extension HotCategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource{
