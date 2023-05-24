@@ -1,0 +1,47 @@
+import Foundation
+
+
+func solution(_ msg:String) -> [Int] {
+    // 1
+    let atoz = Array(65...90).map{String(UnicodeScalar($0))}
+    
+    var dic: [String:Int] = [String:Int]()
+    
+    for (i,j) in atoz.enumerated(){
+        dic[j] = i + 1
+    }
+    
+    var result = [Int]()
+    
+    
+    var msgArray = msg.map{String($0)}
+    
+    var index: Int = 26 // 추가할 단어의 위치
+    
+    
+    var count = 0
+    
+    for i in 0..<msgArray.count{
+    
+        if count <= i{
+            var j = i
+            var word = ""
+            var plusword = msgArray[i] //"k" "A" "K" "A" "O"
+            
+            if j+1 < msgArray.count{
+                while dic.keys.contains(plusword){
+                    word = plusword //"k"
+                    j += 1 //"1"
+                    plusword += msgArray[j] //"KA"
+                    count += 1
+                    
+                }
+                result.append(dic[word] ?? -1) //result에 추가해라
+                index += 1
+                dic[plusword] = index
+            }
+        }
+    }
+    
+    return result
+}
