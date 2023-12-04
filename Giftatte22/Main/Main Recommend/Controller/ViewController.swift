@@ -9,6 +9,11 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 
+struct tesT: Codable{
+    var a: String
+    var b: String
+}
+
 
 class ViewController: UIViewController {
     //    var onboardingDataArray: [Gift] = []
@@ -17,14 +22,59 @@ class ViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+//        firebaseTest()
         
         addCollectionView()
         addHotCategoryCollectionView()
         self.view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         
+    }
+    
+    func firebaseTest(){
+        let db = Firestore.firestore()
+        
+      
+        // Add a new document in collection "cities"
+        db.collection("Maincard50").document("2").setData([
+          "lowprice": "90000",
+          "imageUrl": "https://shopping-phinf.pstatic.net/main_4253244/42532447517.20230909132207.jpg",
+          "title": "안마의자"
+        ]) { err in
+          if let err = err {
+            print("Error writing document: \(err)")
+          } else {
+            print("Document successfully written!")
+          }
+        }
+        /*
+        50대 부모님 추천 / 1~20/ lowprice ,imageUrl,title
+         마사지
+         안마기
+         건강보조제
+         핸드폰
+         티비
+         에어컨
+         공기청정기
+         세탁기
+         갤럭시워치
+         로봇청소기
+         
+         
+         
+         
+        20대 여자
+        20대 남자
+        쓸모 없는 선물
+        겨울 필수템 선물
+        */
+
     }
     
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
