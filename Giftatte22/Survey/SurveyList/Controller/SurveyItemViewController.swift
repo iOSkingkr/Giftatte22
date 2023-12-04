@@ -20,6 +20,8 @@ class SurveyItemViewController: UIViewController{
     var itemNameList3: [String] = ["전자제품", "생활용품", "상품권", "책"]
     var itemNameList4: [String] = ["신발/시계", "전자제품", "생활용품", "상품권"]
     
+    
+    
     let itemImageArray0: Array<UIImage> = [Images.clothes, Images.watch, Images.computer, Images.book]
     let itemImageArray1: Array<UIImage> = [Images.clothes, Images.watch, Images.cosmetics, Images.giftcard]
     let itemImageArray2: Array<UIImage> = [Images.computer, Images.interior, Images.baby, Images.lifeitem]

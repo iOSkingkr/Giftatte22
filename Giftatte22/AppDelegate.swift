@@ -15,7 +15,7 @@ import FirebaseMessaging
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        UNUserNotificationCenter.current().delegate = self
+//        UNUserNotificationCenter.current().delegate = self
         return true
     }
 
@@ -24,26 +24,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        Messaging.messaging().delegate = self
-        
-        //FCM 현재 등록 토큰 확인
-        Messaging.messaging().token{ token, error in
-            if let error = error{
-                print("ERROR FCM 등록 토큰 가져오기: \(error.localizedDescription)")
-            }
-            else if let token = token{
-                print("FCM 등록 토큰: \(token)")
-            }
-        }
-        
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: authOptions){ _, error in
-            print("ERROR, Request Notifications Authorization:\(error.debugDescription)")
-        }
-        application.registerForRemoteNotifications()
-        
+//        Messaging.messaging().delegate = self
+//        
+//        //FCM 현재 등록 토큰 확인
+//        Messaging.messaging().token { token, error in
+//          if let error = error {
+//            print("Error fetching FCM registration token: \(error)")
+//          } else if let token = token {
+//            print("FCM registration token: \(token)")
+//            
+//          }
+//        }
+//        
+//        UNUserNotificationCenter.current().delegate = self
+//
+//        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+//        UNUserNotificationCenter.current().requestAuthorization(
+//          options: authOptions,
+//          completionHandler: { _,error in
+//              print("ERROR, Request Notifications Authorization:\(error.debugDescription)")
+//          }
+//          
+//        )
+//
+//        application.registerForRemoteNotifications()
+//
+//        
         return true
     }
     
@@ -71,14 +77,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate: UNUserNotificationCenterDelegate{
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.list, .banner, .badge, .sound])
-    }
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        completionHandler([.list, .banner, .badge, .sound])
+//    }
 }
 
 extension AppDelegate: MessagingDelegate{
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        guard let token = fcmToken else {return}
-        print("FCM 등록토큰 갱신: \(token)")
-    }
+//    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+////      print("Firebase registration token: \(String(describing: fcmToken))")
+//
+//      let dataDict: [String: String] = ["token": fcmToken ?? ""]
+//      NotificationCenter.default.post(
+//        name: Notification.Name("FCMToken"),
+//        object: nil,
+//        userInfo: dataDict
+//      )
+//      // TODO: If necessary send token to application server.
+//      // Note: This callback is fired at each app startup and whenever a new token is generated.
+//    }
+//    
+//    func application(application: UIApplication,
+//                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+//      Messaging.messaging().apnsToken = deviceToken
+//    }
+
 }

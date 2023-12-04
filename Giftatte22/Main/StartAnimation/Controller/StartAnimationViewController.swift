@@ -10,7 +10,7 @@ import Lottie
 
 
 class StartAnimationViewController: UIViewController {
-    let transitionHandler = TransitionHandler()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class StartAnimationViewController: UIViewController {
             self?.goTabBarViewController()
         }
         
-        let animationView: AnimationView = .init(name: "gift")
+        let animationView: LottieAnimationView = .init(name: "gift")
         self.view.addSubview(animationView)
         animationView.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
         animationView.center = self.view.center
@@ -28,11 +28,13 @@ class StartAnimationViewController: UIViewController {
         animationView.play()
     }
     
+    
     func goTabBarViewController()
     {
+        let transitionHandler = TransitionHandler()
         guard let rootVC = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") else{return}
         let navigation = UINavigationController(rootViewController: rootVC)
-        navigation.transitioningDelegate = self.transitionHandler
+        navigation.transitioningDelegate = transitionHandler
         navigation.modalPresentationStyle = .fullScreen
         self.present(navigation, animated: true, completion: nil)
     }
