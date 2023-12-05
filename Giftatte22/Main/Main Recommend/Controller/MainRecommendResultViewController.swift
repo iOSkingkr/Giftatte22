@@ -10,14 +10,9 @@ import FirebaseFirestore
 import Firebase
 import Kingfisher
 
-struct GiftTest: Codable{
-    var imageUrl: String
-    var lowprice: String
-    var title: String
-}
 
 class MainRecommendResultViewController: UIViewController {
-    var onboardingDataArray: [GiftTest] = []
+    var onboardingDataArray: [Gift] = []
     var nowPage = 0
     var firstcollect = "presents"
     var firstdoc = "ALL"
@@ -27,7 +22,7 @@ class MainRecommendResultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
-        setData()
+        
     }
     
     lazy var activityIndigator: UIActivityIndicatorView = {
@@ -41,17 +36,20 @@ class MainRecommendResultViewController: UIViewController {
         return activityIndigator
     }()
     
+    let str = Strings(itemNameList0: ["1"], itemNameList1: ["1"], itemNameList2: ["1"], itemNameList3: ["1"], itemNameList4: ["1"])
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addSubview(activityIndigator)
 //        activityIndigator.startAnimating()
         
-//        getOnboardingData()
+        getOnboardingData()
         
-        self.defaultTitleTopLabel.text = Strings.defaultTopTitleLabelArray[nowPage]
-        self.defaultTitleBottomLabel.text = Strings.defaultBottomTitleLabelArray[nowPage]
-        self.defaultContentsLabel.text = Strings.defaultContentsLabelArray[nowPage]
+        self.defaultTitleTopLabel.text = str.defaultTopTitleLabelArray[nowPage]
+        self.defaultTitleBottomLabel.text = str.defaultBottomTitleLabelArray[nowPage]
+        self.defaultContentsLabel.text = str.defaultContentsLabelArray[nowPage]
         self.defaultImg.image = recommendResultImageArray[nowPage]
         self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
@@ -64,28 +62,6 @@ class MainRecommendResultViewController: UIViewController {
         let layer = CAShapeLayer()
         layer.path = pathCircle.cgPath
         defaultImg.layer.mask = layer
-    }
-    func setData(){
-        let db : Firestore = Firestore.firestore()
-        db.collection("Maincard50").getDocuments{ querySnapshot, error in
-//            guard let error = error else{return}
-            guard let querySnapshot = querySnapshot else {return}
-            for i in querySnapshot.documents{
-                do{
-                    let data = i.data()
-                    let jsonData = try JSONSerialization.data(withJSONObject: data)
-                    let userInfo = try JSONDecoder().decode(GiftTest.self, from: jsonData)
-                    self.onboardingDataArray.append(userInfo)
-                    print(userInfo)
-                }
-                catch let err{
-                    print(err)
-                }
-            }
-            self.recommendTop5CollectionView.reloadData()
-            
-        }
-        
     }
     
     func getOnboardingData() {
@@ -125,13 +101,15 @@ class MainRecommendResultViewController: UIViewController {
                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                             onboardingDataArray.append(userInfo)
                             
-//                            self.onboardingDataArray = onboardingDataArray
-                            self.recommendTop5CollectionView.reloadData()
+                            
                             
                         }catch let err{
                             print("err: \(err)")
                         }
                     }
+                    self.onboardingDataArray = onboardingDataArray
+                    self.recommendTop5CollectionView.reloadData()
+
                 }
             }
         case 4:
@@ -148,13 +126,14 @@ class MainRecommendResultViewController: UIViewController {
                             let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                             onboardingDataArray.append(userInfo)
                             
-//                            self.onboardingDataArray = onboardingDataArray
-                            self.recommendTop5CollectionView.reloadData()
                             
                         }catch let err{
                             print("err: \(err)")
                         }
                     }
+                    self.onboardingDataArray = onboardingDataArray
+                    self.recommendTop5CollectionView.reloadData()
+
                 }
             }
         default:
@@ -173,15 +152,15 @@ class MainRecommendResultViewController: UIViewController {
                         let jsonData = try JSONSerialization.data(withJSONObject: data)
                         let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
                         onboardingDataArray.append(userInfo)
-                        
-//                        self.onboardingDataArray = onboardingDataArray
-                        self.recommendTop5CollectionView.reloadData()
-                        
+                                            
                     }catch let err{
                         print("err: \(err)")
                     }
                     
                 }
+                self.onboardingDataArray = onboardingDataArray
+                self.recommendTop5CollectionView.reloadData()
+
             }
         }
     }
@@ -224,12 +203,12 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         }
         
         
-        top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].title
-//        let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
-//        numberFormatter.numberStyle = .decimal //decimal 사용
-//        
-//        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0"
-        top5Cell.top5PriceLabel.text = String("최저  \(onboardingDataArray[indexPath.row].lowprice)원~")
+        top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
+        let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
+        numberFormatter.numberStyle = .decimal //decimal 사용
+        
+        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0"
+        top5Cell.top5PriceLabel.text = String("최저  \(lowPrice)원~")
         
         activityIndigator.stopAnimating()
         

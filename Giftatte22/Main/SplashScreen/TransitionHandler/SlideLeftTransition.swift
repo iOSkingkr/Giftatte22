@@ -1,5 +1,5 @@
 //
-//  TransitionHandler.swift
+//  SlideLeftTransition.swift
 //  Giftatte22
 //
 //  Created by duck on 2022/05/30.
@@ -8,7 +8,7 @@
 import UIKit
 
 //로띠애니메이션이 끝나고 Main화면으로 넘어갈때 왼쪽에서 오른쪽으로 화면이 전환하도록 하는 트렌지션
-class TransitionHandler : NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
+class SlideLeftTransition : NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return self
