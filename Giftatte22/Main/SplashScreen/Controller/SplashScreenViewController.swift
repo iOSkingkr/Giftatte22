@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 
-class StartAnimationViewController: UIViewController {
+class SplashScreenViewController: UIViewController {
     
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class StartAnimationViewController: UIViewController {
     
     func goTabBarViewController()
     {
-        let transitionHandler = TransitionHandler()
+        let transitionHandler = SlideLeftTransition()
         guard let rootVC = self.storyboard?.instantiateViewController(identifier: "TabBarViewController") else{return}
         let navigation = UINavigationController(rootViewController: rootVC)
         navigation.transitioningDelegate = transitionHandler
