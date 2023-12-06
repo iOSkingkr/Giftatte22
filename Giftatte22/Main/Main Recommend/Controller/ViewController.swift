@@ -196,7 +196,7 @@ class ViewController: UIViewController {
     
     let mainRecommendCollectImageArray: Array<UIImage> = [Images.parentsImage, Images.twentyWomenImage, Images.twentyMenImage, Images.uselessImage, Images.summerImage]
     
-    let topLabelArray = Strings.collectTitleArray
+    
     
     func addHotCategoryCollectionView(){
         self.hotCategoryCollectionView?.delegate = self
@@ -265,8 +265,14 @@ extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDat
             }
             
             cell.customView.image = mainRecommendCollectImageArray[indexPath.row]
-            cell.customTopLabel.text = Strings.collectTitleArray[indexPath.row]
-            cell.customBottomLabel.text = Strings.collectContentsArray[indexPath.row]
+            
+            let cardNewsTopLabel = [CardNewsTitle.fifty, CardNewsTitle.twentyWoman, CardNewsTitle.twentyMan, CardNewsTitle.useless,CardNewsTitle.summer]
+            let cardNewsContentLabel = [CardNewsContent.fifty, CardNewsContent.twentyWoman, CardNewsContent.twentyMan, CardNewsContent.useless,CardNewsContent.summer]
+            
+            cell.customTopLabel.text = cardNewsTopLabel[indexPath.row].rawValue
+            
+            cell.customBottomLabel.text = cardNewsContentLabel[indexPath.row].rawValue
+            
             cell.layer.cornerRadius = 30
             cell.clipsToBounds = true
             

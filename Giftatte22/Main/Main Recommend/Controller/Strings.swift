@@ -12,8 +12,7 @@ import Foundation
 struct Strings{
     
     //MainRecommendViewCOntroller
-    static let collectTitleArray = ["50대 부모님 추천 선물", "20대 여자 선물" , "20대 남자 선물" ,"쓸모없는 선물 Top9", "여름 필수템 선물"]
-    static let collectContentsArray = ["현금말고 부모님이 좋아하는 선물 어때이가 추천해드려요", "특별한 날 친구의 선물 어때이가 추천해드려요", "고르기 어려운 남자 선물 어때이가 추천해드려요", "뭘 선물해 줄 지 모르겠다면 이건 어때이?", "시원하게 여름을 보내기위한 필수템 어때이가 추천해드려요"]
+
     
     //MainRecommendResultViewController
     let defaultTopTitleLabelArray = ["50대 부모님 추천 선물", "20대 여자 추천 선물" , "20대 남자 추천 선물" ,"쓸모없는 선물 Top9", "여름 필수템 추천"]
@@ -27,6 +26,22 @@ struct Strings{
     var itemNameList2: [String] = ["전자제품", "인테리어소품", "출산육아템", "생활용품"]
     var itemNameList3: [String] = ["전자제품", "생활용품", "상품권", "책"]
     var itemNameList4: [String] = ["시계/신발", "전자제품", "생활용품", "상품권"]
+}
+
+enum CardNewsTitle: String{
+    case fifty = "50대 부모님 추천 선물"
+    case twentyWoman =  "20대 여자 선물"
+    case twentyMan = "20대 남자 선물"
+    case useless = "쓸모없는 선물 Top9"
+    case summer = "여름 필수템 선물"
+}
+
+enum CardNewsContent: String{
+    case fifty = "현금말고 부모님이 좋아하는 선물 어때이가 추천해드려요"
+    case twentyWoman =  "특별한 날 친구의 선물 어때이가 추천해드려요"
+    case twentyMan =  "고르기 어려운 남자 선물 어때이가 추천해드려요"
+    case useless = "뭘 선물해 줄 지 모르겠다면 이건 어때이?"
+    case summer = "시원하게 여름을 보내기위한 필수템 어때이가 추천해드려요"
 }
 
 
