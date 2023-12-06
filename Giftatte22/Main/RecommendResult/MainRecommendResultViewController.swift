@@ -47,9 +47,13 @@ class MainRecommendResultViewController: UIViewController {
         
         getOnboardingData()
         
-        self.defaultTitleTopLabel.text = str.defaultTopTitleLabelArray[nowPage]
-        self.defaultTitleBottomLabel.text = str.defaultBottomTitleLabelArray[nowPage]
-        self.defaultContentsLabel.text = str.defaultContentsLabelArray[nowPage]
+        let centerTitle = [CardNewsTitle.fifty, CardNewsTitle.twentyWoman,CardNewsTitle.twentyMan,CardNewsTitle.useless,CardNewsTitle.summer]
+        let topHashTag = [RecommendResultTopHashTag.fifty, RecommendResultTopHashTag.twentyWoman,RecommendResultTopHashTag.twentyMan,RecommendResultTopHashTag.useless,RecommendResultTopHashTag.summer]
+        let bottomHashTag = [RecommendResultBottomHashTag.fifty, RecommendResultBottomHashTag.twentyWoman,RecommendResultBottomHashTag.twentyMan,RecommendResultBottomHashTag.useless,RecommendResultBottomHashTag.summer]
+        defaultTitleTopLabel.text = centerTitle[nowPage].rawValue
+        defaultTitleBottomLabel.text = topHashTag[nowPage].rawValue
+        defaultContentsLabel.text = bottomHashTag[nowPage].rawValue
+        
         self.defaultImg.image = recommendResultImageArray[nowPage]
         self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         

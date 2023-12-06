@@ -9,13 +9,8 @@ import UIKit
 import FirebaseFirestore
 import Firebase
 
-struct tesT: Codable{
-    var a: String
-    var b: String
-}
 
-
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     //    var onboardingDataArray: [Gift] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,158 +30,6 @@ class ViewController: UIViewController {
         self.view.backgroundColor = .white
         navigationController?.navigationBar.isHidden = true
         
-    }
-    
-    func firebaseTest(){
-        let db = Firestore.firestore()
-        
-      
-        // Add a new document in collection "cities"
-        db.collection("Maincard20M").document("1").setData([
-          "lowprice": 10000,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_8563154/85631543068.3.jpg",
-          "title": "닌텐도스위치"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("2").setData([
-          "lowprice": 100,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_1562297/15622974484.20211022120608.jpg",
-          "title": "카드지갑"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("3").setData([
-          "lowprice": 3000,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_4116209/41162098621.20230713102102.jpg",
-          "title": "배달쿠폰"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("4").setData([
-          "lowprice": 4840,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_2610461/26104618522.20210223153928.jpg",
-          "title": "게임상품권"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("5").setData([
-          "lowprice": 600,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_8180373/81803739367.1.jpg",
-          "title": "향수"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("6").setData([
-          "lowprice": 80,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_5478237/5478237110.20210511105645.jpg",
-          "title": "핸드크림"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-
-        db.collection("Maincard20M").document("7").setData([
-          "lowprice": 80,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_8439498/84394983895.3.jpg",
-          "title": "팔찌"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        
-        db.collection("Maincard20M").document("8").setData([
-          "lowprice": 441760,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_2541303/25413039524.20220321180928.jpg",
-          "title": "에어팟MAX"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("9").setData([
-          "lowprice": 454360,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_2928180/29281800623.20211020120244.jpg",
-          "title": "아이패드"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        db.collection("Maincard20M").document("10").setData([
-          "lowprice": 276900,
-          "imageUrl": "https://shopping-phinf.pstatic.net/main_4275157/42751576618.20230919194741.jpg",
-          "title": "애플워치"
-        ]) { err in
-          if let err = err {
-            print("Error writing document: \(err)")
-          } else {
-            print("Document successfully written!")
-          }
-        }
-        
-        
-        /*
-        50대 부모님 추천 / 1~20/ lowprice ,imageUrl,title
-         목걸이
-         립스틱
-         배달쿠폰
-         올리브영쿠폰
-         향수
-         핸드크림
-         팔찌
-         해드셋
-         아이패드
-         애플워치
-         
-         
-         
-         
-         
-        20대 여자
-        20대 남자
-        쓸모 없는 선물
-        겨울 필수템 선물
-        */
-
     }
     
     @IBOutlet var mainRecommendCollectionView: UICollectionView!
@@ -220,7 +63,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
+extension MainViewController: UICollectionViewDelegateFlowLayout,UICollectionViewDataSource{
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
