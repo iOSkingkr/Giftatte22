@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainRecommendCollectionViewCell: UICollectionViewCell {
+class CardNewsCollectionViewCell: UICollectionViewCell {
     
     let customTopLabel: UILabel = {
     

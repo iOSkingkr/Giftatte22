@@ -20,7 +20,9 @@ class HotCategoryViewController: UIViewController {
     var seconddoc = "5000000"
     var thirdcollect = "appInfo"
     
-    let hotCategoryImagesArray: Array<UIImage> = [Images.y_baby, Images.y_book, Images.y_clothes, Images.y_computer, Images.y_cosmetics, Images.y_giftcard, Images.y_interior, Images.y_lifeitem, Images.y_watch]
+    
+    
+    let imgArray: [HotCategoryImage] = [.y_baby,.y_book,.y_clothes,.y_computer,.y_cosmetics,.y_giftcard,.y_interior,.y_lifeitem,.y_watch]
     
     @IBOutlet var hotCategoryResultImage: UIImageView!
     @IBOutlet var hotCategoryResultLabel: UILabel!

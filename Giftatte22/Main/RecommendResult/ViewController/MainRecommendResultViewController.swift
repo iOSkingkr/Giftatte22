@@ -36,29 +36,41 @@ class MainRecommendResultViewController: UIViewController {
         return activityIndigator
     }()
     
-    let str = Strings(itemNameList0: ["1"], itemNameList1: ["1"], itemNameList2: ["1"], itemNameList3: ["1"], itemNameList4: ["1"])
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.addSubview(activityIndigator)
 //        activityIndigator.startAnimating()
-        
+        fetchR()
         getOnboardingData()
         
-        let centerTitle = [CardNewsTitle.fifty, CardNewsTitle.twentyWoman,CardNewsTitle.twentyMan,CardNewsTitle.useless,CardNewsTitle.summer]
-        let topHashTag = [RecommendResultTopHashTag.fifty, RecommendResultTopHashTag.twentyWoman,RecommendResultTopHashTag.twentyMan,RecommendResultTopHashTag.useless,RecommendResultTopHashTag.summer]
-        let bottomHashTag = [RecommendResultBottomHashTag.fifty, RecommendResultBottomHashTag.twentyWoman,RecommendResultBottomHashTag.twentyMan,RecommendResultBottomHashTag.useless,RecommendResultBottomHashTag.summer]
-        defaultTitleTopLabel.text = centerTitle[nowPage].rawValue
-        defaultTitleBottomLabel.text = topHashTag[nowPage].rawValue
-        defaultContentsLabel.text = bottomHashTag[nowPage].rawValue
+        setLocalLabel()
+        setLoaclImage()
         
-        self.defaultImg.image = recommendResultImageArray[nowPage]
-        self.defaultImg.backgroundColor = recommendResultImageBackgroundColorArray[nowPage]
         
         recommendTop5CollectionView.dataSource = self
         recommendTop5CollectionView.delegate = self
+        
+    }
+    
+    let repository = Repository()
+    
+    func fetchR(){
+        repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "50", document2: "50000003"){ giftdata in
+            print(giftdata)
+            
+        }
+    }
+    
+    func setLoaclImage(){
+        let imgArray:[RecommendResultImage] = [.parentsImage,.twentyWomenImage,.twentyMenImage,.uselessImage,.summerImage]
+        
+        let recommendResultImageBGColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
+        
+        defaultImg.image = imgArray[nowPage].image
+        defaultImg.backgroundColor = recommendResultImageBGColorArray[nowPage]
         
         //defaultImg 원형 mask
         let bounds = defaultImg.bounds
@@ -68,6 +80,18 @@ class MainRecommendResultViewController: UIViewController {
         defaultImg.layer.mask = layer
     }
     
+    func setLocalLabel(){
+        
+        let centerTitle = [RecommendResultTitle.fifty, RecommendResultTitle.twentyWoman,RecommendResultTitle.twentyMan,RecommendResultTitle.useless,RecommendResultTitle.summer]
+        let topHashTag = [RecommendResultTopHashTag.fifty, RecommendResultTopHashTag.twentyWoman,RecommendResultTopHashTag.twentyMan,RecommendResultTopHashTag.useless,RecommendResultTopHashTag.summer]
+        let bottomHashTag = [RecommendResultBottomHashTag.fifty, RecommendResultBottomHashTag.twentyWoman,RecommendResultBottomHashTag.twentyMan,RecommendResultBottomHashTag.useless,RecommendResultBottomHashTag.summer]
+        defaultTitleTopLabel.text = centerTitle[nowPage].rawValue
+        defaultTitleBottomLabel.text = topHashTag[nowPage].rawValue
+        defaultContentsLabel.text = bottomHashTag[nowPage].rawValue
+    }
+    
+    
+
     func getOnboardingData() {
         var onboardingDataArray:[Gift] = []
         let db : Firestore = Firestore.firestore()
@@ -168,10 +192,6 @@ class MainRecommendResultViewController: UIViewController {
             }
         }
     }
-    
-    let recommendResultImageArray: Array<UIImage> = [Images.noBGParentsGiftImage, Images.noBGTwentyWomenGiftImage, Images.noBGTwentyMenGiftImage, Images.noBGUselessGiftImage, Images.noBGSummerGiftImage]
-    
-    let recommendResultImageBackgroundColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
     
     
     @IBOutlet var defaultImg: UIImageView!
