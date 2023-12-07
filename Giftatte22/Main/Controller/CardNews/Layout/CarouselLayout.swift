@@ -22,8 +22,10 @@ class CarouselLayout: UICollectionViewFlowLayout {
             setupLayout()
             isSetup = true
         }
+        
     }
     
+    //CollectionView의 좌우 양옆 셀간의 간격을 유지하고 좌우 정렬
     private func setupLayout() {
         guard let collectionView = self.collectionView else {return}
         
@@ -42,6 +44,7 @@ class CarouselLayout: UICollectionViewFlowLayout {
         self.scrollDirection = .horizontal
     }
     
+    //뷰의 bound가 변경될때 레이아웃을 갱신
     public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }

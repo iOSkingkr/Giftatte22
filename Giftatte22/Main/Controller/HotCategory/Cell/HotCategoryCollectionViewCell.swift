@@ -9,7 +9,7 @@ import UIKit
 
 class HotCategoryCollectionViewCell: UICollectionViewCell {
    
-    let hotCategoryImage1: UIImageView = {
+    let hotcategoryImg: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 30
@@ -21,11 +21,11 @@ class HotCategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
      
-        self.addSubview(self.hotCategoryImage1)
-        self.hotCategoryImage1.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        self.hotCategoryImage1.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        self.hotCategoryImage1.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        self.hotCategoryImage1.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        contentView.addSubview(self.hotcategoryImg)
+        hotcategoryImg.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        hotcategoryImg.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        hotcategoryImg.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        hotcategoryImg.heightAnchor.constraint(equalToConstant: 40).isActive = true
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
