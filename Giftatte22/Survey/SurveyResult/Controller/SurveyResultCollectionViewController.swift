@@ -135,12 +135,9 @@ class SurveyResultCollectionViewController: UIViewController {
                     self.resultDataArray = [Gift(highPrice: 0, imageUrl: "https://shopping-phinf.pstatic.net/main_2778888/3.jpg", keyword: "가격대에 제품이 없어요", lowPrice: 0, meanPrice: 0, rank: 0, score: 0, webUrl: "https://github.com/DevKDuck")]
                     self.surveyResultView.isHidden = false
                     self.surveyResultMidTopLabel.text = "찾으시는 선물이 없습니다 ㅠㅠ\n 금액대를 다시 골라볼까요?"
-                    let time = DispatchTime.now() + (5.0)
+                   
                     
-                    DispatchQueue.main.asyncAfter(deadline: time) {  [weak self] in
-                    }
-                    
-                    let defaultView: AnimationView = .init(name: "defaultAnimation")
+                    let defaultView: LottieAnimationView = .init(name: "defaultAnimation")
                     self.view.addSubview(defaultView)
                     
                     defaultView.frame = CGRect(x: 0, y: 0, width: 220, height: 220)

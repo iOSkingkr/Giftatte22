@@ -14,9 +14,7 @@
 		8C0EEF962844B30900803B10 /* SlideLeftTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0EEF952844B30900803B10 /* SlideLeftTransition.swift */; };
 		8C1711B8280FE8CA00D330DD /* CardNewsString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B7280FE8CA00D330DD /* CardNewsString.swift */; };
 		8C1711BA280FE92400D330DD /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1711B9280FE92400D330DD /* CarouselLayout.swift */; };
-		8C1A4FBC2B2054160024E5CA /* HotCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A4FBB2B2054160024E5CA /* HotCategoryViewController.swift */; };
 		8C1A4FC02B20575D0024E5CA /* MainRecommendResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A4FBE2B20575D0024E5CA /* MainRecommendResultCollectionViewCell.swift */; };
-		8C1A4FC12B20575D0024E5CA /* HotCategoryResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A4FBF2B20575D0024E5CA /* HotCategoryResultCollectionViewCell.swift */; };
 		8C1A4FC52B205FD80024E5CA /* RecommendResultString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A4FC42B205FD80024E5CA /* RecommendResultString.swift */; };
 		8C1A4FCF2B2062900024E5CA /* SurveyString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A4FCE2B2062900024E5CA /* SurveyString.swift */; };
 		8C25C07D280FE4D300D2B2E4 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25C07C280FE4D300D2B2E4 /* SplashScreenViewController.swift */; };
@@ -29,6 +27,9 @@
 		8C50D474282E2782007DB1F3 /* SurveyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */; };
 		8C533A2127FDFA6D0034DA9A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8C533A2027FDFA6D0034DA9A /* Lottie */; };
 		8C5A795E2B1EF59600E3B542 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C5A795D2B1EF59600E3B542 /* GoogleService-Info.plist */; };
+		8C85C3862B284A7E008DD893 /* RecommendResultImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85C3852B284A7E008DD893 /* RecommendResultImage.swift */; };
+		8C85C3892B284AC0008DD893 /* HotCategoryImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C85C3882B284AC0008DD893 /* HotCategoryImages.swift */; };
+		8C85C38B2B284CB1008DD893 /* defaultAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C85C38A2B284CB0008DD893 /* defaultAnimation.json */; };
 		8C868A7D2B21A7200047514C /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C868A7C2B21A7200047514C /* Repository.swift */; };
 		8C868A802B21A9230047514C /* MainResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C868A7F2B21A9230047514C /* MainResultModel.swift */; };
 		8C8E9A0228435CD5008A840B /* gift.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C8E9A0128435CD5008A840B /* gift.json */; };
@@ -47,7 +48,7 @@
 		8CE0A755286440AD00CD4515 /* summerImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CE0A750286440AD00CD4515 /* summerImage.png */; };
 		8CE0A7572864487C00CD4515 /* SurveyResultCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0A7562864487C00CD4515 /* SurveyResultCollectionViewController.swift */; };
 		8CE0A75928644B3600CD4515 /* SurveyResultCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */; };
-		8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDA86E2823C2EF0007BE67 /* Images.swift */; };
+		8CEDA86F2823C2F00007BE67 /* CardNewsImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CEDA86E2823C2EF0007BE67 /* CardNewsImage.swift */; };
 		8CF8B0192B1DA0CE00BA1AA9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8CF8B0182B1DA0CE00BA1AA9 /* FirebaseAnalytics */; };
 		8CF8B01B2B1DA0CE00BA1AA9 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 8CF8B01A2B1DA0CE00BA1AA9 /* FirebaseAnalyticsOnDeviceConversion */; };
 		8CF8B01D2B1DA0CE00BA1AA9 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8CF8B01C2B1DA0CE00BA1AA9 /* FirebaseAnalyticsSwift */; };
@@ -119,9 +120,7 @@
 		8C0EEF952844B30900803B10 /* SlideLeftTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideLeftTransition.swift; sourceTree = "<group>"; };
 		8C1711B7280FE8CA00D330DD /* CardNewsString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNewsString.swift; sourceTree = "<group>"; };
 		8C1711B9280FE92400D330DD /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
-		8C1A4FBB2B2054160024E5CA /* HotCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotCategoryViewController.swift; path = Giftatte22/Main/HotCategory/Controller/HotCategoryViewController.swift; sourceTree = SOURCE_ROOT; };
 		8C1A4FBE2B20575D0024E5CA /* MainRecommendResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRecommendResultCollectionViewCell.swift; sourceTree = "<group>"; };
-		8C1A4FBF2B20575D0024E5CA /* HotCategoryResultCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotCategoryResultCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C1A4FC42B205FD80024E5CA /* RecommendResultString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendResultString.swift; sourceTree = "<group>"; };
 		8C1A4FCE2B2062900024E5CA /* SurveyString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyString.swift; sourceTree = "<group>"; };
 		8C25C07C280FE4D300D2B2E4 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +133,9 @@
 		8C50D473282E2782007DB1F3 /* SurveyEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyEventViewController.swift; sourceTree = "<group>"; };
 		8C526C262934B5B300F3A78C /* Giftatte22.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Giftatte22.entitlements; sourceTree = "<group>"; };
 		8C5A795D2B1EF59600E3B542 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8C85C3852B284A7E008DD893 /* RecommendResultImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendResultImage.swift; sourceTree = "<group>"; };
+		8C85C3882B284AC0008DD893 /* HotCategoryImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCategoryImages.swift; sourceTree = "<group>"; };
+		8C85C38A2B284CB0008DD893 /* defaultAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = defaultAnimation.json; sourceTree = "<group>"; };
 		8C868A7C2B21A7200047514C /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8C868A7F2B21A9230047514C /* MainResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainResultModel.swift; sourceTree = "<group>"; };
 		8C8E9A0128435CD5008A840B /* gift.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gift.json; sourceTree = "<group>"; };
@@ -151,7 +153,7 @@
 		8CE0A750286440AD00CD4515 /* summerImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summerImage.png; sourceTree = "<group>"; };
 		8CE0A7562864487C00CD4515 /* SurveyResultCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyResultCollectionViewController.swift; path = Giftatte22/Survey/SurveyResult/Controller/SurveyResultCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
 		8CE0A75828644B3600CD4515 /* SurveyResultCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SurveyResultCollectionViewCell.swift; path = Giftatte22/Survey/SurveyResult/Cell/SurveyResultCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
-		8CEDA86E2823C2EF0007BE67 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		8CEDA86E2823C2EF0007BE67 /* CardNewsImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNewsImage.swift; sourceTree = "<group>"; };
 		A8094BF028113EB200716A45 /* CardNewsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardNewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8094BF228113EE000716A45 /* MainRecommendResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRecommendResultViewController.swift; sourceTree = "<group>"; };
 		A8094BF428113EE800716A45 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				8C1711B7280FE8CA00D330DD /* CardNewsString.swift */,
+				8CEDA86E2823C2EF0007BE67 /* CardNewsImage.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				8C1A4FC42B205FD80024E5CA /* RecommendResultString.swift */,
+				8C85C3852B284A7E008DD893 /* RecommendResultImage.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -334,6 +338,7 @@
 		8C1A4FCA2B2061A00024E5CA /* HotCategory */ = {
 			isa = PBXGroup;
 			children = (
+				8C85C3872B284AAE008DD893 /* Source */,
 				8C1A4FCC2B2061FE0024E5CA /* Cell */,
 			);
 			path = HotCategory;
@@ -379,35 +384,8 @@
 				8C1A4FC22B2059C30024E5CA /* RecommendResult */,
 				8C1A4FB92B20537D0024E5CA /* Controller */,
 				8C25C078280FE41100D2B2E4 /* Storyboard */,
-				8C25C075280FE37900D2B2E4 /* HotCategory */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		8C25C075280FE37900D2B2E4 /* HotCategory */ = {
-			isa = PBXGroup;
-			children = (
-				8C25C077280FE3E500D2B2E4 /* Controller */,
-				8C25C076280FE3A000D2B2E4 /* Cell */,
-			);
-			path = HotCategory;
-			sourceTree = "<group>";
-		};
-		8C25C076280FE3A000D2B2E4 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				8C1A4FBF2B20575D0024E5CA /* HotCategoryResultCollectionViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		8C25C077280FE3E500D2B2E4 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				8C1A4FBB2B2054160024E5CA /* HotCategoryViewController.swift */,
-				8CEDA86E2823C2EF0007BE67 /* Images.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		8C25C078280FE41100D2B2E4 /* Storyboard */ = {
@@ -431,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8E9A0128435CD5008A840B /* gift.json */,
+				8C85C38A2B284CB0008DD893 /* defaultAnimation.json */,
 			);
 			path = LottieJSON;
 			sourceTree = "<group>";
@@ -468,6 +447,14 @@
 				8C25C07A280FE44700D2B2E4 /* LottieJSON */,
 				8CDEAE4927FEE11D00304715 /* image */,
 				8C25C073280FE33100D2B2E4 /* Font */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8C85C3872B284AAE008DD893 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8C85C3882B284AC0008DD893 /* HotCategoryImages.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -745,6 +732,7 @@
 				A859146E2858E9CB003DDF3C /* y_lifeitem.png in Resources */,
 				A8651AD5282E454400C28C83 /* book.png in Resources */,
 				8C5A795E2B1EF59600E3B542 /* GoogleService-Info.plist in Resources */,
+				8C85C38B2B284CB1008DD893 /* defaultAnimation.json in Resources */,
 				A859146D2858E9CB003DDF3C /* y_baby.png in Resources */,
 				8CDEAE4627FEBDC800304715 /* NotoSansCJKkr-Bold.otf in Resources */,
 				8CE0A753286440AD00CD4515 /* twentyWomanImage.png in Resources */,
@@ -778,11 +766,11 @@
 			files = (
 				8C441F3D2B1F00C400EF9CF2 /* TabBarViewController.swift in Sources */,
 				8C96B1CB28535610009222C9 /* HotCategoryCollectionViewCell.swift in Sources */,
-				8C1A4FBC2B2054160024E5CA /* HotCategoryViewController.swift in Sources */,
 				A8B4013D282B9231005BF428 /* SurveyItemViewController.swift in Sources */,
 				A8923AD1280F226E005EAD7C /* SurveyNavigationViewController.swift in Sources */,
 				A8C67D5A27F96BFB003B78F9 /* SurveyPriceViewController.swift in Sources */,
 				8C1A4FC52B205FD80024E5CA /* RecommendResultString.swift in Sources */,
+				8C85C3892B284AC0008DD893 /* HotCategoryImages.swift in Sources */,
 				A83BFFEB27F42E4F0035E12C /* SurveyGenderViewController.swift in Sources */,
 				8CE0A7572864487C00CD4515 /* SurveyResultCollectionViewController.swift in Sources */,
 				8C25C07D280FE4D300D2B2E4 /* SplashScreenViewController.swift in Sources */,
@@ -794,7 +782,7 @@
 				8CE0A75928644B3600CD4515 /* SurveyResultCollectionViewCell.swift in Sources */,
 				A88CCF3B28044C6B00D37E80 /* sv3CollectionViewCell.swift in Sources */,
 				8C868A802B21A9230047514C /* MainResultModel.swift in Sources */,
-				8C1A4FC12B20575D0024E5CA /* HotCategoryResultCollectionViewCell.swift in Sources */,
+				8C85C3862B284A7E008DD893 /* RecommendResultImage.swift in Sources */,
 				A83BFFE927F42B5D0035E12C /* SurveyHomeViewController.swift in Sources */,
 				3A65488427D650740043D3B5 /* AppDelegate.swift in Sources */,
 				8C1711B8280FE8CA00D330DD /* CardNewsString.swift in Sources */,
@@ -806,7 +794,7 @@
 				A8249D1A27F6D8FC00957E10 /* SurveyCategoryViewController.swift in Sources */,
 				3A65488627D650740043D3B5 /* SceneDelegate.swift in Sources */,
 				8C0EEF962844B30900803B10 /* SlideLeftTransition.swift in Sources */,
-				8CEDA86F2823C2F00007BE67 /* Images.swift in Sources */,
+				8CEDA86F2823C2F00007BE67 /* CardNewsImage.swift in Sources */,
 				8CB79C4428115F04000D914A /* Entity.swift in Sources */,
 				A83BFFED27F4566D0035E12C /* SurveyAgeViewController.swift in Sources */,
 			);
