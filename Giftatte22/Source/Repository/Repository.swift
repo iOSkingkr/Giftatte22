@@ -18,18 +18,18 @@ class Repository{
         let onboardingRef = db.collection(collection1).document(document1).collection(collection2).document(document2).collection("appInfo")
         onboardingRef.getDocuments(){(querySnapshot, err) in
             
+            
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    
                     do{
                         let data = document.data()
                         let jsonData = try JSONSerialization.data(withJSONObject: data)
                         let giftData = try JSONDecoder().decode(Gift.self, from: jsonData)
                         
                         
-                        model.append(MainResultModel(imageUrl: giftData.imageUrl, keyword: giftData.keyword, lowPrice: giftData.lowPrice))
+                        model.append(MainResultModel(imageUrl: giftData.imageUrl, keyword: giftData.keyword, lowPrice: giftData.lowPrice,webUrl: giftData.webUrl))
                         
                     }catch let err{
                         print("err: \(err)")

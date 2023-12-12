@@ -132,18 +132,22 @@ extension MainViewController: UICollectionViewDelegateFlowLayout,UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let delegate: GiftDataProvider?
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
+        delegate = nextVC
+        
         
         if collectionView == mainRecommendCollectionView{
-            guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "MainRecommendResultViewController") as? MainRecommendResultViewController else {return}
-            nextVC.nowPage = indexPath.row
-            self.navigationController?.pushViewController(nextVC, animated: true)
+            
+            delegate?.cardNewsData(indexPathRow: indexPath.row)
+        }
+        else{
+            delegate?.hotCategoryData(indexPathRow: indexPath.row)
+            
         }
         
-        if collectionView == hotCategoryCollectionView{
-            guard let goVC = storyboard?.instantiateViewController(withIdentifier: "HotCategoryViewController") as? HotCategoryViewController else {return}
-            goVC.nowCategory = indexPath.row
-            self.navigationController?.pushViewController(goVC, animated: true)
-        }
+        self.navigationController?.pushViewController(nextVC, animated: true)
+
     }
 }
 

@@ -11,189 +11,25 @@ import Firebase
 import Kingfisher
 
 
-class MainRecommendResultViewController: UIViewController {
-    var onboardingDataArray: [Gift] = []
-    var nowPage = 0
-    var firstcollect = "presents"
-    var firstdoc = "ALL"
-    var secondcollect = "ALL"
-    var seconddoc = "5000000"
-    var thirdcollect = "appInfo"
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.isHidden = false
-        
-    }
-    
-    lazy var activityIndigator: UIActivityIndicatorView = {
-        let activityIndigator = UIActivityIndicatorView()
-        
-        activityIndigator.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
-        activityIndigator.center = self.view.center
-        
-        activityIndigator.color = .yellow
-        activityIndigator.style = .large
-        return activityIndigator
-    }()
-    
+protocol GiftDataProvider: AnyObject{
+    func cardNewsData(indexPathRow: Int)
+    func hotCategoryData(indexPathRow: Int)
+}
 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+class MainRecommendResultViewController: UIViewController, GiftDataProvider {
+    func hotCategoryData(indexPathRow: Int) {
         self.view.addSubview(activityIndigator)
-//        activityIndigator.startAnimating()
-        fetchR()
-        getOnboardingData()
-        
-        setLocalLabel()
-        setLoaclImage()
-        
-        
-        recommendTop5CollectionView.dataSource = self
-        recommendTop5CollectionView.delegate = self
-        
+        fetchHotCategoryGiftData(pageNum: indexPathRow)
     }
     
-    let repository = Repository()
-    
-    func fetchR(){
-        repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "50", document2: "50000003"){ giftdata in
-            print(giftdata)
-            
-        }
+    func cardNewsData(indexPathRow: Int) {
+        self.view.addSubview(activityIndigator)
+        fetchCardNewsGiftData(pageNum: indexPathRow)
+        setCardNewsLabel(pageNum: indexPathRow)
+        setCardNewsImage(pageNum: indexPathRow)
     }
     
-    func setLoaclImage(){
-        let imgArray:[RecommendResultImage] = [.parentsImage,.twentyWomenImage,.twentyMenImage,.uselessImage,.summerImage]
-        
-        let recommendResultImageBGColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
-        
-        defaultImg.image = imgArray[nowPage].image
-        defaultImg.backgroundColor = recommendResultImageBGColorArray[nowPage]
-        
-        //defaultImg 원형 mask
-        let bounds = defaultImg.bounds
-        let pathCircle = UIBezierPath(ovalIn: bounds)
-        let layer = CAShapeLayer()
-        layer.path = pathCircle.cgPath
-        defaultImg.layer.mask = layer
-    }
-    
-    func setLocalLabel(){
-        
-        let centerTitle = [RecommendResultTitle.fifty, RecommendResultTitle.twentyWoman,RecommendResultTitle.twentyMan,RecommendResultTitle.useless,RecommendResultTitle.summer]
-        let topHashTag = [RecommendResultTopHashTag.fifty, RecommendResultTopHashTag.twentyWoman,RecommendResultTopHashTag.twentyMan,RecommendResultTopHashTag.useless,RecommendResultTopHashTag.summer]
-        let bottomHashTag = [RecommendResultBottomHashTag.fifty, RecommendResultBottomHashTag.twentyWoman,RecommendResultBottomHashTag.twentyMan,RecommendResultBottomHashTag.useless,RecommendResultBottomHashTag.summer]
-        defaultTitleTopLabel.text = centerTitle[nowPage].rawValue
-        defaultTitleBottomLabel.text = topHashTag[nowPage].rawValue
-        defaultContentsLabel.text = bottomHashTag[nowPage].rawValue
-    }
-    
-    
-
-    func getOnboardingData() {
-        var onboardingDataArray:[Gift] = []
-        let db : Firestore = Firestore.firestore()
-        
-        switch nowPage{
-        case 0:
-            firstcollect = "presents"
-            firstdoc = "ALL"
-            secondcollect = "50"
-            seconddoc = "50000003"
-            thirdcollect = "appInfo"
-        case 1:
-            firstcollect = "presents"
-            firstdoc = "f"
-            secondcollect = "20"
-            seconddoc = "50000000"
-            thirdcollect = "appInfo"
-        case 2:
-            firstcollect = "presents"
-            firstdoc = "m"
-            secondcollect = "20"
-            seconddoc = "50000000"
-            thirdcollect = "appInfo"
-        case 3:
-            let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("useless").collection("appInfo")
-            onboardingRef.getDocuments(){(querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        
-                        do{
-                            let data = document.data()
-                            let jsonData = try JSONSerialization.data(withJSONObject: data)
-                            let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                            onboardingDataArray.append(userInfo)
-                            
-                            
-                            
-                        }catch let err{
-                            print("err: \(err)")
-                        }
-                    }
-                    self.onboardingDataArray = onboardingDataArray
-                    self.recommendTop5CollectionView.reloadData()
-
-                }
-            }
-        case 4:
-            let onboardingRef = db.collection("onboarding").document("ALL").collection("ALL").document("summer").collection("appInfo")
-            onboardingRef.getDocuments(){(querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        
-                        do{
-                            let data = document.data()
-                            let jsonData = try JSONSerialization.data(withJSONObject: data)
-                            let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                            onboardingDataArray.append(userInfo)
-                            
-                            
-                        }catch let err{
-                            print("err: \(err)")
-                        }
-                    }
-                    self.onboardingDataArray = onboardingDataArray
-                    self.recommendTop5CollectionView.reloadData()
-
-                }
-            }
-        default:
-            print("nowpage 0~5사이가 아닙니다.")
-        }
-        
-        let onboardingRef = db.collection(firstcollect).document(firstdoc).collection(secondcollect).document(seconddoc).collection(thirdcollect)
-        onboardingRef.getDocuments(){(querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    
-                    do{
-                        let data = document.data()
-                        let jsonData = try JSONSerialization.data(withJSONObject: data)
-                        let userInfo = try JSONDecoder().decode(Gift.self, from: jsonData)
-                        onboardingDataArray.append(userInfo)
-                                            
-                    }catch let err{
-                        print("err: \(err)")
-                    }
-                    
-                }
-                self.onboardingDataArray = onboardingDataArray
-                self.recommendTop5CollectionView.reloadData()
-
-            }
-        }
-    }
-    
-    
+    //MARK: Object
     @IBOutlet var defaultImg: UIImageView!
     @IBOutlet var recommendTop5CollectionView: UICollectionView!
     @IBOutlet var defaultTitleTopLabel: UILabel!
@@ -205,33 +41,201 @@ class MainRecommendResultViewController: UIViewController {
     @IBOutlet var defaultTop5Label: UILabel!
     //콜렉션 뷰에 들어갈 Top5 제목 Label
     
+    let repository = Repository()
+    var giftDataArray: [MainResultModel] = []
+    
+    lazy var activityIndigator: UIActivityIndicatorView = {
+        let activityIndigator = UIActivityIndicatorView()
+        activityIndigator.frame = CGRect(x: 0, y: 0, width: 150, height: 150)
+        activityIndigator.center = self.view.center
+        activityIndigator.color = .yellow
+        activityIndigator.style = .large
+        return activityIndigator
+    }()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        recommendTop5CollectionView.dataSource = self
+        recommendTop5CollectionView.delegate = self
+    }
+    
+    func fetchHotCategoryGiftData(pageNum: Int){
+        switch pageNum{
+        case 0:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000005"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 1:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50005542"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 2:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "20", document2: "50000000"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 3:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000003"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 4:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000002"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 5:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000009"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 6:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000004"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 7:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000008"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 8:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "ALL", document2: "50000001"){ giftdata in
+                self.giftDataArray = giftdata
+                self.setHotCategoryImage()
+                self.setHoCategoryLabel()
+                self.recommendTop5CollectionView.reloadData()
+            }
+        default:
+            print("hotcategory 0~8이 아닙니다.")
+            break
+        }
+    }
+    
+    func fetchCardNewsGiftData(pageNum: Int){
+        switch pageNum{
+        case 0:
+            repository.fetchGiftData(collection1: "presents", document1: "ALL", collection2: "50", document2: "50000003"){ giftdata in
+                self.giftDataArray = giftdata
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 1:
+            repository.fetchGiftData(collection1: "presents", document1: "f", collection2: "20", document2: "50000000"){ giftdata in
+                self.giftDataArray = giftdata
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 2:
+            repository.fetchGiftData(collection1: "presents", document1: "m", collection2: "20", document2: "50000000"){ giftdata in
+                self.giftDataArray = giftdata
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 3:
+            repository.fetchGiftData(collection1: "onboarding", document1: "ALL", collection2: "ALL", document2: "useless"){ giftdata in
+                self.giftDataArray = giftdata
+                self.recommendTop5CollectionView.reloadData()
+            }
+        case 4:
+            repository.fetchGiftData(collection1: "onboarding", document1: "ALL", collection2: "ALL", document2: "summer"){ giftdata in
+                self.giftDataArray = giftdata
+                self.recommendTop5CollectionView.reloadData()
+            }
+        default:
+            break
+        }
+        
+        
+    }
+    
+    func setCardNewsImage(pageNum: Int){
+        let imgArray:[RecommendResultImage] = [.parentsImage,.twentyWomenImage,.twentyMenImage,.uselessImage,.summerImage]
+        
+        let recommendResultImageBGColorArray = [UIColor.parentsGiftColor, UIColor.twentyWomenGiftColor, UIColor.twentyMenGiftColor, UIColor.uselessColor, UIColor.summerGiftColor]
+        
+        defaultImg.image = imgArray[pageNum].image
+        defaultImg.backgroundColor = recommendResultImageBGColorArray[pageNum]
+        setPathCircleImage()
+    }
+    
+    func setCardNewsLabel(pageNum: Int){
+        
+        let centerTitle = [RecommendResultTitle.fifty, RecommendResultTitle.twentyWoman,RecommendResultTitle.twentyMan,RecommendResultTitle.useless,RecommendResultTitle.summer]
+        let topHashTag = [RecommendResultTopHashTag.fifty, RecommendResultTopHashTag.twentyWoman,RecommendResultTopHashTag.twentyMan,RecommendResultTopHashTag.useless,RecommendResultTopHashTag.summer]
+        let bottomHashTag = [RecommendResultBottomHashTag.fifty, RecommendResultBottomHashTag.twentyWoman,RecommendResultBottomHashTag.twentyMan,RecommendResultBottomHashTag.useless,RecommendResultBottomHashTag.summer]
+        defaultTitleTopLabel.text = centerTitle[pageNum].rawValue
+        defaultTitleBottomLabel.text = topHashTag[pageNum].rawValue
+        defaultContentsLabel.text = bottomHashTag[pageNum].rawValue
+    }
+    
+    func setHotCategoryImage(){
+        if let url = URL(string: giftDataArray[0].imageUrl){
+            defaultImg.kf.setImage(with: url)
+        }
+        setPathCircleImage()
+    }
+    
+    func setHoCategoryLabel(){
+        defaultTitleTopLabel.text = "추천 선물💝"
+        defaultTitleBottomLabel.text = giftDataArray[0].keyword
+        defaultContentsLabel.text = " "
+    }
+    
+    
+    func setPathCircleImage(){
+        let bounds = defaultImg.bounds
+        let pathCircle = UIBezierPath(ovalIn: bounds)
+        let layer = CAShapeLayer()
+        layer.path = pathCircle.cgPath
+        defaultImg.layer.mask = layer
+    }
+    
 }
 
 extension MainRecommendResultViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return onboardingDataArray.count
+        return giftDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        
-        
         let top5Cell = recommendTop5CollectionView.dequeueReusableCell(withReuseIdentifier: "MainRecommendResultCollectionViewCell", for: indexPath) as! MainRecommendResultCollectionViewCell
         
-        if let kingurl = URL(string: onboardingDataArray[indexPath.row].imageUrl){
+        if let kingurl = URL(string: giftDataArray[indexPath.row].imageUrl){
             top5Cell.top5ImageView.kf.setImage(with: kingurl)
             top5Cell.top5ImageView.layer.cornerRadius = 15
             top5Cell.top5ImageView.contentMode = .scaleToFill
         }
         
         
-        top5Cell.top5NameLabel.text = onboardingDataArray[indexPath.row].keyword
-        let numberFormatter = NumberFormatter() //NumberFormatter객체 생성
-        numberFormatter.numberStyle = .decimal //decimal 사용
+        top5Cell.top5NameLabel.text = giftDataArray[indexPath.row].keyword
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
         
-        let lowPrice = numberFormatter.string(from: NSNumber(value: onboardingDataArray[indexPath.row].lowPrice)) ?? "0"
+        let lowPrice = numberFormatter.string(from: NSNumber(value: giftDataArray[indexPath.row].lowPrice)) ?? "0"
         top5Cell.top5PriceLabel.text = String("최저  \(lowPrice)원~")
         
         activityIndigator.stopAnimating()
@@ -241,9 +245,9 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
-//        if let encoded = onboardingDataArray[indexPath.row].webUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded){
-//            UIApplication.shared.open(myURL, options: [:])
-//        }
+        if let encoded = giftDataArray[indexPath.row].webUrl.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let myURL = URL(string: encoded){
+            UIApplication.shared.open(myURL, options: [:])
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -251,6 +255,7 @@ extension MainRecommendResultViewController: UICollectionViewDelegate, UICollect
         return CGSize(width: 300, height: 130)
     }
 }
+
 
 extension UIColor {
     

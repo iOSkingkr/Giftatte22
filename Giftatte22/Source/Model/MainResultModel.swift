@@ -11,4 +11,5 @@ struct MainResultModel{
     var imageUrl: String
     var keyword: String
     var lowPrice: Int
+    var webUrl: String
 }
